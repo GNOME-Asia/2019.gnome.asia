@@ -19,7 +19,7 @@ class Agenda extends React.Component{
 
                             <tr>
                                 <th>Time</th>
-                                <th>Scheadule</th>
+                                <th>Schedule</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -51,7 +51,7 @@ class Agenda extends React.Component{
 
                             <tr>
                                 <th>Time</th>
-                                <th>Scheadule</th>
+                                <th>Schedule</th>
                             </tr>
                             </thead>
                             <tbody>
