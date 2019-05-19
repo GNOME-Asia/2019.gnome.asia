@@ -13,7 +13,7 @@ class Staff extends React.Component{
                     <div className="row">
                         <div className="col-md-4">
                             <div className="p-3">
-                                <h5 className="font-weight-bold">Lead / Main Coordinator</h5>
+                                <h5 className="font-weight-bold">Lead/Main Coordinator</h5>
                                 <p>
                                     Andik Nur Ahmad
                                 </p>
@@ -29,7 +29,7 @@ class Staff extends React.Component{
                         </div>
                         <div className="col-md-4">
                             <div className="p-3">
-                                <h5 className="font-weight-bold">Secertariat</h5>
+                                <h5 className="font-weight-bold">Secretariat</h5>
                                 <p>
                                     Ahmad Ubaidillah
                                 </p>
@@ -39,7 +39,7 @@ class Staff extends React.Component{
                             <div className="p-3">
                                 <h5 className="font-weight-bold">Design</h5>
                                 <p>
-                                    Raniaamina
+                                    Rania Amina
                                 </p>
                             </div>
                         </div>
