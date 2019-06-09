@@ -3,11 +3,12 @@ import String from '../Components/Contents';
 import gresik from '../assets/gresik2.jpg';
 import { connect } from 'react-redux';
 import { setLocation } from '../Redux/Actions';
+import { pageAnalytics } from '../Components/GoogleAnalytics';
 
 class Home extends React.Component{
 
     componentDidMount(){
-        
+        pageAnalytics('/')
         this.props.setloc(this.props.location)
     }
     

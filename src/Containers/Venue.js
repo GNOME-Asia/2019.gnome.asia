@@ -1,29 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { setLocation } from '../Redux/Actions';
+import { pageAnalytics } from '../Components/GoogleAnalytics';
 
 
-const Hotel = (props) =>{
-    
-    
-    return(
-        <div>
-            <h5>{props.name}</h5>
-            <div>
-                <ul style={{ listStyle:'none' }}>
-                    <li><span className="font-weight-bold">Address:</span> {props.address}</li>
-                    <li><span className="font-weight-bold">Phone:</span> {props.phone}</li>
-                    <li><span className="font-weight-bold">Start from:</span> <span className="font-italic">{props.rate}</span></li>
-                    <li className="mt-3"><span className="text-primary">More information</span></li>
-                </ul>
-                
-            </div>
-        </div>
-    )
-}
+
 class Venue extends React.Component{
 
     componentDidMount(){
+        pageAnalytics('/venue');
         this.props.setloc(this.props.location)
     }
 
@@ -32,37 +17,13 @@ class Venue extends React.Component{
         return(
             <div className="Page my-5">
                 <div className="container py-3">
-                    <h1>Travel Information</h1>
+                    <h1>Venue</h1>
                     <hr />
                     <br/>
-                    <h3>Hotels</h3>
+                    <h3>Universitas Muhammadiyah Gresik</h3>
+                    <br/>
                     <div>
-                        <ul className="list-group">
-                            <a  href="https://www.google.co.id/travel/hotels/Gresik/entity/CgoIuNq7_YGGqJheEAE?g2lb=4207876%2C4208993%2C4223281%2C4242898%2C4253230%2C4254308%2C4258167%2C4260007%2C4260036%2C4250437%2C4253015%2C4261203&hl=en&gl=id&un=0&q=hotel%20gresik&rp=OAFAAEgC&ictx=1&hrf=CgYIoPc2EAAiA0lEUioWCgcI4w8QBRgTEgcI4w8QBRgUGAEoALABAFgBmgEIEgZHcmVzaWuiARUKCy9nLzEyMTN2ZHl0EgZHcmVzaWuqAR4KAgghEgIIZRICCBUSAggNEgIIZxICCFsSAggvGAGqAQsKAggSEgMImwEYAaoBCgoCCBESAgg4GAGqARcKAgguEgIIOhIDCIcBEgIIGhICCAwYAaoBBgoCCGMYAJIBAiAB&tcfs=Ei8KCy9nLzEyMTN2ZHl0EgZHcmVzaWsaGAoKMjAxOS0wNS0xORIKMjAxOS0wNS0yMFIA" target="__blank" className="list-group-item hotel-link my-2">
-                                <Hotel 
-                                    name="Hotel Pesonna Gresik"
-                                    address="Sidokumpul, Jalan Panglima Sudirman No.1, Pulopancikan, Kecamatan Gresik, Sumberrejo, Pulopancikan, Kec. Gresik, Kabupaten Gresik, Jawa Timur 61111"
-                                    phone="(031) 99006330"
-                                    rate="Rp 524.522"
-                                />
-                            </a>
-                            <a href="https://www.google.co.id/travel/hotels/Gresik/entity/CgsI2cy5lfjkuoeDARAB?g2lb=4207876%2C4208993%2C4223281%2C4242898%2C4253230%2C4254308%2C4258167%2C4260007%2C4260036%2C4250437%2C4253015%2C4261203&hl=en&gl=id&un=0&q=hotel%20gresik&rp=OAFAAEgC&ictx=1&hrf=CgYIoPc2EAAiA0lEUioWCgcI4w8QBRgTEgcI4w8QBRgUGAEoALABAFgBmgEIEgZHcmVzaWuiARUKCy9nLzEyMTN2ZHl0EgZHcmVzaWuqAR4KAgghEgIIZRICCBUSAggNEgIIZxICCFsSAggvGAGqAQsKAggSEgMImwEYAaoBCgoCCBESAgg4GAGqARcKAgguEgIIOhIDCIcBEgIIGhICCAwYAaoBBgoCCGMYAJIBAiAB&tcfs=Ei8KCy9nLzEyMTN2ZHl0EgZHcmVzaWsaGAoKMjAxOS0wNS0xORIKMjAxOS0wNS0yMFIA" target="__blank" className="list-group-item hotel-link my-2">
-                                <Hotel 
-                                    name="Hotel Santika Gresik"
-                                    address="Jl. Dr. Wahidin S.H. No.788, Kembangan, Kebomas, Kabupaten Gresik, Jawa Timur 61124"
-                                    phone="(031) 39929777"
-                                    rate="Rp 526.500"
-                                />
-                            </a>
-                            <a href="https://www.google.co.id/travel/hotels/Gresik/entity/CgsIjNGp_LPD1piyARAB?g2lb=4207876%2C4208993%2C4223281%2C4242898%2C4253230%2C4254308%2C4258167%2C4260007%2C4260036%2C4250437%2C4253015%2C4261203&hl=en&gl=id&un=0&q=hotel%20gresik&rp=OAFAAEgC&ictx=1&hrf=CgYIoPc2EAAiA0lEUioWCgcI4w8QBRgTEgcI4w8QBRgUGAEoALABAFgBmgEIEgZHcmVzaWuiARUKCy9nLzEyMTN2ZHl0EgZHcmVzaWuqAR4KAgghEgIIZRICCBUSAggNEgIIZxICCFsSAggvGAGqAQsKAggSEgMImwEYAaoBCgoCCBESAgg4GAGqARcKAgguEgIIOhIDCIcBEgIIGhICCAwYAaoBBgoCCGMYAJIBAiAB&tcfs=Ei8KCy9nLzEyMTN2ZHl0EgZHcmVzaWsaGAoKMjAxOS0wNS0xORIKMjAxOS0wNS0yMFIA" target="__blank" className="list-group-item hotel-link my-2">
-                                <Hotel 
-                                    name="Hotel Saptanawa"
-                                    address="Jl. Arif Rahman Hakim Gresik No.79, Injen Barat, Sidomoro, Kebomas, Kabupaten Gresik, Jawa Timur 61122"
-                                    phone="(031) 3971182"
-                                    rate="Rp 457.500"
-                                />
-                            </a>
-                        </ul>
+                    <iframe title="universitas muhammadiyah gresik" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.695776787119!2d112.61358151487462!3d-7.16112617225026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e77ffd7112b48ef%3A0xbc0320214ba5fa8e!2sUniversitas+Muhammadiyah+Gresik!5e0!3m2!1sen!2sid!4v1560074004247!5m2!1sen!2sid" width='1200' height='450' frameborder='0' style={{ border:0 }} allowfullscreen></iframe>
                     </div>
 
                 </div>

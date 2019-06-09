@@ -6,6 +6,7 @@ let string = new LocalizedString({
         navigation:{
             home:"Home",
             venue:"Venue",
+            cityinformation:"Travel Information",
             registration:"Registration",
             agenda:"Agenda",
             staff:"Staff",
@@ -36,6 +37,7 @@ let string = new LocalizedString({
         navigation:{
             home:"Home",
             venue:"Tempat",
+            cityinformation:"Informasi Kota",
             registration:"Registrasi",
             agenda:"Agenda",
             staff:"Staff",

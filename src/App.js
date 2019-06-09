@@ -9,6 +9,7 @@ import { connect } from 'react-redux';
 import Navigation from './Components/Navigation';
 import Home from './Containers/Home';
 import Venue from './Containers/Venue';
+import Cityinformation from './Containers/City';
 import Notfound from './Containers/Notfound';
 import Footer from './Components/Footer';
 import Sponsor from './Containers/Sponsor';
@@ -31,6 +32,7 @@ class App extends React.Component {
           <Switch>
             <Route exact path="/" component={() => <Home lang={lang} location="home"/>} />
             <Route path="/venue" component={() => <Venue lang={lang} location="venue"/>} />
+            <Route path="/travel-information" component={() => <Cityinformation lang={lang} location="travel-information"/>} />
             <Route path="/registration" component={() => <Registration lang={lang} location="registration"/>} />
             <Route path="/agenda" component={() => <Agenda lang={lang} location="agenda"/>} />
             <Route path="/staff" component={() => <Staff lang={lang} location="staff"/>} />

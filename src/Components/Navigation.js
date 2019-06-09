@@ -50,6 +50,12 @@ class Navigation extends React.Component{
                                 this.setState({
                                     iscolapse:false
                                 })
+                                this.props.setLoc('travel-information')
+                            }} style={this.props.location==='travel-information' ? {fontWeight:'bold',opacity:1}:null} to="/travel-information">{String.navigation.cityinformation}</Link></NavItem>
+                            <NavItem><Link className="nav-link" onClick={()=>{
+                                this.setState({
+                                    iscolapse:false
+                                })
                                 this.props.setLoc('registration')
                             }} style={this.props.location==='registration' ? {fontWeight:'bold',opacity:1}:null} to="/registration">{String.navigation.registration}</Link></NavItem>
                             <NavItem><Link className="nav-link" onClick={()=>{

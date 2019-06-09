@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { setLocation } from '../Redux/Actions';
+import { pageAnalytics } from '../Components/GoogleAnalytics';
 
 class Staff extends React.Component{
     render(){
@@ -75,6 +76,7 @@ class Staff extends React.Component{
     }
 
     componentDidMount(){
+        pageAnalytics('/staff')
         this.props.setloc(this.props.location)
     }
 }
