@@ -29,7 +29,7 @@ class Navigation extends React.Component{
             <Navbar className="navbar bg-dark" fixed="top" expand="md">
                 <div className="container-fluid">
                     
-                    <Link className="navbar-brand" to="/" style={{ color:'white' }}>Gnome Asia Summit 2019</Link>
+                    <Link className="navbar-brand" to="/" style={{ color:'white' }}>GNOME.Asia Summit 2019</Link>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.iscolapse} navbar>
 
