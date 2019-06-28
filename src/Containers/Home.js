@@ -18,8 +18,8 @@ class Home extends React.Component{
         return(
             <div className="Page my-5">
                 <div className="py-2">
-
-                <img src={gresik} className="img-fluid" alt="Gresik City" />
+{/* 
+                <img src={gresik} className="img-fluid" alt="Gresik City" /> */}
                 </div>
                 <div className="container my-3">
                     <h2>{String.home.news.title}</h2>

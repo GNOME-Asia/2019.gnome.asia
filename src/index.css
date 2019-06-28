@@ -12,3 +12,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.py-2 {
+  background-image: url(assets/gresik2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 900px;
+}
