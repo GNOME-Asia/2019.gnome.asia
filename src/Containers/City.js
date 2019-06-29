@@ -51,7 +51,7 @@ class Cityinformation extends React.Component{
                                     name="Hotel Pesonna Gresik"
                                     address="Sidokumpul, Jalan Panglima Sudirman No.1, Pulopancikan, Kecamatan Gresik, Sumberrejo, Pulopancikan, Kec. Gresik, Kabupaten Gresik, Jawa Timur 61111"
                                     phone="(031) 99006330"
-                                    rate="Rp 524.522"
+                                    rate="Rp524.522"
                                     img={pesona}
                                 />
                             </a>
@@ -60,7 +60,7 @@ class Cityinformation extends React.Component{
                                     name="Hotel Santika Gresik"
                                     address="Jl. Dr. Wahidin S.H. No.788, Kembangan, Kebomas, Kabupaten Gresik, Jawa Timur 61124"
                                     phone="(031) 39929777"
-                                    rate="Rp 526.500"
+                                    rate="Rp526.500"
                                     img={santika}
                                 />
                             </a>
@@ -69,7 +69,7 @@ class Cityinformation extends React.Component{
                                     name="Hotel Saptanawa"
                                     address="Jl. Arif Rahman Hakim Gresik No.79, Injen Barat, Sidomoro, Kebomas, Kabupaten Gresik, Jawa Timur 61122"
                                     phone="(031) 3971182"
-                                    rate="Rp 457.500"
+                                    rate="Rp457.500"
                                     img={saptanawa}
                                 />
                             </a>
