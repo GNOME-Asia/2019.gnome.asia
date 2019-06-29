@@ -44,7 +44,7 @@ class Navigation extends React.Component{
                             })}
                             className="nav-link menu-top">{String.navigation.venue}</a></NavItem>
                             {/* <NavItem><a href="#t" className="nav-link menu-top">{String.navigation.cityinformation}</a></NavItem> */}
-                            <NavItem><a href="#scheadule" 
+                            <NavItem><a href="#schedule" 
                             onClick={()=>this.setState({
                                 iscolapse:false
                             })}
