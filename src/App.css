@@ -1,11 +1,55 @@
+/* Primary Biru = #e5f3ed */
+/* Font white = #ffffff */
+
 
 .App{
-  @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
-  font-family: 'Ubuntu Mono', monospace;
   font-size: 14px;
+  background-color: #ffffff;
+  color:#616161;
+  
   
 }
 
+html{
+  scroll-behavior: smooth;
+  
+}
+
+.navbar-top{
+  background-color:#2962FF !important;
+  box-shadow: 0px -8px 20px 0px black;
+}
+
+.menu-top{
+  color: #ffffff !important;
+  border: 1px solid #2962FF;
+  
+}
+
+.menu-top:hover{
+  border-bottom: 1px solid #ffffff;
+  transition: 350ms ease-in-out;
+}
+.navbar-dark .navbar-toggler-icon{
+  background-image: ('./assets/favicon.ico') !important;
+}
+
+.tab-agenda{
+  color:#2962FF !important;
+  border: 1px solid red;
+}
+.tab-agenda-active{
+  background-color: #2962FF !important;
+  color: #ffffff !important;
+  transition: 350ms ease-in-out;
+}
+.agenda-container{
+  background-color: #fafafa;
+}
+
+iframe{
+  box-shadow: 1px 1px 5px 0px black;
+}
 
 .Page{
   animation: Open 1s ease-in-out;
@@ -23,26 +67,10 @@
 p{
   line-height: 2.5
 }
-
-.nav-link{
-  color: white;
-  opacity: 0.8;
-}
-
-.nav-link:hover{
-  font-weight: bold;
-  color:white;
-  opacity: 1;
-}
-
 .dropdown-item:hover{
   background-color: white !important;
   color: #343A40 !important;
 }
-
-/* .navbar-toggler{
-  border: 1px solid white;
-} */
 
 .navbar-toggler-icon{
   background: url(assets/menu.png);
@@ -54,8 +82,10 @@ p{
   color: black !important;
 }
 
-.hotel-link:hover{
-  box-shadow: 0px 0px 3px #343A40;
+.hotel-link{
+  box-shadow: 3px 3px 10px 0px #9E9E9E;
   transition: 0.3s ease-out;
 }
-
+.img-hotels{
+  box-shadow: 3px 3px 10px 0px #9E9E9E;
+}

@@ -1,25 +1,26 @@
 import React from 'react';
 import String from '../Components/Contents';
-import gresik from '../assets/gresik2.jpg';
+import gresik from '../assets/gresik-landscape.jpg';
 import { connect } from 'react-redux';
 import { setLocation } from '../Redux/Actions';
-
 class Home extends React.Component{
 
-    componentDidMount(){
-        
-        this.props.setloc(this.props.location)
-    }
+    // componentDidMount(){
+    //     pageAnalytics('/')
+    //     this.props.setloc(this.props.location)
+    // }
     
     render(){
         
         String.setLanguage(this.props.lang)
-        
+        console.log(this.props.warning)
         return(
-            <div className="Page my-5">
+            <div className="Page my-5" id="home">
+                
                 <div className="py-2">
-{/* 
-                <img src={gresik} className="img-fluid" alt="Gresik City" /> */}
+                
+                <img src={gresik} className="img-fluid" width="100%" alt="Gresik City" />
+                
                 </div>
                 <div className="container my-3">
                     <h2>{String.home.news.title}</h2>
