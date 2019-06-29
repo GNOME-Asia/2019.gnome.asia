@@ -6,7 +6,7 @@ class Footer extends React.Component{
             <div className="container py-3">
                 <hr />
                 <div className="text-center">
-                    <span>Copyright © 2019 GNOME Asia Summit</span>
+                    <span>Copyright © 2019 GNOME.Asia Summit</span>
                 </div>
             </div>
         )
