@@ -8,7 +8,7 @@ let string = new LocalizedString({
             venue:"Venue",
             cityinformation:"Travel Information",
             registration:"Registration",
-            agenda:"Agenda",
+            agenda:"Scheadule",
             staff:"Staff",
             sponsor:"Sponsor",
             language:"Language"
@@ -36,10 +36,10 @@ let string = new LocalizedString({
     id:{
         navigation:{
             home:"Home",
-            venue:"Tempat",
+            venue:"Venue",
             cityinformation:"Informasi Kota",
-            registration:"Registrasi",
-            agenda:"Agenda",
+            registration:"Registration",
+            agenda:"Scheadule",
             staff:"Staff",
             sponsor:"Sponsor",
             language:"Bahasa"

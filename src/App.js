@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  BrowserRouter,Route,Switch
-} from 'react-router-dom';
+
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 import { connect } from 'react-redux';
@@ -10,42 +8,44 @@ import Navigation from './Components/Navigation';
 import Home from './Containers/Home';
 import Venue from './Containers/Venue';
 import Cityinformation from './Containers/City';
-import Notfound from './Containers/Notfound';
+// import Notfound from './Containers/Notfound';
 import Footer from './Components/Footer';
 import Sponsor from './Containers/Sponsor';
 import Agenda from './Containers/Agenda';
-import Registration from './Containers/Registration';
+// import Registration from './Containers/Registration';
 import Staff from './Containers/Staff';
-
-
+import Media from './Containers/Media';
+import Community from './Containers/Community';
 
 class App extends React.Component {
-  
+
   render(){
-    
     let lang = this.props.lang
+
+    
     return (
-      <BrowserRouter>
+      
        <div className="App">
-        <Navigation />
+       
+        <Navigation/>
         
-          <Switch>
-            <Route exact path="/" component={() => <Home lang={lang} location="home"/>} />
-            <Route path="/venue" component={() => <Venue lang={lang} location="venue"/>} />
-            <Route path="/travel-information" component={() => <Cityinformation lang={lang} location="travel-information"/>} />
-            <Route path="/registration" component={() => <Registration lang={lang} location="registration"/>} />
-            <Route path="/agenda" component={() => <Agenda lang={lang} location="agenda"/>} />
-            <Route path="/staff" component={() => <Staff lang={lang} location="staff"/>} />
-            <Route path="/sponsor" component={() => <Sponsor lang={lang} location="sponsor"/>} />
-            <Route path="/registration"  component={Notfound} />
-            <Route component={Notfound} />
-          </Switch>
-          <Footer/>
+        <Home lang={lang} location="home" warning="Ini HOME"/>
+        
+
+        <Venue lang={lang} location="venue" refProps={this.scroll}/>
+        <Cityinformation lang={lang} location="travel-information"/>
+        <Agenda lang={lang} location="agenda" refProps={this.scroll}/>
+        <Staff lang={lang} location="staff"/>
+        <Sponsor lang={lang} location="sponsor"/>
+        <Media/>
+        <Community/>
+        <Footer/>
        </div>
         
-      </BrowserRouter>
+      
     );
   }
+  
 }
 
 const mapStateToProps = state => {

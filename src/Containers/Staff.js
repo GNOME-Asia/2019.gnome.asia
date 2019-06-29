@@ -1,12 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { setLocation } from '../Redux/Actions';
-import { pageAnalytics } from '../Components/GoogleAnalytics';
 
 class Staff extends React.Component{
     render(){
+        
         return(
-            <div className="Page my-5">
+            <div className="Page py-5" id="staff">
                 <div className="container py-3">
                     <h1>Staff</h1>
                     <hr/>
@@ -32,7 +32,15 @@ class Staff extends React.Component{
                             <div className="p-3">
                                 <h5 className="font-weight-bold">Secretariat</h5>
                                 <p>
-                                    Ahmad Ubaidillah
+                                    Andri Purnama
+                                </p>
+                            </div>
+                        </div>
+                        <div className="col-md-4">
+                            <div className="p-3">
+                                <h5 className="font-weight-bold">Treasurer</h5>
+                                <p>
+                                    Awaluddin Rizal
                                 </p>
                             </div>
                         </div>
@@ -75,10 +83,7 @@ class Staff extends React.Component{
         )
     }
 
-    componentDidMount(){
-        pageAnalytics('/staff')
-        this.props.setloc(this.props.location)
-    }
+  
 }
 
 const mapStateToProps = state =>{

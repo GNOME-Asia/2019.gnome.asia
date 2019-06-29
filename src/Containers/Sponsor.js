@@ -1,37 +1,36 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { setLocation } from '../Redux/Actions';
-import { pageAnalytics } from '../Components/GoogleAnalytics';
+import unmuh from '../assets/logo_UMG.svg';
 
+
+const Image = props => {
+    return <img className="img-fluid" alt={props.name} src={props.src} style={{ width:'100px' }}/>
+}
 class Sponsor extends React.Component{
     render(){
         return(
-            <div className="Page my-5">
+            <div className="Page py-5" id="sponsor">
                 <div className="container py-3">
-                    <h1>Sponsor</h1>
+                    <h3>Sponsor</h3>
                     <hr/>
+                    <div>
+                        <ul className="list-inline">
+                            <li className="list-inline-item">
+                                <Image
+                                    name="Universitas Muhammadiyah Gresik"
+                                    src={unmuh}
+                                />
+                            </li>
+                            
+                        </ul>
+                    </div>
                 </div>
                 
             </div>
         )
     }
 
-    componentDidMount(){
-        pageAnalytics('/sponsor')
-        this.props.setloc(this.props.location)
-    }
+  
 }
 
-const mapStateToProps = state =>{
-    return{
-        loc: state.Reducers.location
-    }
-}
 
-const mapDispatchToProps = dispatch =>{
-    return{
-        setloc: (loc) => dispatch(setLocation(loc))
-    }
-}
-
-export default connect(mapStateToProps,mapDispatchToProps)(Sponsor);
+export default Sponsor;
