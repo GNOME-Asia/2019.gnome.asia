@@ -29,7 +29,7 @@ let string = new LocalizedString({
             
         },
         etc:{
-            more:"more ..."
+            more:"more . . ."
         },
         notfound:"Page not Found"
     },
