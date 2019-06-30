@@ -6,8 +6,9 @@ let string = new LocalizedString({
         navigation:{
             home:"Home",
             venue:"Venue",
+            cityinformation:"Travel Information",
             registration:"Registration",
-            agenda:"Agenda",
+            agenda:"Schedule",
             staff:"Staff",
             sponsor:"Sponsor",
             language:"Language"
@@ -28,16 +29,17 @@ let string = new LocalizedString({
             
         },
         etc:{
-            more:"more.."
+            more:"more . . ."
         },
         notfound:"Page not Found"
     },
     id:{
         navigation:{
             home:"Home",
-            venue:"Tempat",
-            registration:"Registrasi",
-            agenda:"Agenda",
+            venue:"Venue",
+            cityinformation:"Informasi Kota",
+            registration:"Registration",
+            agenda:"Schedule",
             staff:"Staff",
             sponsor:"Sponsor",
             language:"Bahasa"
