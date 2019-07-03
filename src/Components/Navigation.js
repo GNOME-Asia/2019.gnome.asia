@@ -28,7 +28,7 @@ class Navigation extends React.Component{
             <Navbar className="navbar navbar-top " dark fixed="top" expand="md">
                 <div className="container-fluid">
                     
-                    <a href="/" className="navbar-brand" > <img className="img-fluid" width="30" src={gnome} alt="Gnome Asia Simmit 2019"/> GNOME Asia Summit 2019</a>
+                    <a href="/" className="navbar-brand" > <img className="img-fluid" width="30" src={gnome} alt="GNOME.Asia Simmit 2019"/> GNOME.Asia Summit 2019</a>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.iscolapse} navbar>
 
@@ -44,7 +44,7 @@ class Navigation extends React.Component{
                             })}
                             className="nav-link menu-top">{String.navigation.venue}</a></NavItem>
                             {/* <NavItem><a href="#t" className="nav-link menu-top">{String.navigation.cityinformation}</a></NavItem> */}
-                            <NavItem><a href="#scheadule" 
+                            <NavItem><a href="#schedule" 
                             onClick={()=>this.setState({
                                 iscolapse:false
                             })}

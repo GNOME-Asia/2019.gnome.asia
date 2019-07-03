@@ -23,11 +23,11 @@ class Agenda extends React.Component{
     render(){
         console.log(this.state.activeTabs)
         return(
-            <div className="Page py-5" style={{ backgroundColor:'#E0E0E0' }} id="scheadule">
+            <div className="Page py-5" style={{ backgroundColor:'#E0E0E0' }} id="schedule">
                 <div className="container py-3">
                     <div className="text-center">
 
-                        <h1>Scheadule</h1>
+                        <h1>Schedule</h1>
                     </div>
                     <hr />
                     <br />
