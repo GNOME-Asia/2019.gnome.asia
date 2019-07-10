@@ -7,7 +7,7 @@
   background-color: #ffffff;
   color:#616161;
   
-  
+  font-size: 14px;
 }
 
 html{
@@ -16,19 +16,25 @@ html{
 }
 
 .navbar-top{
-  background-color:#2962FF !important;
+  background-color:#FFFFFF !important;
   box-shadow: 0px -8px 20px 0px black;
 }
 
+.navbar-brand{
+  font-size: 14px;
+}
+
 .menu-top{
-  color: #ffffff !important;
-  border: 1px solid #2962FF;
+  color: #000000 !important;
+  border: 1px solid#ffffff;
+  
   
 }
 
 .menu-top:hover{
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid #0a0a0a;
   transition: 350ms ease-in-out;
+
 }
 .navbar-dark .navbar-toggler-icon{
   background-image: ('./assets/favicon.ico') !important;

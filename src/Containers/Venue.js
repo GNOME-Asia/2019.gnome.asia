@@ -7,7 +7,7 @@ class Venue extends React.Component{
     render(){
         
         return(
-            <div className="Page py-5" id="venue">
+            <div className="Page py-5">
                 <div className="container py-3">
                     <h1>Venue</h1>
                     <hr />

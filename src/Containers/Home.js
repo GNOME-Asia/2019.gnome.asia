@@ -1,30 +1,35 @@
 import React from 'react';
 import String from '../Components/Contents';
-import gresik from '../assets/gresik-landscape.jpg';
 import { connect } from 'react-redux';
 import { setLocation } from '../Redux/Actions';
-class Home extends React.Component{
-
-    // componentDidMount(){
-    //     pageAnalytics('/')
-    //     this.props.setloc(this.props.location)
-    // }
-    
+import Carousel from '../Components/Carousel';
+class Home extends React.Component{  
     render(){
-        
         String.setLanguage(this.props.lang)
-        console.log(this.props.warning)
+
         return(
-            <div className="Page my-5" id="home">
-                
-                <div className="py-2">
-                
-                <img src={gresik} className="img-fluid" width="100%" alt="Gresik City" />
-                
-                </div>
+            <div className="Page pt-5">
+                <br/>
+                <Carousel/>
                 <div className="container my-3">
                     <h2>{String.home.news.title}</h2>
                     <hr/>
+                    <div className="my-5">
+                        <h5 style={{ fontWeight:'bold' }}>{String.home.news.pengumumanjudul}</h5>
+                        <p>
+                        {String.home.news.pengumumancontent}
+                        <br/>
+                        <span><a href={String.home.news.pengumumanlink} target="__blank">{String.etc.more}</a></span>
+                        </p>
+                    </div>
+                    <div className="my-5">
+                        <h5 style={{ fontWeight:'bold' }}>{String.home.news.logo}</h5>
+                        <p>
+                        {String.home.news.logocontent}
+                        <br/>
+                        <span><a href={String.home.news.logolink} target="__blank">{String.etc.more}</a></span>
+                        </p>
+                    </div>
                     <div className="my-5">
                         <h5 style={{ fontWeight:'bold' }}>{String.home.news.logo}</h5>
                         <p>
