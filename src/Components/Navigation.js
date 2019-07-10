@@ -1,16 +1,21 @@
 import React from 'react';
 import { Navbar,Nav,NavItem,Collapse,NavbarToggler } from 'reactstrap';
 import String from '../Components/Contents';
-import gnome from '../assets/gnome-logo.png';
+import gnome from '../assets/photo_2019-07-10 19.01.08.jpeg';
+import Registrationmodal from '../Components/Registrationmodal';
+
 
 class Navigation extends React.Component{
     constructor(props){
         super(props);
 
         this.state = {
-            iscolapse: false
+            iscolapse: false,
+            modal: false
         }
         this.toggle = this.toggle.bind(this)
+        this._closed = this._closed.bind(this)
+        this._modalopen = this._modalopen.bind(this)
         // console.log(this.props)
     }
 
@@ -20,54 +25,67 @@ class Navigation extends React.Component{
         })
     }
 
+    _closed(){
+        this.setState({
+            iscolapse: false
+        })
+    }
+
+    _modalopen(){
+        this.setState({
+            modal: !this.state.modal,
+            iscolapse:false
+        })
+    }
 
     render(){
       
         
         return(
-            <Navbar className="navbar navbar-top " dark fixed="top" expand="md">
+            <div>
+            <Navbar className="navbar navbar-top" light fixed="top" expand="md">
                 <div className="container-fluid">
                     
-                    <a href="/" className="navbar-brand" > <img className="img-fluid" width="30" src={gnome} alt="GNOME.Asia Simmit 2019"/> GNOME.Asia Summit 2019</a>
+                    <a href="/" className="navbar-brand" > <img className="img-fluid" width="120" src={gnome} alt="GNOME.Asia Simmit 2019"/> 
+                    {/* GNOME.Asia Summit 2019 */}
+                    </a>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.iscolapse} navbar>
 
                         <Nav className="ml-auto" navbar>
                             <NavItem><a href="#home" 
-                            onClick={()=>this.setState({
-                                iscolapse:false
-                            })}
-                            className="nav-link menu-top">{String.navigation.home}</a></NavItem>
+                            onClick={
+                                this._closed
+                            }
+                            className="nav-link menu-top p-3">{String.navigation.home}</a></NavItem>
                             <NavItem><a href="#venue" 
-                            onClick={()=>this.setState({
-                                iscolapse:false
-                            })}
-                            className="nav-link menu-top">{String.navigation.venue}</a></NavItem>
-                            {/* <NavItem><a href="#t" className="nav-link menu-top">{String.navigation.cityinformation}</a></NavItem> */}
+                            onClick={this._closed}
+                            className="nav-link menu-top p-3">{String.navigation.venue}</a></NavItem>
                             <NavItem><a href="#schedule" 
-                            onClick={()=>this.setState({
-                                iscolapse:false
-                            })}
-                            className="nav-link menu-top">{String.navigation.agenda}</a></NavItem>
+                            onClick={this._closed}
+                            className="nav-link menu-top p-3">{String.navigation.agenda}</a></NavItem>
+                            <NavItem><a href="#speakers" 
+                            onClick={this._closed}
+                            className="nav-link menu-top p-3">{String.navigation.speakers}</a></NavItem>
                             <NavItem><a href="#staff" 
-                            onClick={()=>this.setState({
-                                iscolapse:false
-                            })}
-                            className="nav-link menu-top">{String.navigation.staff}</a></NavItem>
+                            onClick={this._closed}
+                            className="nav-link menu-top p-3">{String.navigation.staff}</a></NavItem>
+                            <NavItem><a href="#callofproposal" 
+                            onClick={this._closed}
+                            className="nav-link menu-top p-3">{String.navigation.cfp}</a></NavItem>
                             <NavItem><a href="#sponsor" 
-                            onClick={()=>this.setState({
-                                iscolapse:false
-                            })}
-                            className="nav-link menu-top">{String.navigation.sponsor}</a></NavItem>
+                            onClick={this._closed}
+                            className="nav-link menu-top p-3">{String.navigation.sponsor}</a></NavItem>
                             <NavItem><a href="#registration" 
-                            onClick={()=>this.setState({
-                                iscolapse:false
-                            })}
-                            className="nav-link menu-top">{String.navigation.registration}</a></NavItem>
+                            onClick={this._modalopen}
+                            className="nav-link menu-top p-3">{String.navigation.registration}</a></NavItem>
                         </Nav>
                     </Collapse>
+                    
                 </div>
             </Navbar>
+            <Registrationmodal open={this.state.modal} toggle={this._modalopen}/>
+            </div>
         );
     }
 }

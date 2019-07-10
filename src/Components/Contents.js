@@ -11,7 +11,9 @@ let string = new LocalizedString({
             agenda:"Schedule",
             staff:"Staff",
             sponsor:"Sponsor",
-            language:"Language"
+            language:"Language",
+            speakers:"Speakers",
+            cfp:"Call for Proposal"
         },
         home:{
             news:{
@@ -21,7 +23,10 @@ let string = new LocalizedString({
                 tuanrumahlink:"https://gnome.id/Gresik-Tuan-Rumah-GNOME-Asia-Summit-2019.html",
                 logo:"GNOME.Asia Summit 2019 Logo Competition",
                 logocontent:"GNOME.Asia Summit 2019 will be held in Gresik, Indonesia in October, 2019. We are looking for creative people to design logo for this year’s Summit. The contest is open from now until June 21, 2019 and the winner will be announced on June 30, 2019",
-                logolink:"https://gnome.id/Gnome-Asia-Logo-Competition/"
+                logolink:"https://gnome.id/Gnome-Asia-Logo-Competition/",
+                pengumumanjudul:'GNOME.Asia Summit 2019 Logo Contest Announcement',
+                pengumumancontent:'GNOME.Asia Summit 2019 logo competition is over, the vote was in. The resulting jury has been decided the winner of this logo competition. The winner is “Fendi Prad” from Indonesia.',
+                pengumumanlink:'https://gnome.id/pengumuman-pemenang-kontes-logo-gnome-asia-summit-2019.html'
                   
             }
         },
@@ -42,7 +47,9 @@ let string = new LocalizedString({
             agenda:"Schedule",
             staff:"Staff",
             sponsor:"Sponsor",
-            language:"Bahasa"
+            language:"Bahasa",
+            speakers:"Speakers",
+            cfp:"Call for Proposal"
         },
         home:{
             news:{
@@ -52,7 +59,10 @@ let string = new LocalizedString({
                 tuanrumahlink:"https://gnome.id/Gresik-Tuan-Rumah-GNOME-Asia-Summit-2019.html",
                 logo:"GNOME.Asia Summit 2019 Logo Competition",
                 logocontent:"Perhelatan tahunan komite GNOME.Asia, yaitu GNOME.Asia Summit, di tahun 2019 ini akan kembali diadakan di Indonesia. Setelah pada tahun 2015 diadakan di Depok, pada tahun ini Gresik mendapat kehormatan menjadi tuan rumah.",
-                logolink:"https://gnome.id/Sayembara-Logo-GNOME-Asia.html#more"
+                logolink:"https://gnome.id/Sayembara-Logo-GNOME-Asia.html#more",
+                pengumumanjudul:'GNOME.Asia Summit 2019 Logo Contest Announcement',
+                pengumumancontent:'GNOME.Asia Summit 2019 logo competition is over, the vote was in. The resulting jury has been decided the winner of this logo competition. The winner is “Fendi Prad” from Indonesia.',
+                pengumumanlink:'https://gnome.id/pengumuman-pemenang-kontes-logo-gnome-asia-summit-2019.html'
                   
             }
         },
