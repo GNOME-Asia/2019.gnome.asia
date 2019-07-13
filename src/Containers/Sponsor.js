@@ -8,7 +8,7 @@ const Image = props => {
 class Sponsor extends React.Component{
     render(){
         return(
-            <div className="Page py-5" id="sponsor">
+            <div className="Page py-5">
                 <div className="container py-3">
                     <h3>Sponsor</h3>
                     <hr/>
