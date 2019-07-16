@@ -1,5 +1,6 @@
 import React from 'react';
 import unmuh from '../assets/unmuh.png';
+import sakti from '../assets/sakti.png';
 
 
 const Image = props => {
@@ -20,7 +21,12 @@ class Sponsor extends React.Component{
                                     src={unmuh}
                                 />
                             </li>
-                            
+                            <li className="list-inline-item">
+                                <Image
+                                    name="Universitas Muhammadiyah Gresik"
+                                    src={sakti}
+                                />
+                            </li>
                         </ul>
                     </div>
                 </div>
