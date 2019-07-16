@@ -1,6 +1,9 @@
 import React from 'react';
+import Counter from '../Components/Counter';
 
 class Proposal extends React.Component{
+
+
     render(){
         return(
             <div className="Page py-5" id="callofproposal">
@@ -60,7 +63,44 @@ class Proposal extends React.Component{
                         <p>
                         We are also interested in other topics related to Free/Libre and Open Source Software which are not listed above.
                         </p>
+                        <h5>Type of Session</h5>
+                        <p>
+                            You can choose from the following types of session;
+                        </p>
+                        <ol start="1">
+                            <li>
+                            Standard session. Standard session will be scheduled for 45 minutes (35 minutes talk + 10 minutes Q&A). The session could be a technical talk, panel discussion, or BOF. If you need more time or additional resources, feel free to get in touch with the organizing team.
+                            </li>
+                            <li>
+                            Lightning talk session. This session is a 5 minutes presentation for demonstrating your work or promoting an interesting topic. 
+                            </li>
+                        </ol>
+                        <h5>Submission Criteria</h5>
+                        <p>
+                        Please provide a short abstract of your paper (under 200 words). Include your name, biographical information, a title, and a description of your presentation. Please submit your proposal to the following <a href="https://s.id/GNAS19-CfP" target="__blank">LINK</a>, 
+                        The reviewing team will evaluate the entries based on the submitted abstracts and available time by following the schedule.
+                        </p>
+                        <ul>
+                            <li>Submission timeline: July 15th to August 15th 2019</li>
+                            <li>Confirmation of paper acceptance: August, 20th 2019</li>
+                        </ul>
 
+                        <h5>Travel Support</h5>
+                        <p>
+                        There will be an opportunity for speakers and GNOME Foundation members to request travel support by the GNOME Foundation. Please submit your application to the GNOME Travel Committee. For further information please refer to this guides <a href="https://wiki.gnome.org/Travel" target="__blank">https://wiki.gnome.org/Travel</a>.
+                        </p>
+                        <p>
+                        All interested contributors are highly encouraged to send in talks. More information about GNOME.Asia Summit 2019 is available at <a href="https://asiasummit.gnome.id" target="__blank">https://asiasummit.gnome.id</a>.
+                        </p>
+                        <div className="d-flex justify-content-center mt-5">
+                            <div className="d-flex flex-column align-items-center">
+                                <a href="https://s.id/GNAS19-CfP" target="__blank" className="btn btn-lg btn-danger shadow-sm">Call for Papers for GNOME.Asia Summit 2019</a>
+                                <br/>
+                                <Counter/> 
+                            </div>
+                        
+                            
+                        </div>
                     </div>
                     {/* <div className="d-flex align-items-center justify-content-center" style={{ height:'25vh' }} >
                             
