@@ -48,7 +48,7 @@ class Staff extends React.Component{
                             <div className="p-3">
                                 <h5 className="font-weight-bold">Design</h5>
                                 <p>
-                                    Rania Amina
+                                    Rania Amina & Team
                                 </p>
                             </div>
                         </div>
