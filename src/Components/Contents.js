@@ -26,7 +26,10 @@ let string = new LocalizedString({
                 logolink:"https://gnome.id/Gnome-Asia-Logo-Competition/",
                 pengumumanjudul:'GNOME.Asia Summit 2019 Logo Contest Announcement',
                 pengumumancontent:'GNOME.Asia Summit 2019 logo competition is over, the vote was in. The resulting jury has been decided the winner of this logo competition. The winner is “Fendi Prad” from Indonesia.',
-                pengumumanlink:'https://gnome.id/pengumuman-pemenang-kontes-logo-gnome-asia-summit-2019.html'
+                pengumumanlink:'https://gnome.id/pengumuman-pemenang-kontes-logo-gnome-asia-summit-2019.html',
+                cfpjudul:'Call for Papers for GNOME.Asia Summit 2019 Is Now Open! ',
+                cfpcontent:'GNOME.Asia Summit 2019 invites you to participate as a speaker at the conference on the 12th and 13th of October 2019 in Gresik, Indonesia.GNOME.Asia Summit is the featured annual GNOME conference in Asia. It focuses primarily on the GNOME desktop, but also covers applications and platform development tools. The summit brings together the GNOME community in Asia to provide a forum for users, developers, foundation leaders, governments and businesses to discuss the present technology and future developments.',
+                cfplink:'https://gnome.id/en/call-for-papers-for-gnome-asia-summit-2019-is-now-open/'
                   
             }
         },
@@ -62,7 +65,7 @@ let string = new LocalizedString({
                 logolink:"https://gnome.id/Sayembara-Logo-GNOME-Asia.html#more",
                 pengumumanjudul:'GNOME.Asia Summit 2019 Logo Contest Announcement',
                 pengumumancontent:'GNOME.Asia Summit 2019 logo competition is over, the vote was in. The resulting jury has been decided the winner of this logo competition. The winner is “Fendi Prad” from Indonesia.',
-                pengumumanlink:'https://gnome.id/pengumuman-pemenang-kontes-logo-gnome-asia-summit-2019.html'
+                pengumumanlink:'https://gnome.id/pengumuman-pemenang-kontes-logo-gnome-asia-summit-2019.html',
                   
             }
         },

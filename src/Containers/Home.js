@@ -15,6 +15,14 @@ class Home extends React.Component{
                     <h2>{String.home.news.title}</h2>
                     <hr/>
                     <div className="my-5">
+                        <h5 style={{ fontWeight:'bold' }}>{String.home.news.cfpjudul}</h5>
+                        <p>
+                        {String.home.news.cfpcontent}
+                        <br/>
+                        <span><a href={String.home.news.cfplink} target="__blank">{String.etc.more}</a></span>
+                        </p>
+                    </div>
+                    <div className="my-5">
                         <h5 style={{ fontWeight:'bold' }}>{String.home.news.pengumumanjudul}</h5>
                         <p>
                         {String.home.news.pengumumancontent}

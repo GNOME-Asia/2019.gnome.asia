@@ -1,10 +1,10 @@
 import React from 'react';
-// import unmuh from '../assets/unmuh.png';
+import kabarlinux from '../assets/kabarlinux.png';
 
 
-// const Image = props =>{
-//     return <img className="img-fluid" alt={props.name} src={props.src} style={{ width:'100px' }}/>
-// }
+const Image = props =>{
+     return <img className="img-fluid" alt={props.name} src={props.src} style={{ width:'144px' }}/>
+}
 
 class Media extends React.Component{
     render(){
@@ -14,6 +14,14 @@ class Media extends React.Component{
                     <h3>Media Partner</h3>
                     <hr/>
                     <div>
+                        <ul className="list-inline">
+                            <li className="list-inline-item">
+                                <Image 
+                                    name="Kabar Linux"
+                                    src={kabarlinux}
+                                />
+                            </li>
+                        </ul>
                         {/* <ul className="list-inline">
                             <li className="list-inline-item">
                                 <Image 

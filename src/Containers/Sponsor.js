@@ -1,9 +1,10 @@
 import React from 'react';
-import unmuh from '../assets/logo_UMG.svg';
+import unmuh from '../assets/unmuh.png';
+import sakti from '../assets/sakti.png';
 
 
 const Image = props => {
-    return <img className="img-fluid" alt={props.name} src={props.src} style={{ width:'100px' }}/>
+    return <img className="img-fluid" alt={props.name} src={props.src} style={{ width:'128px' }}/>
 }
 class Sponsor extends React.Component{
     render(){
@@ -20,7 +21,12 @@ class Sponsor extends React.Component{
                                     src={unmuh}
                                 />
                             </li>
-                            
+                            <li className="list-inline-item">
+                                <Image
+                                    name="Universitas Muhammadiyah Gresik"
+                                    src={sakti}
+                                />
+                            </li>
                         </ul>
                     </div>
                 </div>
