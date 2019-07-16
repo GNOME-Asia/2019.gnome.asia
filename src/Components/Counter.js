@@ -11,7 +11,8 @@ class Counter extends React.Component{
             days:0,
             hours:0,
             minutes:0,
-            seconds:0
+            seconds:0,
+            distance:0
         }
     }
 
@@ -32,13 +33,17 @@ class Counter extends React.Component{
                 days: days,
                 hours:hours,
                 minutes:minutes,
-                seconds:seconds
+                seconds:seconds,
+                distance:distance
             })
         }, 1000);
     }
 
     componentWillUnmount(){
-        clearInterval(this.interval)
+        if(this.state.distance < 0){
+
+            clearInterval(this.interval)
+        }
     }
 
     render(){

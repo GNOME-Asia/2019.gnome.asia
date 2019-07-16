@@ -12,14 +12,8 @@ class Proposal extends React.Component{
                     <hr/>
                     <br/>
                     <div className="container">
-                        <p>
-                        GNOME.Asia Summit 2019 invites you to participate as a speaker at the conference on the 12th and 13th of October 2019 in Gresik, Indonesia.
-                        </p>
-                        <p>
-                        GNOME.Asia Summit is the featured annual GNOME conference in Asia. It focuses primarily on the GNOME desktop, but also covers applications and platform development tools. The summit brings together the GNOME community in Asia to provide a forum for users, developers, foundation leaders, governments and businesses to discuss the present technology and future developments.
-                        </p>
                         <h4>Topics of Call for Papers (CFP)</h4>
-                        <p>GNOME.Asia Summit 2019 will invite talks relevant to GNOME and FLOSS. We welcome proposals by newcomers and experienced speakers alike. The possible topics are, but not limited to :</p>
+                        <br/>
                         <h5>Contribute to GNOME</h5>
                         <ul>
                             <li>Latest 	developments</li>
@@ -60,13 +54,9 @@ class Proposal extends React.Component{
                             <li>Distributed systems</li>
                             <li>Open Source DevOps</li>
                         </ul>
-                        <p>
-                        We are also interested in other topics related to Free/Libre and Open Source Software which are not listed above.
-                        </p>
+                        <br/> 
                         <h5>Type of Session</h5>
-                        <p>
-                            You can choose from the following types of session;
-                        </p>
+                       
                         <ol start="1">
                             <li>
                             Standard session. Standard session will be scheduled for 45 minutes (35 minutes talk + 10 minutes Q&A). The session could be a technical talk, panel discussion, or BOF. If you need more time or additional resources, feel free to get in touch with the organizing team.
@@ -77,9 +67,18 @@ class Proposal extends React.Component{
                         </ol>
                         <h5>Submission Criteria</h5>
                         <p>
-                        Please provide a short abstract of your paper (under 200 words). Include your name, biographical information, a title, and a description of your presentation. Please submit your proposal to the following <a href="https://s.id/GNAS19-CfP" target="__blank">LINK</a>, 
-                        The reviewing team will evaluate the entries based on the submitted abstracts and available time by following the schedule.
+                        Please provide a short abstract of your paper (under 200 words). Include your name, biographical information, a title, and a description of your presentation.
+                        
                         </p>
+                        <div className="d-flex justify-content-center my-3">
+                            <div className="d-flex flex-column align-items-center">
+                                <span>Apply here</span>
+                                <br/>
+                                <a href="https://s.id/GNAS19-CfP" target="__blank" className="btn btn-lg btn-danger shadow-sm">Call for Papers for GNOME.Asia Summit 2019</a>
+                                <br/>
+                                <Counter/> 
+                            </div>
+                        </div>
                         <ul>
                             <li>Submission timeline: July 15th to August 15th 2019</li>
                             <li>Confirmation of paper acceptance: August, 20th 2019</li>
@@ -92,20 +91,8 @@ class Proposal extends React.Component{
                         <p>
                         All interested contributors are highly encouraged to send in talks. More information about GNOME.Asia Summit 2019 is available at <a href="https://asiasummit.gnome.id" target="__blank">https://asiasummit.gnome.id</a>.
                         </p>
-                        <div className="d-flex justify-content-center mt-5">
-                            <div className="d-flex flex-column align-items-center">
-                                <a href="https://s.id/GNAS19-CfP" target="__blank" className="btn btn-lg btn-danger shadow-sm">Call for Papers for GNOME.Asia Summit 2019</a>
-                                <br/>
-                                <Counter/> 
-                            </div>
                         
-                            
-                        </div>
                     </div>
-                    {/* <div className="d-flex align-items-center justify-content-center" style={{ height:'25vh' }} >
-                            
-                        <p style={{ letterSpacing:5 }}>Coming soon</p>
-                    </div> */}
                 </div>
             </div>
         )
