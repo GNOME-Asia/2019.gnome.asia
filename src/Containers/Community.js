@@ -1,12 +1,12 @@
 import React from 'react';
 // import unmuh from '../assets/unmuh.png';
-import gresikdev from '../assets/logo_GresikdevLogo.svg';
-import gnomeid from '../assets/logo_gnome-id.svg';
-import gimpscape from '../assets/Gimpscape.svg';
+import gresikdev from '../assets/gresikdev.png';
+import gnomeid from '../assets/gnome-id.png';
+import gimpscape from '../assets/gimpscape.png';
 
 
 const Image = props =>{
-    return <img className="img-fluid" alt={props.name} src={props.src} style={{ width:'100px' }}/>
+    return <img className="img-fluid" alt={props.name} src={props.src} style={{ width:'144px' }}/>
 }
 
 

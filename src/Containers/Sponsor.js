@@ -1,9 +1,9 @@
 import React from 'react';
-import unmuh from '../assets/logo_UMG.svg';
+import unmuh from '../assets/unmuh.png';
 
 
 const Image = props => {
-    return <img className="img-fluid" alt={props.name} src={props.src} style={{ width:'100px' }}/>
+    return <img className="img-fluid" alt={props.name} src={props.src} style={{ width:'128px' }}/>
 }
 class Sponsor extends React.Component{
     render(){
