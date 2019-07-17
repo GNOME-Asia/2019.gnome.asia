@@ -69,11 +69,12 @@ class Proposal extends React.Component{
         return(
             <div className="Page py-5" id="callofproposal">
                 <div className="container py-3">
+                
                     <h1>Call for Papers for GNOME.Asia Summit 2019 is now open!</h1>
                     <hr/>
                     <br/>
                         <h4>Topics of Call for Papers (CFP)</h4>
-                        <div className="container px-3">
+                        <div className="container px-5">
                         <br/>
                         <div onClick={this._gnome} className="cfptitle">
 
@@ -138,60 +139,64 @@ class Proposal extends React.Component{
                             </ul>
                         </div>
                         
-                        <div onClick={this._ts} className="cfptitle">
-
-                            <h5> <i className={`fas ${this.state.ts ? 'fa-minus':'fa-plus'} mr-2`}></i>Type of Session</h5>
-                        </div>
-                        <div className={this.state.ts ? 'cfpshow' : 'cfphidden'}>
-
-                            <ol start="1">
-                                <li>
-                                Standard session. Standard session will be scheduled for 45 minutes (35 minutes talk + 10 minutes Q&A). The session could be a technical talk, panel discussion, or BOF. If you need more time or additional resources, feel free to get in touch with the organizing team.
-                                </li>
-                                <li>
-                                Lightning talk session. This session is a 5 minutes presentation for demonstrating your work or promoting an interesting topic. 
-                                </li>
-                            </ol>
-                        </div>
-                        <div onClick={this._sc} className="cfptitle">
-
-                            <h5><i className={`fas ${this.state.sc ? 'fa-minus':'fa-plus'} mr-2`}></i>Submission Criteria</h5>
-                        </div>
-                        <div className={this.state.sc ? 'cfpshow' : 'cfphidden'}>
-
-                        <p>
-                        Please provide a short abstract of your paper (under 200 words). Include your name, biographical information, a title, and a description of your presentation.
-                        
-                        </p>
-                        
-                        <ul>
-                            <li>Submission timeline: July 15th to August 15th 2019</li>
-                            <li>Confirmation of paper acceptance: August, 20th 2019</li>
-                        </ul>
-                        </div>
-                        <div onClick={this._travel} className="cfptitle">
-
-                            <h5><i className={`fas ${this.state.travel ? 'fa-minus':'fa-plus'} mr-2`}></i>Travel Support</h5>
-                        </div>
-                        <div className={this.state.travel ? 'cfpshow' : 'cfphidden'}>
-
-                            <p>
-                            There will be an opportunity for speakers and GNOME Foundation members to request travel support by the GNOME Foundation. Please submit your application to the GNOME Travel Committee. For further information please refer to this guides <a href="https://wiki.gnome.org/Travel" target="__blank">https://wiki.gnome.org/Travel</a>.
-                            </p>
-                            <p>
-                            All interested contributors are highly encouraged to send in talks. More information about GNOME.Asia Summit 2019 is available at <a href="https://asiasummit.gnome.id" target="__blank">https://asiasummit.gnome.id</a>.
-                            </p>
-                        </div>
+                     
 
                         
                     </div>
-                    <div className="d-flex justify-content-center my-3">
-                        <div className="d-flex flex-column align-items-center">
-                            <span>Apply here</span>
-                            <br/>
-                            <a href="https://s.id/GNAS19-CfP" target="__blank" className="btn btn-lg btn-danger shadow-sm">Call for Papers for GNOME.Asia Summit 2019</a>
-                            <br/>
-                            <Counter/> 
+
+                    <br/>
+                    <div className="container">
+                        <div>
+
+                        <h5>Type of Session</h5>
+                        </div>
+                        <div>
+
+                        <ol start="1">
+                            <li>
+                            Standard session. Standard session will be scheduled for 45 minutes (35 minutes talk + 10 minutes Q&A). The session could be a technical talk, panel discussion, or BOF. If you need more time or additional resources, feel free to get in touch with the organizing team.
+                            </li>
+                            <li>
+                            Lightning talk session. This session is a 5 minutes presentation for demonstrating your work or promoting an interesting topic. 
+                            </li>
+                        </ol>
+                        </div>
+                        <div >
+
+                        <h5>Submission Criteria</h5>
+                        </div>
+                        <div>
+                            <p>
+                            Please provide a short abstract of your paper (under 200 words). Include your name, biographical information, a title, and a description of your presentation.
+                            </p>
+                            <ul>
+                                <li>Submission timeline: July 15th to August 15th 2019</li>
+                                <li>Confirmation of paper acceptance: August, 20th 2019</li>
+                            </ul>
+                        </div>
+                        <div>
+
+                        <h5>Travel Support</h5>
+                        </div>
+                        <div>
+
+                        <p>
+                        There will be an opportunity for speakers and GNOME Foundation members to request travel support by the GNOME Foundation. Please submit your application to the GNOME Travel Committee. For further information please refer to this guides <a href="https://wiki.gnome.org/Travel" target="__blank">https://wiki.gnome.org/Travel</a>.
+                        </p>
+                        <p>
+                        All interested contributors are highly encouraged to send in talks. More information about GNOME.Asia Summit 2019 is available at <a href="https://asiasummit.gnome.id" target="__blank">https://asiasummit.gnome.id</a>.
+                        </p>
+                        </div>
+
+                        <div className="d-flex justify-content-center my-3">
+                            <div className="d-flex flex-column align-items-center">
+                                <span>Apply here</span>
+                                <br/>
+                                <a href="https://s.id/GNAS19-CfP" target="__blank" className="btn btn-lg btn-danger shadow-sm">Call for Papers for GNOME.Asia Summit 2019</a>
+                                <br/>
+                                <Counter/> 
+                            </div>
+
                         </div>
                     </div>
                 </div>
