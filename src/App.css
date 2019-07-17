@@ -7,6 +7,7 @@
   background-color: #ffffff;
   color:#616161;
   
+  
   font-size: 14px;
 }
 
@@ -95,3 +96,53 @@ p{
 .img-hotels{
   box-shadow: 3px 3px 10px 0px #9E9E9E;
 }
+
+
+
+.cfpshow{
+  opacity: 0;
+  display: block;
+  animation-name: cfpshow;
+  animation-duration: 800ms;
+  animation-delay: 350ms;
+  animation-timing-function:cubic-bezier(0.57, 0.21, 1, 1);
+  animation-fill-mode: forwards;
+}
+
+.cfphidden{
+  display: none;
+}
+
+@keyframes cfpshow{
+  0%{
+    display: block;
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    display: none;
+    opacity: 1;
+
+  }
+}
+
+.cfptitle{
+  cursor: pointer;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.cfptitle:hover > h5 > i{
+  color: #dc3545;
+  text-shadow: 1px 1px 1px #616161;
+  transition: 200ms ease-out;
+
+}
+
+.fa-minus{
+  color: #dc3545;
+  text-shadow: 1px 1px 1px #616161;
+ 
+}
+
