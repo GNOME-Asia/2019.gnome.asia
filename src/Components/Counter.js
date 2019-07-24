@@ -44,10 +44,11 @@ class Counter extends React.Component{
 
             clearInterval(this.interval)
         }
+        clearInterval(this.interval)
     }
 
     render(){
-        console.log(this.state.targetdate)
+        
         return(
             <div>
                 <span className="px-1">{this.state.days} <b><i>Days</i></b></span>

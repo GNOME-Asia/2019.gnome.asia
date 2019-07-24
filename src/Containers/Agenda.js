@@ -19,7 +19,7 @@ class Agenda extends React.Component{
         }
     }
     render(){
-        console.log(this.state.activeTabs)
+        
         return(
             <div className="Page py-5" style={{ backgroundColor:'#E0E0E0' }}>
                 <div className="container py-3">
