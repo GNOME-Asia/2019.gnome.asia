@@ -1,5 +1,4 @@
-import React from 'react';
-import { connect } from 'react-redux';
+ import React from 'react';
 
 class EmailInput extends React.Component{
     constructor(props){
@@ -17,12 +16,12 @@ class EmailInput extends React.Component{
         return(
             <div className="form-group">
                                 
-                <label>Email</label>
-                <input type="email" 
+                <label htmlFor="email">Email</label>
+                <input id="email" type="email" 
                 className={this.state.checkemail ? this.state.emailvalid ? "form-control is-valid" : "form-control is-invalid" :"form-control"}
                 value={this.props.value}
                 onChange={this.props.onChangeValue}
-                
+                placeholder="example@example.com"
                 required/>
                 {
                     this.state.emailvalid ? 
@@ -40,10 +39,4 @@ class EmailInput extends React.Component{
     }
 }
 
-const mapStateToProps = state => {
-    return{
-        email: state.UserReducer.email
-    }
-}
-
-export default connect(mapStateToProps,null)(EmailInput);
+export default EmailInput;

@@ -15,11 +15,16 @@ import Media from './Containers/Media';
 import Community from './Containers/Community';
 import Proposal from './Containers/Proposal';
 import Speakers from './Containers/Speakers';
-import Registration from './Containers/Registration';
+import Loading from './Components/Loading';
 import { 
   BrowserRouter as Router
-  ,Switch,Route 
+  ,Switch,Route,Redirect
 } from 'react-router-dom';
+import { connect } from 'react-redux';
+
+const Dashboard = React.lazy(()=>import('./Containers/Dashboard'));
+const Login = React.lazy(()=>import('./Containers/Login'));
+const Registration = React.lazy(()=>import('./Containers/Registration'));
 
 
 const content = () => {
@@ -56,16 +61,58 @@ const content = () => {
       </div>
   )
 }
-class App extends React.Component {
 
+const Dashboardroute= ({component: Component, ...props}) => {
+  return(
+    <Route 
+      render={
+        ()=> props.islogin ? (
+        <React.Suspense fallback={<Loading/>}>
+
+          <Component />
+        </React.Suspense>
+        ):(<Redirect to={{ pathname:'/login' }}/>)
+      }
+    />
+  )
+}
+
+const LoginRoute = ({component:Component, ...props}) => {
+  return(
+    <Route
+      render={
+        ()=> props.islogin ? <Redirect to={{ pathname:'/dashboard' }}/> : 
+        <React.Suspense fallback={<Loading/>} >
+
+          <Component />
+        </React.Suspense>
+      }
+    />
+  )
+}
+
+const Registrationroute = ({component:Component, ...props}) => {
+  return(
+    <Route
+      render={
+        ()=> props.islogin ? <Redirect to={{ pathname:'/dashboard' }}/> : 
+        <React.Suspense fallback={<Loading/>}>
+          <Component />
+        </React.Suspense>
+      }
+    />
+  )
+}
+class App extends React.Component {
   render(){
-    
     return (
       <Router>
        <div className="App">
        <Switch>
         <Route path="/" exact component={content} />
-        <Route path="/registration" component={Registration}/>
+        <Registrationroute islogin={this.props.islogin} path="/registration" component={Registration} />
+        <LoginRoute islogin={this.props.islogin} path="/login" component={Login}/>
+        <Dashboardroute  islogin={this.props.islogin} path="/dashboard" component={Dashboard} />
         <Route component={Notfound}/>
         </Switch>
        </div>
@@ -75,6 +122,10 @@ class App extends React.Component {
   
 }
 
+const mapStateToProps = state => {
+  return{
+    islogin: state.UserReducer.islogin
+  }
+}
 
-
-export default App;
+export default connect(mapStateToProps,null)(App);

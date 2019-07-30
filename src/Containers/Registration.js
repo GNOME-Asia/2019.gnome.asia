@@ -1,6 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import EmailInput from '../Components/EmailInput';
+import gnome from '../assets/photo_2019-07-10 19.01.08.jpeg';
+import { Link } from 'react-router-dom';
+import Footerback from '../Components/Footerback';
+import Buttonsubmit from '../Components/Buttonsubmit';
+import { doRegister,doLogout } from '../Redux/action/userAction';
 class Registration extends React.Component{
     constructor(props){
         super();
@@ -9,15 +14,17 @@ class Registration extends React.Component{
             name:'',
             email:'',
             password:'',
+            confirm:'',
             passlength:{
                 check:false,
                 match:false
             },
-            confirm:'',
             matchpassword:{
                 check:false,
                 match:false
-            }
+            },
+            data:'',
+            loading:false
             
         }
 
@@ -40,10 +47,13 @@ class Registration extends React.Component{
         })
     }
 
-    _handleSubmit(e){
+    async _handleSubmit(e){
         e.preventDefault();
+        if(this.state.matchpassword.match){
 
-        console.log(e)
+            this.props.doregister(this.state.name,this.state.email,this.state.password)
+        }
+
     }
     
     _inputPassword(e){
@@ -97,20 +107,29 @@ class Registration extends React.Component{
             }
         }
     }
+
     
-    render(){        
-        
+
+    render(){  
         return(
-            <div className="Page my-5">
+            <div className="Page mb-5 mt-3">
                 <div className="container py-3">
                     <h1>Registration</h1>
                     <hr/>
-                    <div className="row justify-content-center">
-                        <div className="col-md-4">
+                    <br/>
+                    <div className="row">
+                        <div className="col-md-8">
+                            <div className="px-5">
+                                <img src={gnome} className="img-fluid" alt="GNOME Asia Summit 2019" />
+                            </div>
+                        </div>
+                        <div className="col-md-4 pt-5">
+                            {this.props.error ?  <div className="text-danger mb-3"><b><i className="far fa-times-circle mr-3"></i> {this.props.error}</b></div>:null}
                             <form onSubmit={this._handleSubmit}>
                                 <div className="form-group">
-                                    <label>Full Name</label>
-                                    <input type="Text" className="form-control" 
+                                    <label htmlFor="name">Full Name</label>
+                                    <input id="name" type="Text" className="form-control" 
+                                    placeholder="Gatot Kaca"
                                     value={this.state.name} 
                                     onChange={this._inputName}
                                     required/>
@@ -121,11 +140,12 @@ class Registration extends React.Component{
                                     onChangeValue={this._inputEmail}
                                 />
                                 <div className="form-group">
-                                    <label>Password</label>
-                                    <input type="password" 
+                                    <label htmlFor="password">Password</label>
+                                    <input id="password" type="password" 
                                     className={this.state.passlength.check ? (this.state.passlength.match ? "form-control is-valid":"form-control is-invalid") : "form-control"} 
                                     value={this.state.password}
                                     onChange={this._inputPassword}
+                                    placeholder="········"
                                     required/>
                                     {
                                         this.state.passlength < 8 && this.state.passlength.check ? 
@@ -138,11 +158,12 @@ class Registration extends React.Component{
                                     }
                                 </div>
                                 <div className="form-group">
-                                    <label>Confirm Password</label>
-                                    <input type="password" 
+                                    <label htmlFor="confirm">Confirm Password</label>
+                                    <input id="confirm" type="password" 
                                     className={this.state.matchpassword.check ? (this.state.matchpassword.match ? "form-control is-valid" : "form-control is-invalid") :"form-control"}
                                     value={this.state.confirm}
                                     onChange={this._inputConfirm}
+                                    placeholder="········"
                                     required/>
                                     {
                                         this.state.matchpassword.match && this.state.matchpassword.check ? 
@@ -155,14 +176,23 @@ class Registration extends React.Component{
                                         </div>
                                     }
                                 </div>
+
+                                <Buttonsubmit 
+                                    class="btn btn-block btn-primary btn-rounded"
+                                    text="Sign up"
+                                    loading={this.props.loading}
+                                />
                                 
-                                
-                                
-                                <button className="btn btn-block btn-primary">Sign Up</button>
                             </form>
+                            <br/>
+                            <div className="d-flex justify-content-center">
+                                <span>Already have an account?</span>
+                                <Link className="ml-2" to="/login">Login</Link>
+                            </div>
                         </div>
                     </div>
-
+                    
+                    <Footerback/>
                 </div>
             </div>
         )
@@ -173,10 +203,17 @@ class Registration extends React.Component{
 
 const mapStateToProps = state => {
     return{
-        user: state.UserReducer.user
+        name: state.UserReducer.name,
+        loading:state.UserReducer.loading,
+        error: state.UserReducer.error
     }
 }
 
+const mapDispatchToProps = dispatch => {
+    return{
+        doregister: (name,email,password) => dispatch(doRegister(name,email,password)),
+        doLogout: () => dispatch(doLogout())
+    }
+}
 
-export default connect(mapStateToProps,null)(Registration);
-// export default Registration;
+export default connect(mapStateToProps,mapDispatchToProps)(Registration);
