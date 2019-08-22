@@ -1,8 +1,12 @@
 const initialstate = {
     name:'',
     email:'',
+    phone:'',
+    payments:[],
+    verified:null,
     islogin:false,
     loading: false,
+    token: null,
     error:null
 }
 
@@ -14,8 +18,12 @@ let Reducers = (state = initialstate, action) =>{
                 ...state,
                 name:action.name,
                 email:action.email,
+                token: action.token,
                 islogin:true,
-                loading:false
+                loading:false,
+                phone: action.phone,
+                verified: action.verified,
+                payments:action.payments
             }
         }
         case 'FETCH_REGISTER':{
@@ -38,7 +46,10 @@ let Reducers = (state = initialstate, action) =>{
                 ...state,
                 email:action.email,
                 password:action.password,
-                loading:false
+                phone:action.phone,
+                loading:false,
+                islogin:true,
+                verified: action.verified
             }
         }
 
@@ -56,7 +67,11 @@ let Reducers = (state = initialstate, action) =>{
                 islogin:true,
                 email:action.email,
                 name:action.name,
-                loading:false
+                phone:action.phone,
+                token: action.token,
+                loading:false,
+                verified: action.verified,
+                payments:action.payments
             }
         }
 
@@ -81,7 +96,11 @@ let Reducers = (state = initialstate, action) =>{
             return{
                 ...state,
                 islogin:false,
-                loading:false
+                token:null,
+                user:'',
+                email:'',
+                loading:false,
+                verified: null
             }
         }
             

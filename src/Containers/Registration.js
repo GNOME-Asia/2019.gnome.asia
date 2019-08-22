@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import Footerback from '../Components/Footerback';
 import Buttonsubmit from '../Components/Buttonsubmit';
 import { doRegister,doLogout } from '../Redux/action/userAction';
+import PhoneInput from '../Components/PhoneInput';
 class Registration extends React.Component{
     constructor(props){
         super();
@@ -13,6 +14,8 @@ class Registration extends React.Component{
         this.state = {
             name:'',
             email:'',
+            countrycode: '',
+            phone:'',
             password:'',
             confirm:'',
             passlength:{
@@ -33,7 +36,9 @@ class Registration extends React.Component{
         this._handleSubmit = this._handleSubmit.bind(this);
         this._inputPassword = this._inputPassword.bind(this);
         this._inputConfirm = this._inputConfirm.bind(this);
-        
+        this._countryCode = this._countryCode.bind(this)
+        this._phone = this._phone.bind(this)
+
     }
 
     _inputName(e){
@@ -50,8 +55,8 @@ class Registration extends React.Component{
     async _handleSubmit(e){
         e.preventDefault();
         if(this.state.matchpassword.match){
-
-            this.props.doregister(this.state.name,this.state.email,this.state.password)
+            const telp = this.state.countrycode+this.state.phone
+            this.props.doregister(this.state.name,this.state.email,telp,this.state.password)
         }
 
     }
@@ -108,9 +113,22 @@ class Registration extends React.Component{
         }
     }
 
+    _countryCode(code){
+        this.setState({
+            countrycode: code
+        })
+    }
+    
+    _phone(phone){
+        this.setState({
+            phone: phone
+        })
+    }
+    
     
 
     render(){  
+        console.log("Kode Negara: " +this.state.countrycode + this.state.phone)
         return(
             <div className="Page mb-5 mt-3">
                 <div className="container py-3">
@@ -138,6 +156,12 @@ class Registration extends React.Component{
                                 <EmailInput 
                                     value={this.state.email}
                                     onChangeValue={this._inputEmail}
+                                />
+                                <PhoneInput
+                                    countrycode={this.state.countrycode}
+                                    phone={this.state.phone}
+                                    onChangeCode={this._countryCode}
+                                    onChangePhone={this._phone}
                                 />
                                 <div className="form-group">
                                     <label htmlFor="password">Password</label>
@@ -211,7 +235,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return{
-        doregister: (name,email,password) => dispatch(doRegister(name,email,password)),
+        doregister: (name,email,phone,password) => dispatch(doRegister(name,email,phone,password)),
         doLogout: () => dispatch(doLogout())
     }
 }

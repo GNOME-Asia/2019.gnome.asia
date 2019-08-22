@@ -13,10 +13,12 @@ const middleware = applyMiddleware(logger,sagaMiddleware)
 const store = createStore(Reducers,middleware);
 sagaMiddleware.run(mysaga)
 
+//check user is login or not from Firebase
 firebase.auth().onAuthStateChanged(user => {
-    if(user){
-        
-        store.dispatch(verifyUser(user))
+    
+    if(user && localStorage.getItem('ken_token')){
+        const token = localStorage.getItem('ken_token')
+        store.dispatch(verifyUser(user,token))
     }
     
 })

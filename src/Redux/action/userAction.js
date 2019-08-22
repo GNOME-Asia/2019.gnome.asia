@@ -1,21 +1,23 @@
 
-export function doRegister(name,email,password){
+export function doRegister(name,email,phone,password){
 //   console.log(data)
     // firebase.auth().createUserWithEmailAndPassword(email,password)
     return {
         type:"FETCH_REGISTER",
         name:name,
         email:email,
+        phone: phone,
         password:password
     }
 }
 
 
-export function verifyUser(user){  
+export function verifyUser(user,token){  
      
     return {
         type:"VERIFY_USER",
-        data: user
+        data: user,
+        token: token
     }
 }
 

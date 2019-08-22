@@ -41,15 +41,26 @@ const login = (param) => connection({
     return err
 })
 
+const logout = (token) => connection({
+    method:'post',
+    url:'/logout',
+    headers:{
+        'Authorization': 'Bearer '+ token
+    }
+})
+
 //Check Login
 
-const checkLogin = () => connection({
+const checkLogin = (token) => connection({
     method:'get',
-    url:'/checklogin'
+    url:'/user',
+    headers:{
+        'Authorization': 'Bearer '+ token
+    }
 })
 
 export default{
-    test,registration,login, checkLogin
+    test,registration,login, checkLogin, logout
 }
 
 
