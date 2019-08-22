@@ -1,5 +1,5 @@
 import React from 'react';
-// import Counter from '../Components/Counter';
+import Counter from '../Components/Counter';
 
 class Proposal extends React.Component{
     constructor(props){
@@ -192,10 +192,9 @@ class Proposal extends React.Component{
                             <div className="d-flex flex-column align-items-center">
                                 <span>Apply here</span>
                                 <br/>
-                                <button className="btn btn-lg btn-dark shadow-sm btn" disabled>Call for Papers for GNOME.Asia Summit 2019 is Closed</button>
-                                {/* <a href="https://s.id/GNAS19-CfP" target="__blank" className="btn btn-lg btn-danger shadow-sm">Call for Papers for GNOME.Asia Summit 2019</a> */}
+                                <a href="https://s.id/GNAS19-CfP" target="__blank" className="btn btn-lg btn-danger shadow-sm">Call for Papers for GNOME.Asia Summit 2019</a>
                                 <br/>
-                                {/* <Counter/>  */}
+                                <Counter/> 
                             </div>
 
                         </div>

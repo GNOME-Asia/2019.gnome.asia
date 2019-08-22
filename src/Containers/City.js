@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { setLocation } from '../Redux/Actions';
 import pesona from '../assets/pesona.png';
 import santika from '../assets/santika.png';
 import saptanawa from '../assets/saptanawa.jpg';
@@ -82,6 +84,17 @@ class Cityinformation extends React.Component{
     }
 }
 
+const mapStateToProps = state =>{
+    return{
+        loc: state.Reducers.location
+    }
+}
+
+const mapDispatchToProps = dispatch =>{
+    return{
+        setloc: (loc) => dispatch(setLocation(loc))
+    }
+}
 
 
-export default Cityinformation;
+export default connect(mapStateToProps,mapDispatchToProps)(Cityinformation)
