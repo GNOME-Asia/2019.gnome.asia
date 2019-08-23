@@ -1,6 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { setLocation } from '../Redux/Actions';
 import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col } from 'reactstrap';
 
 class Agenda extends React.Component{
@@ -111,17 +109,4 @@ class Agenda extends React.Component{
 }
 
 
-
-const mapStateToProps = state =>{
-    return{
-        loc: state.Reducers.location
-    }
-}
-
-const mapDispatchToProps = dispatch =>{
-    return{
-        setloc: (loc) => dispatch(setLocation(loc))
-    }
-}
-
-export default connect(mapStateToProps,mapDispatchToProps)(Agenda);
+export default Agenda;
