@@ -194,7 +194,7 @@ class Proposal extends React.Component{
                                 <br/>
                                 <a href="https://s.id/GNAS19-CfP" target="__blank" className="btn btn-lg btn-danger shadow-sm">Call for Papers for GNOME.Asia Summit 2019</a>
                                 <br/>
-                                <Counter/> 
+                                <Counter targetdate="Aug 15, 2019 15:37:25"/> 
                             </div>
 
                         </div>

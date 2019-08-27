@@ -1,12 +1,12 @@
 import { put,takeLatest,all,call } from 'redux-saga/effects';
 import Api from '../Settings/api';
-import firebase from '../Settings/firebase';
+// import firebase from '../Settings/firebase';
 // var _ = require('lodash');
 
 function* fetchRegister(action){
     try {
-        const [firebaseauth,kenproject] = yield all([
-            firebase.auth().createUserWithEmailAndPassword(action.email,action.password),
+        const [kenproject] = yield all([
+            // firebase.auth().createUserWithEmailAndPassword(action.email,action.password),
             call(Api.registration,action)    
         ])
 
@@ -23,7 +23,8 @@ function* fetchRegister(action){
             phone: ken.phone,
             verified: ken.email_verified_at,
             payments: [],
-            email:firebaseauth.user.email
+            email:ken.email
+            // email:firebaseauth.user.email
 
         })
 
@@ -65,7 +66,7 @@ function *islogin(action){
 function* fetchLogout(){
 
    try {
-    firebase.auth().signOut()
+    // firebase.auth().signOut()
     if(localStorage.getItem('ken_token')){
         yield call(Api.logout,localStorage.getItem('ken_token'))
         // console.log(kenlogout.data)
@@ -86,15 +87,16 @@ function* fetchLogout(){
 function* fetchLogin(action){
 
     try {
-        const [firebaseauth,kenproject] = yield all([
-            firebase.auth().signInWithEmailAndPassword(action.email,action.password),
+        const [kenproject] = yield all([
+            // firebase.auth().signInWithEmailAndPassword(action.email,action.password),
             call(Api.login,action)
         ])
         // console.log(kenproject)
         localStorage.setItem('ken_token',kenproject.accessToken)
         yield put({
             type:"DO_LOGIN",
-            email:firebaseauth.user.email,
+            // email:firebaseauth.user.email,
+            email: kenproject.user.email,
             token: kenproject.accessToken,
             name: kenproject.user.name,
             phone:kenproject.user.phone,

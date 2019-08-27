@@ -3,7 +3,22 @@ import Footer from '../Components/Footerback';
 import { connect } from 'react-redux';
 import { doLogout } from '../Redux/action/userAction';
 import Navdashboard from '../Components/Navdashboard';
+import Counter from '../Components/Counter';
 
+
+const Status = (props) => {
+    if(props.code === 0) return <span className="text-danger font-weight-bold">Belum Bayar</span>
+    else if(props.code === 1) return <span className="text-success">Sudah Terbayar</span>
+    else if(props.code === 2) return <span className="text-danger">QR CODE EXPIRED</span>
+}
+
+const Qrcode = (props) => {
+    return(
+        <div>
+            <img src={props.src} alt="QRcode Payment" width="40%"/>
+        </div>
+    )
+}
 
 class Dashboard extends React.Component{
     render(){
@@ -35,7 +50,27 @@ class Dashboard extends React.Component{
                                 <div>
                                     {
                                         this.props.verified ? (
-                                            <img src={this.props.payments.qrcode_url}  alt="Mycoop"/>
+                                            this.props.payments.map((item,key) => {
+                                                if(item.status === 0 ){
+                                                    return (
+                                                        <div key={key} className="p-3 border text-center my-2">
+                                                            <Status code={item.status}/>
+                                                            <br/>
+                                                            <Qrcode src={item.qrcode_url}/>
+                                                            <br/>
+                                                            <div>
+                                                            <span className="text-danger font-weight-bold">QR code Expired in</span>
+                                                            <Counter targetdate={item.expired_date}/> 
+                                                            </div>
+                                                        </div>
+                                                    )
+                                                }
+                                                else {
+
+                                                }
+                                                return null
+                                            } )
+                                            
                                         ):(<p>Check your Email for Verify & Get Payment QRcode</p>)
                                     }
                                 </div>
@@ -57,7 +92,7 @@ const mapStateToProps = state => {
         name: state.UserReducer.name,
         phone: state.UserReducer.phone,
         verified: state.UserReducer.verified,
-        payments: state.UserReducer.payments[0]
+        payments: state.UserReducer.payments
     }
 }
 

@@ -30,7 +30,6 @@ const registration = (param) => connection({
 })
 
 //Login
-
 const login = (param) => connection({
     method:'post',
     url:'/login',
