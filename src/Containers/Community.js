@@ -3,6 +3,7 @@ import React from 'react';
 import gresikdev from '../assets/gresikdev.png';
 import gnomeid from '../assets/gnome-id.png';
 import gimpscape from '../assets/gimpscape.png';
+import klim from '../assets/KLiM.png'
 
 
 const Image = props =>{
@@ -35,6 +36,12 @@ class Community extends React.Component{
                                 <Image 
                                     name="GimpScape"
                                     src={gimpscape}
+                                />
+                            </li>
+                            <li className="list-inline-item">
+                                <Image 
+                                    name="KLiM"
+                                    src={klim}
                                 />
                             </li>
                         </ul>

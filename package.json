@@ -2,6 +2,7 @@
   "name": "gnomeasia",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://2019.gnome.asia",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "firebase": "^6.3.1",
