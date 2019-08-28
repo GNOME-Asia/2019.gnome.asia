@@ -6,7 +6,7 @@ class Agenda extends React.Component{
         super(props);
 
         this.state = {
-            activeTabs: '1'
+            activeTabs: '0'
         }
         this._toggle = this._toggle.bind(this);
     }
@@ -24,15 +24,9 @@ class Agenda extends React.Component{
             <div className="Page py-5" style={{ backgroundColor:'#E0E0E0' }}>
                 <div className="container py-3">
                     <div className="text-center">
-
                         <h1>Schedule</h1>
                     </div>
                     <hr />
-                    <br />
-                    <div>
-                        <h4>October, 12–13 2019</h4>
-                    </div>
-
                     <div className="p-4 agenda-container">
                        <Nav tabs fill>
                             <NavItem>
@@ -55,7 +49,10 @@ class Agenda extends React.Component{
                             <TabPane tabId="0">
                                 <Row className="my-3">
                                 <Col sm="12">
-                                    <Table striped hover bordered responsive className="text-center">
+                                    <Table bordered responsive className="text-center">
+                                        <thead className="table-dark">
+                                            <tr><th colSpan="4">Friday, October 11th 2019</th></tr>
+                                        </thead>
                                         <tbody>
                                             <tr>
                                                 <td className="align-middle">08:00 - 08:30</td>
@@ -63,7 +60,7 @@ class Agenda extends React.Component{
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">08:30 - 09:30</td>
-                                                <td className="align-middle" colSpan="3">Gitlab Class <br/> GresikDev</td>
+                                                <td className="align-middle" colSpan="3">Gitlab Class by GresikDev</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">09:30 - 11:00</td>
@@ -91,7 +88,10 @@ class Agenda extends React.Component{
                             <TabPane tabId="1">
                                 <Row className="my-3">
                                 <Col sm="12">
-                                    <Table striped hover bordered responsive className="text-center">
+                                    <Table bordered responsive className="text-center">
+                                        <thead className="table-dark">
+                                            <tr><th colSpan="6">Saturday, October 12th 2019</th></tr>
+                                        </thead>
                                         <tbody>
                                             <tr>
                                                 <td className="align-middle">08:00 - 09:00</td>
@@ -106,15 +106,15 @@ class Agenda extends React.Component{
                                                 <td className="align-middle" colSpan="5">Opening Talk by Mayor</td>
                                             </tr>
                                             <tr>
-                                                <td className="align-middle">9:40 - 9:45</td>
+                                                <td className="align-middle">09:40 - 09:45</td>
                                                 <td className="align-middle" colSpan="5">Opening Talk by Dean of University</td>
                                             </tr>
                                             <tr>
-                                                <td className="align-middle">9:45 - 9:50</td>
+                                                <td className="align-middle">09:45 - 09:50</td>
                                                 <td className="align-middle" colSpan="5">Opening Talk by GNOME</td>
                                             </tr>
                                             <tr>
-                                                <td className="align-middle">9:50 - 10:50</td>
+                                                <td className="align-middle">09:50 - 10:50</td>
                                                 <td className="align-middle" colSpan="5">GNOME Foundation — We're Here to Help - Rosanna Yuen</td>
                                             </tr>
                                             <tr>
@@ -126,15 +126,12 @@ class Agenda extends React.Component{
                                                 <td className="align-middle" colSpan="5">Break/Lunch/Praying</td>
                                             </tr>
                                             <tr>
-                                                <td colspan="6">Parallel Class</td>
-                                            </tr>
-                                            <tr>
                                                 <td></td>
-                                                <td className="align-middle">Class 1</td>
-                                                <td className="align-middle">Class 2</td>
-                                                <td className="align-middle">Class 3</td>
-                                                <td className="align-middle">Class 4</td>
-                                                <td className="align-middle">Class 5</td>
+                                                <td className="align-middle table-secondary">Class 1</td>
+                                                <td className="align-middle table-secondary">Class 2</td>
+                                                <td className="align-middle table-secondary">Class 3</td>
+                                                <td className="align-middle table-secondary">Class 4</td>
+                                                <td className="align-middle table-secondary">Class 5</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">13:00 - 13:45</td>
@@ -146,22 +143,19 @@ class Agenda extends React.Component{
                                             </tr>
                                             <tr>
                                                 <td></td>
-                                                <td colSpan="5">Group Photos (Each Class)</td>
+                                                <td className="align-middle" colSpan="5">Group Photos (Each Class)</td>
                                             </tr>
                                             <tr>
                                                 <td>13:45 - 14:50</td>
-                                                <td colSpan="5">Coffee Break</td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="6">Parallel Class</td>
+                                                <td className="align-middle" colSpan="5">Coffee Break</td>
                                             </tr>
                                             <tr>
                                                 <td></td>
-                                                <td className="align-middle">Class 1</td>
-                                                <td className="align-middle">Class 2</td>
-                                                <td className="align-middle">Class 3</td>
-                                                <td className="align-middle">Class 4</td>
-                                                <td className="align-middle">Class 5</td>
+                                                <td className="align-middle table-secondary">Class 1</td>
+                                                <td className="align-middle table-secondary">Class 2</td>
+                                                <td className="align-middle table-secondary">Class 3</td>
+                                                <td className="align-middle table-secondary">Class 4</td>
+                                                <td className="align-middle table-secondary">Class 5</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">14:50 - 15:00</td>
@@ -173,7 +167,7 @@ class Agenda extends React.Component{
                                             </tr>
                                             <tr>
                                                 <td></td>
-                                                <td colSpan="5">Group Photos (Each Class)</td>
+                                                <td className="align-middle" colSpan="5">Group Photos (Each Class)</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">15:00 - 15:30</td>
@@ -207,7 +201,10 @@ class Agenda extends React.Component{
                             <TabPane tabId="2">
                                 <Row className="my-3">
                                 <Col sm="12">
-                                    <Table striped hover bordered responsive className="text-center">
+                                    <Table bordered responsive className="text-center">
+                                        <thead className="table-dark">
+                                            <tr><th colSpan="6">Sunday, October 13th 2019</th></tr>
+                                        </thead>
                                         <tbody>
                                             <tr>
                                                 <td className="align-middle">08:00 - 09:10</td>
@@ -230,15 +227,12 @@ class Agenda extends React.Component{
                                                 <td className="align-middle" colSpan="5">Coffee Break</td>
                                             </tr>
                                             <tr>
-                                                <td colspan="6">Parallel Class</td>
-                                            </tr>
-                                            <tr>
                                                 <td></td>
-                                                <td className="align-middle">Class 1</td>
-                                                <td className="align-middle">Class 2</td>
-                                                <td className="align-middle">Class 3</td>
-                                                <td className="align-middle">Class 4</td>
-                                                <td className="align-middle">Class 5</td>
+                                                <td className="align-middle table-secondary">Class 1</td>
+                                                <td className="align-middle table-secondary">Class 2</td>
+                                                <td className="align-middle table-secondary">Class 3</td>
+                                                <td className="align-middle table-secondary">Class 4</td>
+                                                <td className="align-middle table-secondary">Class 5</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">11:30 - 12:15</td>
@@ -250,22 +244,19 @@ class Agenda extends React.Component{
                                             </tr>
                                             <tr>
                                                 <td></td>
-                                                <td colSpan="5">Group Photos (Each Class)</td>
+                                                <td className="align-middle" colSpan="5">Group Photos (Each Class)</td>
                                             </tr>
                                             <tr>
                                                 <td>12:15 - 13:30</td>
-                                                <td colSpan="5">Coffee Break</td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="6">Parallel Class</td>
+                                                <td className="align-middle" colSpan="5">Coffee Break</td>
                                             </tr>
                                             <tr>
                                                 <td></td>
-                                                <td className="align-middle">Class 1</td>
-                                                <td className="align-middle">Class 2</td>
-                                                <td className="align-middle">Class 3</td>
-                                                <td className="align-middle">Class 4</td>
-                                                <td className="align-middle">Class 5</td>
+                                                <td className="align-middle table-secondary">Class 1</td>
+                                                <td className="align-middle table-secondary">Class 2</td>
+                                                <td className="align-middle table-secondary">Class 3</td>
+                                                <td className="align-middle table-secondary">Class 4</td>
+                                                <td className="align-middle table-secondary">Class 5</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">13:30 - 14:15</td>
@@ -277,7 +268,7 @@ class Agenda extends React.Component{
                                             </tr>
                                             <tr>
                                                 <td></td>
-                                                <td colSpan="5">Group Photos (Each Class)</td>
+                                                <td className="align-middle" colSpan="5">Group Photos (Each Class)</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">14:15 - 14:45</td>
