@@ -14,6 +14,8 @@ class Registration extends React.Component{
         this.state = {
             name:'',
             email:'',
+            asal:'',
+            amount:'',
             countrycode: '',
             phone:'',
             password:'',
@@ -38,7 +40,17 @@ class Registration extends React.Component{
         this._inputConfirm = this._inputConfirm.bind(this);
         this._countryCode = this._countryCode.bind(this)
         this._phone = this._phone.bind(this)
+        this._asal = this._asal.bind(this)
+        this._amount = this._amount.bind(this)
 
+    }
+    _amount(e){
+        this.setState({amount:e.target.value})
+    }
+    _asal(e){
+        this.setState({
+            asal: e.target.value
+        })
     }
 
     _inputName(e){
@@ -56,7 +68,7 @@ class Registration extends React.Component{
         e.preventDefault();
         if(this.state.matchpassword.match){
             const telp = this.state.countrycode+this.state.phone
-            this.props.doregister(this.state.name,this.state.email,telp,this.state.password)
+            this.props.doregister(this.state.name,this.state.email,telp,this.state.password,this.state.asal,this.state.amount)
         }
 
     }
@@ -164,6 +176,14 @@ class Registration extends React.Component{
                                     onChangePhone={this._phone}
                                 />
                                 <div className="form-group">
+                                    <label htmlFor="asal">Asal</label>
+                                    <input id="asal" value={this.state.asal} onChange={this._asal} className="form-control"  required/>
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="amount">Amount</label>
+                                    <input id="amount" value={this.state.amount} onChange={this._amount} className="form-control"  required/>
+                                </div>
+                                <div className="form-group">
                                     <label htmlFor="password">Password</label>
                                     <input id="password" type="password" 
                                     className={this.state.passlength.check ? (this.state.passlength.match ? "form-control is-valid":"form-control is-invalid") : "form-control"} 
@@ -235,7 +255,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return{
-        doregister: (name,email,phone,password) => dispatch(doRegister(name,email,phone,password)),
+        doregister: (name,email,phone,password,asal,amount) => dispatch(doRegister(name,email,phone,password,asal,amount)),
         doLogout: () => dispatch(doLogout())
     }
 }

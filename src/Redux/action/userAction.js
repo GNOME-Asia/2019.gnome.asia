@@ -1,5 +1,5 @@
 
-export function doRegister(name,email,phone,password){
+export function doRegister(name,email,phone,password,asal,amount){
 //   console.log(data)
     // firebase.auth().createUserWithEmailAndPassword(email,password)
     return {
@@ -7,7 +7,9 @@ export function doRegister(name,email,phone,password){
         name:name,
         email:email,
         phone: phone,
-        password:password
+        password:password,
+        asal: asal,
+        amount: amount
     }
 }
 
