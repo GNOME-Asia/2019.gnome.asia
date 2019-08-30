@@ -163,7 +163,7 @@ class Agenda extends React.Component{
                                                 <td className="align-middle">Managing Social Capital in Open Source <br/> Rizki Kelimutu</td>
                                                 <td className="align-middle">Running Linux Desktop on Sony Playstation 4 <br/> Iwan Suryanto Tahari</td>
                                                 <td className="align-middle">pulseaudio: Improvement on Audio Streams Switch <br/> Hui Wang</td>
-                                                <td className="align-middle">The experience of the KLAS roadshow to ignite the spirit of Open Source in East Java, Indonesia <br/>Darian Rizaludin</td>
+                                                <td className="align-middle">Collaboration in Game  Development using Godot: an Open Source Software <br/>Sofyan Sugianto</td>
                                             </tr>
                                             <tr>
                                                 <td></td>
@@ -240,7 +240,7 @@ class Agenda extends React.Component{
                                                 <td className="align-middle">Open Source in Homeschooling Family <br/> Andik Nur Achmad</td>
                                                 <td className="align-middle">Penerapan Lisensi Creative Commons Pada Karya Desain <br/> Florens Debora Patricia</td>
                                                 <td className="align-middle">Power Management and Measurement in GNOME <br/> Aditya Manglik</td>
-                                                <td className="align-middle">Collaboration in Game  Development using Godot: an Open Source Software <br/>Sofyan Sugianto</td>
+                                                <td className="align-middle">The experience of the KLAS roadshow to ignite the spirit of Open Source in East Java, Indonesia <br/>Darian Rizaludin</td>
                                             </tr>
                                             <tr>
                                                 <td></td>
@@ -301,9 +301,9 @@ class Agenda extends React.Component{
                             </TabPane>
                         </TabContent>
  
+                    <small className="text-danger"><i>* The schedule can change at any time</i></small>
                     </div>
                 </div>
-                
                 <br/>
             </div>
         )
