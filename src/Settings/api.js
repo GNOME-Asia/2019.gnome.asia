@@ -5,7 +5,7 @@ let baseURL = env.environtment === 'production' ? env.production : env.local ;
 
 const connection = Axios.create({
     baseURL:baseURL,
-    timeout:10000
+    timeout:30000
 })
 
 

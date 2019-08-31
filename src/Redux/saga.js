@@ -29,6 +29,7 @@ function* fetchRegister(action){
         })
 
     } catch (error) {
+        console.log(error.response)
         yield put({type:"AUTH_ERROR",error:error.message})
     }
 }
@@ -58,6 +59,7 @@ function *islogin(action){
         
     
     } catch (error) {
+        console.log(error.response)
         yield put({type:"AUTH_ERROR",error:error.message})
     }
     
