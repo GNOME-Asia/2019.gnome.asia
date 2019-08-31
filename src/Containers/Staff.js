@@ -1,6 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { setLocation } from '../Redux/Actions';
 
 class Staff extends React.Component{
     render(){
@@ -86,16 +84,4 @@ class Staff extends React.Component{
   
 }
 
-const mapStateToProps = state =>{
-    return{
-        loc: state.Reducers.location
-    }
-}
-
-const mapDispatchToProps = dispatch =>{
-    return{
-        setloc: (loc) => dispatch(setLocation(loc))
-    }
-}
-
-export default connect(mapStateToProps,mapDispatchToProps)(Staff);
+export default Staff;

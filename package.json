@@ -2,9 +2,10 @@
   "name": "gnomeasia",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://2019.gnome.asia",
   "dependencies": {
-    "animejs": "^3.0.1",
     "bootstrap": "^4.3.1",
+    "firebase": "^6.3.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

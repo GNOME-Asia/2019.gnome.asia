@@ -11,7 +11,6 @@ import Cityinformation from './Containers/City';
 import Footer from './Components/Footer';
 import Sponsor from './Containers/Sponsor';
 import Agenda from './Containers/Agenda';
-// import Registration from './Containers/Registration';
 import Staff from './Containers/Staff';
 import Media from './Containers/Media';
 import Community from './Containers/Community';
@@ -21,8 +20,9 @@ import Speakers from './Containers/Speakers';
 class App extends React.Component {
 
   render(){
-    let lang = this.props.lang
+    
 
+    console.log(this.props.mystate)
     
     return (
       
@@ -31,16 +31,16 @@ class App extends React.Component {
         <Navigation/>
         <div className="py-3" id="home">
 
-          <Home lang={lang} location="home" warning="Ini HOME"/>
+          <Home/>
         </div>
         <div className="pt-5" id="venue">
 
-          <Venue lang={lang} location="venue" refProps={this.scroll}/>
+          <Venue />
         </div>
-          <Cityinformation lang={lang} location="travel-information"/>
+          <Cityinformation/>
         <div className="pt-5" id="schedule">
 
-          <Agenda lang={lang} location="agenda" refProps={this.scroll}/>
+          <Agenda/>
         </div>
         <div className="pt-5" id="speakers">
 
@@ -48,7 +48,7 @@ class App extends React.Component {
         </div>
         <div className="pt-5" id="staff">
 
-          <Staff lang={lang} location="staff"/>
+          <Staff/>
         </div>
         <div className="pt-5" id="callofproposal">
 
@@ -56,7 +56,7 @@ class App extends React.Component {
         </div>
         <div className="pt-5" id="sponsor">
 
-          <Sponsor lang={lang} location="sponsor"/>
+          <Sponsor/>
         </div>
           <Media/>
           <Community/>
@@ -71,7 +71,8 @@ class App extends React.Component {
 
 const mapStateToProps = state => {
   return{
-    lang: state.Reducers.lang
+    lang: state.Reducers.lang,
+    mystate: state
   }
 }
 
