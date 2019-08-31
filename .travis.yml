@@ -17,4 +17,4 @@ deploy:
   on:
     branch: master
 notifications:
-  webhooks: https://fathomless-fjord-24024.herokuapp.com/notify?secret=gnomaasiasummit2019
+  webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
