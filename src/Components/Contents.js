@@ -13,7 +13,7 @@ let string = new LocalizedString({
             sponsor:"Sponsor",
             language:"Language",
             speakers:"Speakers",
-            cfp:"Call for Proposal"
+            cfp:"Call for Paper"
         },
         home:{
             news:{
