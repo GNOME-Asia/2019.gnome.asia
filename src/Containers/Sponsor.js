@@ -15,9 +15,9 @@ const Platinum = props => {
     return <img className="img-fluid" alt={props.name} src={props.src} style={{ height:'200px' }}/>
 }
 
-const Gold = props => {
-    return <img className="img-fluid" alt={props.name} src={props.src} style={{ height:'200px' }}/>
-}
+// const Gold = props => {
+//     return <img className="img-fluid" alt={props.name} src={props.src} style={{ height:'200px' }}/>
+// }
 
 const Silver = props => {
     return <img className="img-fluid" alt={props.name} src={props.src} style={{ height:'150px' }}/>
