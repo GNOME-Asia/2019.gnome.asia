@@ -2,7 +2,7 @@ import React from 'react';
 import unmuh from '../assets/sponsors/unmuh.png';
 import sakti from '../assets/sponsors/silver/sakti.png';
 import gnome from '../assets/sponsors/platinum/gnome.png';
-import tatalogam from '../assets/sponsors/silver/tatalogam.png';
+import tatalogam from '../assets/sponsors/silver/domus.png';
 import fans from '../assets/sponsors/bronze/fans.png';
 import cloudkilat from '../assets/sponsors/bronze/cloudkilat.png';
 
