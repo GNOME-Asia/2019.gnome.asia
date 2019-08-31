@@ -1,9 +1,9 @@
 import React from 'react';
-import kabarlinux from '../assets/kabarlinux.png';
+import kabarlinux from '../assets//media/kabarlinux.png';
 
 
 const Image = props =>{
-     return <img className="img-fluid" alt={props.name} src={props.src} style={{ width:'144px' }}/>
+     return <img className="img-fluid" alt={props.name} src={props.src} style={{ height:'100px' }}/>
 }
 
 class Media extends React.Component{
