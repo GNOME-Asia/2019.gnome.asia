@@ -79,11 +79,6 @@ p{
   color: #343A40 !important;
 }
 
-.navbar-toggler-icon{
-  background: url(assets/menu.png);
-  
-}
-
 .hotel-link{
   text-decoration: none !important;
   color: black !important;

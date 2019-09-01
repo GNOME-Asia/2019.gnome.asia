@@ -1,7 +1,7 @@
 import React from 'react';
-import pesona from '../assets/pesona.png';
-import santika from '../assets/santika.png';
-import saptanawa from '../assets/saptanawa.jpg';
+import pesona from '../assets/hotels/pesona.png';
+import santika from '../assets/hotels/santika.png';
+import saptanawa from '../assets/hotels/saptanawa.jpg';
 
 const Hotel = (props) =>{
     
