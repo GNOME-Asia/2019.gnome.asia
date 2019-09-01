@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navbar,Nav,NavItem,Collapse,NavbarToggler } from 'reactstrap';
 import String from '../Components/Contents';
-import gnome from '../assets/photo_2019-07-10 19.01.08.jpeg';
+import gnome from '../assets/2019_logo.jpeg';
 import Registrationmodal from '../Components/Registrationmodal';
 
 
