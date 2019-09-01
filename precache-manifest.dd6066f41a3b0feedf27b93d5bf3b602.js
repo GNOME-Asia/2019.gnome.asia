@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6a492fd8f9e1bdaf9ad00b26237e51aa",
+    "revision": "249642b96b39456cb62a76663c0e9009",
     "url": "/index.html"
   },
   {
@@ -8,28 +8,32 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/css/2.266e55a5.chunk.css"
   },
   {
-    "revision": "4e90ac937d86f71b2967",
-    "url": "/static/css/main.f5ebe042.chunk.css"
+    "revision": "2ae3b7f774fd3e98b5ac",
+    "url": "/static/css/main.7f3c9e64.chunk.css"
   },
   {
     "revision": "bf6da2803fbff7e48f1f",
     "url": "/static/js/2.4427728d.chunk.js"
   },
   {
-    "revision": "4e90ac937d86f71b2967",
-    "url": "/static/js/main.25075d5c.chunk.js"
+    "revision": "2ae3b7f774fd3e98b5ac",
+    "url": "/static/js/main.afd92071.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
     "url": "/static/js/runtime~main.a8a9905a.js"
   },
   {
+    "revision": "c15933df6581ddb001e9b5a56db0b9e5",
+    "url": "/static/media/2019_logo.c15933df.jpeg"
+  },
+  {
     "revision": "083763abcc6ab29f3f56290eeeb4148c",
     "url": "/static/media/KLiM.083763ab.png"
   },
   {
-    "revision": "a84fa528569631adf467da5e8b6c181d",
-    "url": "/static/media/P1160835.a84fa528.JPG"
+    "revision": "9c7321ecb6159f94ebec9f022ab0c22e",
+    "url": "/static/media/P1160835.9c7321ec.JPG"
   },
   {
     "revision": "e150e6e0c7c7d4b66ce76c8dec1efa68",
@@ -64,24 +68,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/kabarlinux.99c6630d.png"
   },
   {
-    "revision": "0fedb69d901dc442a41342f37f0a790c",
-    "url": "/static/media/pesona.0fedb69d.png"
-  },
-  {
-    "revision": "3aa14a62ef4b0071ab4f3dc1b95b73de",
-    "url": "/static/media/photo_2019-07-10 19.01.08.3aa14a62.jpeg"
+    "revision": "47e49012f40997dc1f90d6233e6a3108",
+    "url": "/static/media/pesona.47e49012.png"
   },
   {
     "revision": "ba346349f4b1bb27113a616150c3dad0",
     "url": "/static/media/sakti.ba346349.png"
   },
   {
-    "revision": "8b61e43a59537bca540d0483d2eb2cbd",
-    "url": "/static/media/santika.8b61e43a.png"
+    "revision": "f0c0cb5ddbee4757c94d79e0d4ae49d4",
+    "url": "/static/media/santika.f0c0cb5d.png"
   },
   {
-    "revision": "feabe4a96280add3d10a210b70734a56",
-    "url": "/static/media/saptanawa.feabe4a9.jpg"
+    "revision": "b826ba91ea35a3c7b624959f2463e247",
+    "url": "/static/media/saptanawa.b826ba91.jpg"
   },
   {
     "revision": "6bf79e058af938b99155ad972bacc2ce",
