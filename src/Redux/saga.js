@@ -38,7 +38,7 @@ function *islogin(action){
     
     try {
         
-        const data = action.data
+        // const data = action.data
         const token = action.token
         // console.log("ANDA SEDANG LOGIN GAN!!",data)
         const ken = yield call(Api.checkLogin,token)
@@ -47,7 +47,7 @@ function *islogin(action){
 
         yield put({
             type:"IS_LOGIN",
-            email:data.email,
+            email:kendata.user.email,
             name:kendata.user.name,
             phone: kendata.user.phone,
             verified: kendata.user.email_verified_at,
@@ -60,6 +60,7 @@ function *islogin(action){
     
     } catch (error) {
         console.log(error.response)
+        localStorage.removeItem('ken_token')
         yield put({type:"AUTH_ERROR",error:error.message})
     }
     

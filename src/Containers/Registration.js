@@ -15,7 +15,7 @@ class Registration extends React.Component{
             name:'',
             email:'',
             asal:'',
-            amount:'',
+            amount:'100000',
             countrycode: '',
             phone:'',
             password:'',
@@ -29,7 +29,10 @@ class Registration extends React.Component{
                 match:false
             },
             data:'',
-            loading:false
+            loading:false,
+            ticket: 1,
+            showupload: false,
+            kaos:'M'
             
         }
 
@@ -42,10 +45,32 @@ class Registration extends React.Component{
         this._phone = this._phone.bind(this)
         this._asal = this._asal.bind(this)
         this._amount = this._amount.bind(this)
+        this._kaos = this._kaos.bind(this)
 
     }
+
+    _kaos(e){
+        this.setState({
+            kaos: e.target.value
+        })
+    }
     _amount(e){
-        this.setState({amount:e.target.value})
+        console.log(e.target.value)
+        if(e.target.value === '1'){
+            this.setState({
+                amount:100000,
+                ticket: 1,
+                showupload: false
+            })
+        }
+        else if(e.target.value === '2'){
+            this.setState({
+                amount:50000,
+                ticket: 2,
+                showupload: true
+            })
+        }
+        
     }
     _asal(e){
         this.setState({
@@ -68,7 +93,7 @@ class Registration extends React.Component{
         e.preventDefault();
         if(this.state.matchpassword.match){
             const telp = this.state.countrycode+this.state.phone
-            this.props.doregister(this.state.name,this.state.email,telp,this.state.password,this.state.asal,this.state.amount)
+            this.props.doregister(this.state.name,this.state.email,telp,this.state.password,this.state.asal,this.state.amount,this.state.kaos,this.state.ticket)
         }
 
     }
@@ -140,7 +165,7 @@ class Registration extends React.Component{
     
 
     render(){  
-        console.log("Kode Negara: " +this.state.countrycode + this.state.phone)
+        console.log(this.state.kaos)
         return(
             <div className="Page mb-5 mt-3">
                 <div className="container py-3">
@@ -180,10 +205,49 @@ class Registration extends React.Component{
                                     <input id="asal" value={this.state.asal} onChange={this._asal} className="form-control"  required/>
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="amount">Amount</label>
-                                    <input id="amount" value={this.state.amount} onChange={this._amount} className="form-control"  required/>
+                                    <span>Ticket</span>
+                                    <br/><br/>
+                                    <div className="form-check form-check-inline ml-3">
+                                        <input className="form-check-input" type="radio" name="inlineRadioOptions" id="umum" value="1" onChange={this._amount} defaultChecked/>
+                                        <label className="form-check-label" htmlFor="umum">Umum - Rp. 100K</label>
+                                    </div>
+                                    <div className="form-check form-check-inline">
+                                        <input className="form-check-input" type="radio" name="inlineRadioOptions" id="mahasiswa" value="2" onChange={this._amount}/>
+                                        <label className="form-check-label" htmlFor="mahasiswa">Mahasiswa - Rp. 50K</label>
+                                    </div>
+                                    <div className={this.state.showupload ? null : 'd-none'}>
+                                        <div className="form-group mt-3 ml-3">
+                                            <label htmlFor="filektm">Insert Your Student Card</label>
+                                            <input type="file" className="form-control-file" id="filektm" />
+                                        </div>
+                                    </div>
                                 </div>
                                 <div className="form-group">
+                                    <span>T-Shirt size</span>
+                                    <br/><br/>
+                                    <div className="form-check form-check-inline ml-3">
+                                        <input className="form-check-input" type="radio" id="sizem" name="kaos" value="M" onChange={this._kaos} defaultChecked/>
+                                        <label className="form-check-label" htmlFor="sizem">M</label>
+                                    </div>
+                                    <div className="form-check form-check-inline">
+                                        <input className="form-check-input" type="radio" id="sizel" name="kaos" value="L" onChange={this._kaos}/>
+                                        <label className="form-check-label" htmlFor="sizel">L</label>
+                                    </div>
+                                    <div className="form-check form-check-inline">
+                                        <input className="form-check-input" type="radio" id="sizexl" name="kaos" value="XL" onChange={this._kaos}/>
+                                        <label className="form-check-label" htmlFor="sizexl">XL</label>
+                                    </div>
+                                    <div className="form-check form-check-inline">
+                                        <input className="form-check-input" type="radio" id="sizaxxl" name="kaos" value="XXL" onChange={this._kaos}/>
+                                        <label className="form-check-label" htmlFor="sizaxxl">XXL</label>
+                                    </div>
+                                    <div className="form-check form-check-inline">
+                                        <input className="form-check-input" type="radio" id="sizexxxl" name="kaos" value="XXXL" onChange={this._kaos}/>
+                                        <label className="form-check-label" htmlFor="sizexxxl">XXXL</label>
+                                    </div>
+                                </div>
+
+                                <div className="form-group mt-3">
                                     <label htmlFor="password">Password</label>
                                     <input id="password" type="password" 
                                     className={this.state.passlength.check ? (this.state.passlength.match ? "form-control is-valid":"form-control is-invalid") : "form-control"} 
@@ -255,7 +319,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return{
-        doregister: (name,email,phone,password,asal,amount) => dispatch(doRegister(name,email,phone,password,asal,amount)),
+        doregister: (name,email,phone,password,asal,amount,kaos,ticket) => dispatch(doRegister(name,email,phone,password,asal,amount,kaos,ticket)),
         doLogout: () => dispatch(doLogout())
     }
 }

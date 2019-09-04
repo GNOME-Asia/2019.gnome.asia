@@ -10,6 +10,7 @@
     "lodash": "^4.17.15",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
+    "react-cookie": "^4.0.1",
     "react-dom": "^16.8.6",
     "react-ga": "^2.5.7",
     "react-localization": "^1.0.15",
