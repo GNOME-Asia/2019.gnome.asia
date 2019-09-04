@@ -56,7 +56,7 @@ class Agenda extends React.Component{
                                         <tbody>
                                             <tr>
                                                 <td className="align-middle">08:00 - 08:30</td>
-                                                <td className="align-middle" colSpan="3">Registrasi</td>
+                                                <td className="align-middle" colSpan="3">Registration</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">08:30 - 09:30</td>
@@ -115,11 +115,11 @@ class Agenda extends React.Component{
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">09:50 - 10:50</td>
-                                                <td className="align-middle" colSpan="5">GNOME Foundation — We're Here to Help - Rosanna Yuen</td>
+                                                <td className="align-middle" colSpan="5">Opening Talk by Neil McGovern (GNOME Executive Director)</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">10:50 - 11:50</td>
-                                                <td className="align-middle" colSpan="5">Keynote Speaker (Sponsor) - MyCoop</td>
+                                                <td className="align-middle" colSpan="5">Keynote Speaker (Sponsor) - DOMUS</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">11:50 - 13:00</td>
@@ -146,7 +146,7 @@ class Agenda extends React.Component{
                                                 <td className="align-middle" colSpan="5">Group Photos (Each Class)</td>
                                             </tr>
                                             <tr>
-                                                <td>13:45 - 14:50</td>
+                                                <td>13:45 - 14:15</td>
                                                 <td className="align-middle" colSpan="5">Coffee Break</td>
                                             </tr>
                                             <tr>
@@ -158,7 +158,7 @@ class Agenda extends React.Component{
                                                 <td className="align-middle table-secondary">Class 5</td>
                                             </tr>
                                             <tr>
-                                                <td className="align-middle">14:50 - 15:00</td>
+                                                <td className="align-middle">14:15 - 15:00</td>
                                                 <td className="align-middle">How To Contribute To FOSS Projects <br/> Ahmad Haris</td>
                                                 <td className="align-middle">Managing Social Capital in Open Source <br/> Rizki Kelimutu</td>
                                                 <td className="align-middle">Running Linux Desktop on Sony Playstation 4 <br/> Iwan Suryanto Tahari</td>
@@ -208,7 +208,7 @@ class Agenda extends React.Component{
                                         <tbody>
                                             <tr>
                                                 <td className="align-middle">08:00 - 09:10</td>
-                                                <td className="align-middle" colSpan="5">Registrasi</td>
+                                                <td className="align-middle" colSpan="5">Registration</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">09:10 - 09:15</td>
@@ -216,7 +216,7 @@ class Agenda extends React.Component{
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">09:15 - 10:15</td>
-                                                <td className="align-middle" colSpan="5">Opening Talk by Neil McGovern (GNOME Executive Director)</td>
+                                                <td className="align-middle" colSpan="5">GNOME Foundation — We're Here to Help - Rosanna Yuen</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">10:15 - 11:00</td>
