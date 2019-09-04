@@ -95,7 +95,7 @@ class Agenda extends React.Component{
                                         <tbody>
                                             <tr>
                                                 <td className="align-middle">08:00 - 09:00</td>
-                                                <td className="align-middle" colSpan="5">Registrasi</td>
+                                                <td className="align-middle" colSpan="5">Registration</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">09:00 - 09:30</td>
@@ -175,19 +175,19 @@ class Agenda extends React.Component{
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">15:30 - 15:35</td>
-                                                <td className="align-middle" colSpan="5">(Ligthning Talk) GNOME l10n Indonesia Progress <br/> Kukuh syafaat</td>
+                                                <td className="align-middle" colSpan="5">(Lightning Talk) GNOME l10n Indonesia Progress <br/> Kukuh syafaat</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">15:35 - 15:40</td>
-                                                <td className="align-middle" colSpan="5">(Ligthning Talk) IRGSH <br/> Herpiko Dwi Aguno</td>
+                                                <td className="align-middle" colSpan="5">(Lightning Talk) IRGSH <br/> Herpiko Dwi Aguno</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">15:40 - 15:45</td>
-                                                <td className="align-middle" colSpan="5">(Ligthning Talk) Open Source and Education in Indonesia <br/> Faiq Aminuddin</td>
+                                                <td className="align-middle" colSpan="5">(Lightning Talk) Open Source and Education in Indonesia <br/> Faiq Aminuddin</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">15:45 - 15:50</td>
-                                                <td className="align-middle" colSpan="5">(Ligthning Talk) Deep Learning in Linux Distros <br/> Radical Rakhman Wahid</td>
+                                                <td className="align-middle" colSpan="5">(Lightning Talk) Deep Learning in Linux Distros <br/> Radical Rakhman Wahid</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">15:50 - 16:30</td>
@@ -276,15 +276,15 @@ class Agenda extends React.Component{
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">14:45 - 14:50</td>
-                                                <td className="align-middle" colSpan="5">(Ligthning Talk) The Role of Open Source Technology to Accelerate Sustainable Development Goals <br/> Uthia Estiane</td>
+                                                <td className="align-middle" colSpan="5">(Lightning Talk) The Role of Open Source Technology to Accelerate Sustainable Development Goals <br/> Uthia Estiane</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">14:50 - 14:55</td>
-                                                <td className="align-middle" colSpan="5">(Ligthning Talk) Implementasi dan manfaat File hosting Owncloud dan Virtualisasi Proxmox pada pembelajaran Teaching Factory SMK Muhammadiyah 1 Yogyakarta <br/> Budi Putra</td>
+                                                <td className="align-middle" colSpan="5">(Lightning Talk) Implementasi dan manfaat File hosting Owncloud dan Virtualisasi Proxmox pada pembelajaran Teaching Factory SMK Muhammadiyah 1 Yogyakarta <br/> Budi Putra</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">14:55 - 15:00</td>
-                                                <td className="align-middle" colSpan="5">(Ligthning Talk) Introducing and Educate Local Community to FOSS <br/> Ernawan Ernawan</td>
+                                                <td className="align-middle" colSpan="5">(Lightning Talk) Introducing and Educate Local Community to FOSS <br/> Ernawan Ernawan</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">15:00 - 16:15</td>
