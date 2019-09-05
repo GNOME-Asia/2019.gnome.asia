@@ -238,7 +238,7 @@ class Agenda extends React.Component{
                                                 <td className="align-middle">11:30 - 12:15</td>
                                                 <td className="align-middle">Gitar Shredding dalam Lingkungan GNOME <br/>Hananto Herlambang</td>
                                                 <td className="align-middle">Open Source in Homeschooling Family <br/> Andik Nur Achmad</td>
-                                                <td className="align-middle">Penerapan Lisensi Creative Commons Pada Karya Desain <br/> Florens Debora Patricia</td>
+                                                <td className="align-middle">Using Creative Commons License to Collaborate with Digital Artwork <br/> Florens Debora Patricia</td>
                                                 <td className="align-middle">Power Management and Measurement in GNOME <br/> Aditya Manglik</td>
                                                 <td className="align-middle">The experience of the KLAS roadshow to ignite the spirit of Open Source in East Java, Indonesia <br/>Darian Rizaludin</td>
                                             </tr>
