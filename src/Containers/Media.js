@@ -13,7 +13,7 @@ class Media extends React.Component{
     render(){
         return(
             <div className="Page my-5">
-                <div className="container py-3">
+                <div className="container text-center py-3">
                     <h3>Media Partner</h3>
                     <hr/>
                     <div>

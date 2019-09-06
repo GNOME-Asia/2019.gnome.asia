@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from "reactstrap";
 import unmuh from '../assets/sponsors/unmuh.png';
 import sakti from '../assets/sponsors/silver/sakti.png';
 import gnome from '../assets/sponsors/platinum/gnome.png';
@@ -12,13 +13,13 @@ const Image = props => {
     return <img className="img-fluid" alt={props.name} src={props.src} style={{ height:'200px' }}/>
 }
 
+const SponsorTitle = props => {
+    return <div className="mx-auto my-5 text-white" style={{background:props.color, padding:'20px', width:'200px'}}><h5 class="my-0">{props.title}</h5></div>
+}
+
 const Platinum = props => {
     return <img className="img-fluid" alt={props.name} src={props.src} style={{ height:'200px' }}/>
 }
-
-// const Gold = props => {
-//     return <img className="img-fluid" alt={props.name} src={props.src} style={{ height:'200px' }}/>
-// }
 
 const Silver = props => {
     return <img className="img-fluid" alt={props.name} src={props.src} style={{ height:'150px' }}/>
@@ -29,15 +30,15 @@ const Bronze = props => {
 }
 
 const Custom = props => {
-    return <img className="img-fluid" alt={props.name} src={props.src} style={{ height:'100px' }}/>
+    return <img className="img-fluid" alt={props.name} src={props.src} style={{ height:'130px' }}/>
 }
 
 class Sponsor extends React.Component{
     render(){
         return(
             <div className="Page py-5">
-                <div className="container py-3">
-                    <h3>Sponsor</h3>
+                <div className="container text-center py-3">
+                    <h1>Sponsors</h1>
                     <hr/>
                     <div>
                         <ul className="list-inline">
@@ -49,8 +50,7 @@ class Sponsor extends React.Component{
                             </li>
                         </ul>
                         <ul className="list-inline">
-                            <br></br><br></br>
-                            <h5>Platinum</h5>
+                            <SponsorTitle color="#f57601" title="Platinum" />
                             <li className="list-inline-item">
                                 <Platinum
                                     name="GNOME Foundation"
@@ -59,8 +59,7 @@ class Sponsor extends React.Component{
                             </li>
                         </ul>
                         <ul className="list-inline">
-                            <br></br><br></br>
-                            <h5>Silver</h5>
+                            <SponsorTitle color="#f57601" title="Silver" />
                             <li className="list-inline-item">
                                 <Silver
                                     name="PT SAKTI KINERJA KOLABORASINDO"
@@ -75,8 +74,7 @@ class Sponsor extends React.Component{
                             </li>
                         </ul>
                         <ul className="list-inline">
-                            <br></br><br></br>
-                            <h5>Bronze</h5>
+                            <SponsorTitle color="#f57601" title="Bronze" />
                             <li className="list-inline-item">
                                 <Bronze
                                     name="FANS"
@@ -91,8 +89,7 @@ class Sponsor extends React.Component{
                             </li>
                         </ul>
                         <ul className="list-inline">
-                            <br></br><br></br>
-                            <h5>Custom Sponsors</h5>
+                            <SponsorTitle color="#f57601" title="Custom Sponsors" />
                             <li className="list-inline-item">
                                 <Custom
                                     name="KabarLinux"
