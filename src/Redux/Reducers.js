@@ -1,25 +1,10 @@
-const initialstate = {
-    lang: 'en',
-    location:'home'
-}
+import { combineReducers } from 'redux';
+import UserReducer from './state/userReducer';
 
-let Reducers = (state = initialstate, action) =>{
-    switch (action.type) {
-        case 'SET_LANG':
-            return{
-                ...state,
-                lang:action.payload
-            }
-            // break;
-        case 'SET_LOC':
-            return{
-                ...state,
-                location:action.payload
-            }
-        default:
-            return state
-            // break;
-    }
-}
 
-export default Reducers;
+let State = combineReducers({
+    UserReducer
+    
+})
+
+export default State;
