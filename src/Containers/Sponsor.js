@@ -5,6 +5,7 @@ import gnome from '../assets/sponsors/platinum/gnome.png';
 import tatalogam from '../assets/sponsors/silver/domus.png';
 import fans from '../assets/sponsors/bronze/fans.png';
 import cloudkilat from '../assets/sponsors/bronze/cloudkilat.png';
+import kabarlinux from '../assets/sponsors/custom/kabarlinux.png';
 
 
 const Image = props => {
@@ -25,6 +26,10 @@ const Silver = props => {
 
 const Bronze = props => {
     return <img className="img-fluid" alt={props.name} src={props.src} style={{ height:'130px' }}/>
+}
+
+const Custom = props => {
+    return <img className="img-fluid" alt={props.name} src={props.src} style={{ height:'100px' }}/>
 }
 
 class Sponsor extends React.Component{
@@ -82,6 +87,16 @@ class Sponsor extends React.Component{
                                 <Bronze
                                     name="Cloudkilat"
                                     src={cloudkilat}
+                                />
+                            </li>
+                        </ul>
+                        <ul className="list-inline">
+                            <br></br><br></br>
+                            <h5>Custom Sponsors</h5>
+                            <li className="list-inline-item">
+                                <Custom
+                                    name="KabarLinux"
+                                    src={kabarlinux}
                                 />
                             </li>
                         </ul>
