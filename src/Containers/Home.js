@@ -11,7 +11,7 @@ class Home extends React.Component{
                 <br/>
                 <Carousel/>
                 <div className="container my-3">
-                    <h2>News</h2>
+                    <h2>{String.home.news.title}</h2>
                     <hr/>
                     <News title={String.home.news.cfpjudul} content={String.home.news.cfpcontent} link={String.home.news.cfplink}/>
                     <News title={String.home.news.pengumumanjudul} content={String.home.news.pengumumancontent} link={String.home.news.pengumumanlink}/>

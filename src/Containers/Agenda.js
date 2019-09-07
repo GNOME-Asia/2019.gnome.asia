@@ -1,4 +1,5 @@
 import React from 'react';
+import String from '../Components/Contents';
 import { Table, TabContent, TabPane, Nav, NavItem, NavLink, Row, Col } from 'reactstrap';
 
 class Agenda extends React.Component{
@@ -24,7 +25,7 @@ class Agenda extends React.Component{
             <div className="Page py-5" style={{ backgroundColor:'#E0E0E0' }}>
                 <div className="container py-3">
                     <div className="text-center">
-                        <h1>Schedule</h1>
+                        <h1>{String.navigation.agenda}</h1>
                     </div>
                     <hr />
                     <div className="p-4 agenda-container">

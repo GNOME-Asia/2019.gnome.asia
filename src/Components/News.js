@@ -8,7 +8,7 @@ const News = (props) => {
             <p>
             {props.content}
             <br/>
-            <span><a href={props.link} target="__blank">{String.etc.more}</a></span>
+            <a className="btn btn-outline-primary" href={props.link} target="__blank">{String.etc.more}</a>
             </p>
         </div>
     )
