@@ -1,7 +1,6 @@
 import React from 'react';
 import gnf from '../assets/media/gnf.png';
 import inigresik from '../assets/media/ini-gresik.png';
-import teknoevent from '../assets/media/teknoevent.png';
 import wicara from '../assets/media/wicara.png'
 
 
@@ -28,12 +27,6 @@ class Media extends React.Component{
                                 <Image 
                                     name="Ini Gresik"
                                     src={inigresik}
-                                />
-                            </li>
-                            <li className="list-inline-item">
-                                <Image 
-                                    name="Tekno Event"
-                                    src={teknoevent}
                                 />
                             </li>
                             <li className="list-inline-item">
