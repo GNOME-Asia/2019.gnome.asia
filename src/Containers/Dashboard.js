@@ -33,14 +33,14 @@ class Dashboard extends React.Component{
                         <div className="col-md-6">
                             <div className="p-4">
                                 <div className="mb-1">
-                                    <span>Profile</span>
+                                    <h3>Hello, {this.props.name}</h3><br/>
+                                    <p>
+                                    {this.props.email} {this.props.verified ? <span className="text-success ml-1">Verified</span> : <span className="text-danger ml-1">Not Verified</span>}
+                                    <br/>
+                                    {`+`+this.props.phone}
+                                    </p>
+                                    
                                 </div>
-                                <ul className="nav flex-column">
-                                    <li className="nav-item">Name: <b>{this.props.name}</b></li>
-                                    <li className="nav-item">Email: {this.props.email} {this.props.verified ? <span className="text-success ml-1">Verified</span> : <span className="text-danger ml-1">Not Verified</span>}</li>
-                                    <li className="nav-item">Phone: {`+`+this.props.phone}</li>
-                                </ul>
-                                
                             </div>
                         </div>
                         <div className="col-md-6">
@@ -54,7 +54,9 @@ class Dashboard extends React.Component{
                                                 if(item.status === 0 ){
                                                     return (
                                                         <div key={key} className="p-3 border text-center my-2">
-                                                            <Status code={item.status}/>
+                                                            <h4>Rp. {item.amount}</h4>
+                                                            <Status code={item.status}/><br/>
+                                                            <small>QrCode akan expired dalam waktu 1x24 jam</small>
                                                             <br/>
                                                             <Qrcode src={item.qrcode_url}/>
                                                             <br/>
@@ -65,10 +67,22 @@ class Dashboard extends React.Component{
                                                         </div>
                                                     )
                                                 }
-                                                else {
-
+                                                else if(item.status === 1){
+                                                    return(
+                                                        <div className="my-4" key={key}>
+                                                        <h4>Kode Registrasi & QR code telah dikirim ke Email Anda</h4>
+                                                        <span>Terima Kasih telah melakukan pembayaran di Mycoop</span>
+                                                        </div>
+                                                    )
                                                 }
-                                                return null
+                                                else {
+                                                    return(
+                                                        <div className="my-4" key={key}>
+                                                            <h4>QR Code pembayaran anda telah Expired, klik dibawah untuk membuat QRcode pembayaran</h4>
+                                                            <button>Request Qr Code</button>
+                                                        </div>
+                                                    )
+                                                }
                                             } )
                                             
                                         ):(<p>Check your Email for Verify & Get Payment QRcode</p>)

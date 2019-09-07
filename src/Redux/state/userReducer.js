@@ -7,7 +7,8 @@ const initialstate = {
     islogin:false,
     loading: false,
     token: null,
-    error:null
+    error:null,
+    errmsg:null
 }
 
 
@@ -19,10 +20,10 @@ let Reducers = (state = initialstate, action) =>{
                 name:action.name,
                 email:action.email,
                 token: action.token,
-                islogin:true,
                 loading:false,
                 phone: action.phone,
                 verified: action.verified,
+                islogin:true,
                 payments:action.payments
             }
         }
@@ -49,7 +50,8 @@ let Reducers = (state = initialstate, action) =>{
                 phone:action.phone,
                 loading:false,
                 islogin:true,
-                verified: action.verified
+                verified: action.verified,
+                payments: action.payments
             }
         }
 
@@ -80,7 +82,8 @@ let Reducers = (state = initialstate, action) =>{
                 ...state,
                 islogin:false,
                 error:action.error,
-                loading:false
+                loading:false,
+                errmsg: action.errmsg
             }
         }
 
