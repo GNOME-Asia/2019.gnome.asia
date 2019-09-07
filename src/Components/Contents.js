@@ -37,7 +37,7 @@ let string = new LocalizedString({
             
         },
         etc:{
-            more:"more . . ."
+            more:"Read more..."
         },
         notfound:"Page not Found"
     },
@@ -70,7 +70,7 @@ let string = new LocalizedString({
             }
         },
         etc:{
-            more:"Selengkapnya.."
+            more:"Read more..."
         },
         notfound:"Halaman Tidak Ditemukan"
     }
