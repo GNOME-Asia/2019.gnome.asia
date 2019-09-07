@@ -1,7 +1,5 @@
-
-export function doRegister(name,email,phone,password,asal,amount,kaos,ticket){
-  console.log(amount)
-    
+export function doRegister(name,email,phone,password,asal,amount,tshirt,ticket,ktm){
+//   console.log(ktm)
     return {
         type:"FETCH_REGISTER",
         name:name,
@@ -10,9 +8,13 @@ export function doRegister(name,email,phone,password,asal,amount,kaos,ticket){
         password:password,
         asal: asal,
         amount: amount,
-        tshirt: kaos,
-        ticket: ticket
+        tshirt: tshirt,
+        ticket: ticket,
+        ktm: ktm
     }
+
+    
+    
 }
 
 

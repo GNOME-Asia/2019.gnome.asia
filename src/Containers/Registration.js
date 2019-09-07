@@ -32,7 +32,11 @@ class Registration extends React.Component{
             loading:false,
             ticket: 1,
             showupload: false,
-            kaos:'M'
+            kaos:'M',
+            file:{
+                selected:'',
+                load: 0
+            }
             
         }
 
@@ -46,7 +50,20 @@ class Registration extends React.Component{
         this._asal = this._asal.bind(this)
         this._amount = this._amount.bind(this)
         this._kaos = this._kaos.bind(this)
+        this._uploadKtm = this._uploadKtm.bind(this)
 
+    }
+
+    _uploadKtm(e){
+        // console.log(e.target.files[0])
+        this.setState({
+            file:{
+                selected:e.target.files[0],
+                load: 0
+            }
+        })
+
+        console.log(e.target.files[0])
     }
 
     _kaos(e){
@@ -93,7 +110,7 @@ class Registration extends React.Component{
         e.preventDefault();
         if(this.state.matchpassword.match){
             const telp = this.state.countrycode+this.state.phone
-            this.props.doregister(this.state.name,this.state.email,telp,this.state.password,this.state.asal,this.state.amount,this.state.kaos,this.state.ticket)
+            this.props.doregister(this.state.name,this.state.email,telp,this.state.password,this.state.asal,this.state.amount,this.state.kaos,this.state.ticket,this.state.file.selected)
         }
 
     }
@@ -179,7 +196,7 @@ class Registration extends React.Component{
                             </div>
                         </div>
                         <div className="col-md-4 pt-5">
-                            {this.props.error ?  <div className="text-danger mb-3"><b><i className="far fa-times-circle mr-3"></i> {this.props.error}</b></div>:null}
+                            {this.props.error ?  <div className="text-danger mb-3"><b><i className="far fa-times-circle mr-3"></i> {this.props.error} - {this.props.errmsg}</b></div>:null}
                             <form onSubmit={this._handleSubmit}>
                                 <div className="form-group">
                                     <label htmlFor="name">Full Name</label>
@@ -218,7 +235,7 @@ class Registration extends React.Component{
                                     <div className={this.state.showupload ? null : 'd-none'}>
                                         <div className="form-group mt-3 ml-3">
                                             <label htmlFor="filektm">Insert Your Student Card</label>
-                                            <input type="file" className="form-control-file" id="filektm" />
+                                            <input type="file" className="form-control-file" id="filektm"  onChange={this._uploadKtm}/>
                                         </div>
                                     </div>
                                 </div>
@@ -313,13 +330,14 @@ const mapStateToProps = state => {
     return{
         name: state.UserReducer.name,
         loading:state.UserReducer.loading,
-        error: state.UserReducer.error
+        error: state.UserReducer.error,
+        errmsg: state.UserReducer.errmsg
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return{
-        doregister: (name,email,phone,password,asal,amount,kaos,ticket) => dispatch(doRegister(name,email,phone,password,asal,amount,kaos,ticket)),
+        doregister: (name,email,phone,password,asal,amount,kaos,ticket,ktm) => dispatch(doRegister(name,email,phone,password,asal,amount,kaos,ticket,ktm)),
         doLogout: () => dispatch(doLogout())
     }
 }

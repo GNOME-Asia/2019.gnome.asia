@@ -1,16 +1,32 @@
-import { put,takeLatest,all,call } from 'redux-saga/effects';
+import { put,takeLatest,call } from 'redux-saga/effects';
 import Api from '../Settings/api';
 // import firebase from '../Settings/firebase';
 // var _ = require('lodash');
 
 function* fetchRegister(action){
     try {
-        const [kenproject] = yield all([
-            // firebase.auth().createUserWithEmailAndPassword(action.email,action.password),
-            call(Api.registration,action)    
-        ])
+        console.log(action)
+        // const [kenproject] = yield all([
+        //     call(Api.registration,action)    
+        // ])
+        const data = new FormData()
+        data.append('name',action.name)
+        data.append('email',action.email)
+        data.append('ktm',action.ktm)
+        data.append('asal',action.asal)
+        data.append('amount',action.amount)
+        data.append('password',action.password)
+        data.append('phone',action.phone)
+        data.append('ticket',action.ticket)
+        data.append('tshirt',action.tshirt)
 
-        console.log(kenproject.data)
+        // console.log(data)
+
+        
+
+        const kenproject = yield call(Api.registration,data)
+        
+        console.log(kenproject)
         const ken = kenproject.data
 
         //setLocalstorage
@@ -24,13 +40,16 @@ function* fetchRegister(action){
             verified: ken.email_verified_at,
             payments: [],
             email:ken.email
-            // email:firebaseauth.user.email
-
         })
 
     } catch (error) {
         console.log(error.response)
-        yield put({type:"AUTH_ERROR",error:error.message})
+        const errmsg = error.response.data.error
+        yield put({
+            type:"AUTH_ERROR",
+            error:error.message,
+            errmsg: errmsg
+        })
     }
 }
 
@@ -90,23 +109,25 @@ function* fetchLogout(){
 function* fetchLogin(action){
 
     try {
-        const [kenproject] = yield all([
-            // firebase.auth().signInWithEmailAndPassword(action.email,action.password),
-            call(Api.login,action)
-        ])
-        // console.log(kenproject)
-        localStorage.setItem('ken_token',kenproject.accessToken)
+        // const [kenproject] = yield all([
+        //     // firebase.auth().signInWithEmailAndPassword(action.email,action.password),
+        //     call(Api.login,action)
+        // ])
+        const kendata = yield call(Api.login,action)
+        // const kendata = ken.data
+        console.log(kendata)
+        localStorage.setItem('ken_token',kendata.accessToken)
         yield put({
             type:"DO_LOGIN",
-            // email:firebaseauth.user.email,
-            email: kenproject.user.email,
-            token: kenproject.accessToken,
-            name: kenproject.user.name,
-            phone:kenproject.user.phone,
-            payments:kenproject.payments,
-            verified: kenproject.email_verified_at
+            email: kendata.user.email,
+            token: kendata.accessToken,
+            name: kendata.user.name,
+            phone:kendata.user.phone,
+            payments:kendata.payments,
+            verified: kendata.user.email_verified_at
         })
     } catch (error) {
+        console.log("Error Login gan!")
         yield put({type:"AUTH_ERROR",error:error.message})
     }
     
