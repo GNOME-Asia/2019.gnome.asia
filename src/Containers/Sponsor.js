@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from "reactstrap";
 import unmuh from '../assets/sponsors/unmuh.png';
 import sakti from '../assets/sponsors/silver/sakti.png';
 import gnome from '../assets/sponsors/platinum/gnome.png';
@@ -14,7 +13,7 @@ const Image = props => {
 }
 
 const SponsorTitle = props => {
-    return <div className="mx-auto my-5 text-white" style={{background:props.color, padding:'20px', width:'200px'}}><h5 class="my-0">{props.title}</h5></div>
+    return <div className="mx-auto my-5 text-white" style={{background:props.color, padding:'20px', width:'200px'}}><h5 className="my-0">{props.title}</h5></div>
 }
 
 const Platinum = props => {
