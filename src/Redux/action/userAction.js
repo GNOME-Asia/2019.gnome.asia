@@ -12,9 +12,6 @@ export function doRegister(name,email,phone,password,asal,amount,tshirt,ticket,k
         ticket: ticket,
         ktm: ktm
     }
-
-    
-    
 }
 
 
@@ -39,5 +36,13 @@ export function doLogin(email,password){
 export function doLogout(){
     return{
         type:"FETCH_LOGOUT"
+    }
+}
+
+export function reCreateQr(userid){
+    return{
+        type:"RECREATE_QRCODE",
+        userid:userid,
+        islogin:true
     }
 }

@@ -52,6 +52,7 @@ class Login extends React.Component{
                             </div>
                         </div>
                         <div className="col-md-4 pt-5">
+                        {this.props.error ?  <div className="text-danger mb-3"><b><i className="far fa-times-circle mr-3"></i> {this.props.error}</b></div>:null}
                             <form onSubmit={this._handleForm}>
                                 <div className="form-group">
                                     <label htmlFor="email">Email</label>
@@ -92,7 +93,8 @@ class Login extends React.Component{
 
 const mapStateToProps = state => {
     return{
-        loading: state.UserReducer.loading
+        loading: state.UserReducer.loading,
+        error: state.UserReducer.error
     }
 }
 
