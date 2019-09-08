@@ -8,7 +8,8 @@ const initialstate = {
     loading: false,
     token: null,
     error:null,
-    errmsg:null
+    errmsg:null,
+    documents:[]
 }
 
 
@@ -23,8 +24,9 @@ let Reducers = (state = initialstate, action) =>{
                 loading:false,
                 phone: action.phone,
                 verified: action.verified,
-                islogin:true,
-                payments:action.payments
+                islogin:action.islogin,
+                payments:action.payments,
+                documents: action.documents
             }
         }
         case 'FETCH_REGISTER':{
@@ -73,7 +75,8 @@ let Reducers = (state = initialstate, action) =>{
                 token: action.token,
                 loading:false,
                 verified: action.verified,
-                payments:action.payments
+                payments:action.payments,
+                documents: action.documents
             }
         }
 
@@ -104,6 +107,27 @@ let Reducers = (state = initialstate, action) =>{
                 email:'',
                 loading:false,
                 verified: null
+            }
+        }
+        case "EMAIL_ALREADY_TAKEN":{
+            return{
+                ...state,
+                islogin: action.islogin,
+                error: action.error,
+                loading: action.loading
+            }
+        }
+
+        case "RECREATE_QRCODE":{
+            return{
+                ...state,
+                loading:true,
+            }
+        }
+        case "RECREATE_QRCODE_DONE": {
+            return{
+                ...state,
+                loading:false
             }
         }
             

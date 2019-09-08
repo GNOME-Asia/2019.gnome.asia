@@ -57,10 +57,7 @@ class Counter extends React.Component{
             clearInterval(this.interval)
         }
         // console.log(this.state.distance)
-    }
-
-    compo
-    
+    }    
     componentWillUnmount(){
         if(this.state.distance <= 1000){
 

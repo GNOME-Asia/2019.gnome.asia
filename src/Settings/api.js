@@ -58,8 +58,30 @@ const checkLogin = (token) => connection({
     }
 })
 
+const recreateqr = (token,userid) => connection({
+    method:'post',
+    url:'/recreateqr',
+    headers:{
+        'Authorization': 'Bearer '+token
+    },
+    data: {
+        userid: userid
+    }
+})
+
+const setexpired = (token,userid) => connection({
+    method:'post',
+    url:'/setexpired',
+    headers:{
+        'Authorization': 'Bearer '+token
+    },
+    data: {
+        userid: userid
+    }
+})
+
 export default{
-    test,registration,login, checkLogin, logout
+    test,registration,login, checkLogin, logout, recreateqr,setexpired
 }
 
 
