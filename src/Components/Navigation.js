@@ -64,9 +64,6 @@ class Navigation extends React.Component{
                             <NavItem><a href="#schedule" 
                             onClick={this._closed}
                             className="nav-link menu-top p-3">{String.navigation.agenda}</a></NavItem>
-                            <NavItem><a href="#speakers" 
-                            onClick={this._closed}
-                            className="nav-link menu-top p-3">{String.navigation.speakers}</a></NavItem>
                             <NavItem><a href="#staff" 
                             onClick={this._closed}
                             className="nav-link menu-top p-3">{String.navigation.staff}</a></NavItem>
