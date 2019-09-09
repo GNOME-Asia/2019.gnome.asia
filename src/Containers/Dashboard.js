@@ -125,7 +125,7 @@ class Dashboard extends React.Component{
                             <div>
                                 <div className="my-3">
                                     <h5>Transaction ID: <span className="text-danger font-italic">{this.props.payments.transaction_id}</span></h5>
-                                    <p>Jumlah: Rp. <strong>{this.props.payments.amount}</strong></p>
+                                    <p>Jumlah: Rp <strong>{this.props.payments.amount.toLocaleString()}</strong></p>
                                 </div>
                                 <div>
                                     {
