@@ -1,5 +1,7 @@
 import React from 'react';
 import Carousel from '../Components/Carousel';
+import News from '../Components/News';
+import String from '../Components/Contents';
 class Home extends React.Component{  
     render(){
         
@@ -9,41 +11,12 @@ class Home extends React.Component{
                 <br/>
                 <Carousel/>
                 <div className="container my-3">
-                    <h2>News</h2>
+                    <h2>{String.home.news.title}</h2>
                     <hr/>
-                    <div className="my-5">
-                        <h5 style={{ fontWeight:'bold' }}>Call for Papers for GNOME.Asia Summit 2019 Is Now Open! </h5>
-                        <p>
-                        GNOME.Asia Summit 2019 invites you to participate as a speaker at the conference on the 12th and 13th of October 2019 in Gresik, Indonesia.GNOME.Asia Summit is the featured annual GNOME conference in Asia. It focuses primarily on the GNOME desktop, but also covers applications and platform development tools. The summit brings together the GNOME community in Asia to provide a forum for users, developers, foundation leaders, governments and businesses to discuss the present technology and future developments.
-                        
-                        <br/>
-                        <span><a href="https://gnome.id/en/call-for-papers-for-gnome-asia-summit-2019-is-now-open/" target="__blank">more. . .</a></span>
-                        </p>
-                    </div>
-                    <div className="my-5">
-                        <h5 style={{ fontWeight:'bold' }}>GNOME.Asia Summit 2019 Logo Contest Announcement</h5>
-                        <p>
-                        GNOME.Asia Summit 2019 logo competition is over, the vote was in. The resulting jury has been decided the winner of this logo competition. The winner is “Fendi Prad” from Indonesia.
-                        <br/>
-                        <span><a href="https://gnome.id/pengumuman-pemenang-kontes-logo-gnome-asia-summit-2019.html" target="__blank">more. . .</a></span>
-                        </p>
-                    </div>
-                    <div className="my-5">
-                        <h5 style={{ fontWeight:'bold' }}>GNOME.Asia Summit 2019 Logo Competition</h5>
-                        <p>
-                        GNOME.Asia Summit 2019 will be held in Gresik, Indonesia in October, 2019. We are looking for creative people to design logo for this year’s Summit. The contest is open from now until June 21, 2019 and the winner will be announced on June 30, 2019.
-                        <br/>
-                        <span><a href="https://gnome.id/Gnome-Asia-Logo-Competition/" target="__blank">more. . .</a></span>
-                        </p>
-                    </div>
-                    <div className="my-5">
-                        <h5 style={{ fontWeight:'bold' }}>Gresik, Tuan Rumah GNOME.Asia Summit 2019</h5>
-                        <p>
-                        GNOME.Asia Summit merupakan acara rutin komunitas GNOME di Asia yang digelar setiap tahunnya. Kegiatan ini biasanya digelar selama beberapa hari dan mempertemukan para pengembang, pengguna, dan orang-orang yang memiliki antusiasme terhadap GNOME atau hal-hal terkait dengan tema free & open source software. Tak heran, ajang ini selalu dinanti-nanti oleh para teman-teman komunitas di Indonesia maupun Asia.
-                        <br/>
-                        <span><a href="https://gnome.id/Gresik-Tuan-Rumah-GNOME-Asia-Summit-2019.html" target="__blank">more. . .</a></span>
-                        </p>
-                    </div>
+                    <News title={String.home.news.cfpjudul} content={String.home.news.cfpcontent} link={String.home.news.cfplink}/>
+                    <News title={String.home.news.pengumumanjudul} content={String.home.news.pengumumancontent} link={String.home.news.pengumumanlink}/>
+                    <News title={String.home.news.logo} content={String.home.news.logocontent} link={String.home.news.logolink}/>
+                    <News title={String.home.news.tuanrumah} content={String.home.news.tuanrumahcontent} link={String.home.news.tuanrumahlink}/>
                     
                 </div>
                 
