@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import EmailInput from '../Components/EmailInput';
-import gnome from '../assets/photo_2019-07-10 19.01.08.jpeg';
+import gnome from '../assets/2019_logo.jpeg';
 import { Link } from 'react-router-dom';
 import Footerback from '../Components/Footerback';
 import Buttonsubmit from '../Components/Buttonsubmit';

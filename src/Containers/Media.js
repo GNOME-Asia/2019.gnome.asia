@@ -1,9 +1,11 @@
 import React from 'react';
-import kabarlinux from '../assets/kabarlinux.png';
+import gnf from '../assets/media/gnf.png';
+import inigresik from '../assets/media/ini-gresik.png';
+import wicara from '../assets/media/wicara.png'
 
 
 const Image = props =>{
-     return <img className="img-fluid" alt={props.name} src={props.src} style={{ width:'144px' }}/>
+     return <img className="img-fluid" alt={props.name} src={props.src} style={{ height:'100px' }}/>
 }
 
 class Media extends React.Component{
@@ -17,19 +19,23 @@ class Media extends React.Component{
                         <ul className="list-inline">
                             <li className="list-inline-item">
                                 <Image 
-                                    name="Kabar Linux"
-                                    src={kabarlinux}
+                                    name="GNF"
+                                    src={gnf}
+                                />
+                            </li>
+                            <li className="list-inline-item">
+                                <Image 
+                                    name="Ini Gresik"
+                                    src={inigresik}
+                                />
+                            </li>
+                            <li className="list-inline-item">
+                                <Image 
+                                    name="Wicara"
+                                    src={wicara}
                                 />
                             </li>
                         </ul>
-                        {/* <ul className="list-inline">
-                            <li className="list-inline-item">
-                                <Image 
-                                    name="Relawan TIK Gresik"
-                                    src={unmuh}
-                                />
-                            </li>
-                        </ul> */}
                     </div>
                 </div>
             </div>

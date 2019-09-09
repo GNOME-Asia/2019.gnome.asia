@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import gnome from '../assets/photo_2019-07-10 19.01.08.jpeg';
+import gnome from '../assets/2019_logo.jpeg';
 import Footerback from '../Components/Footerback';
 import Buttonsubmit from '../Components/Buttonsubmit';
 import { connect } from 'react-redux'; 
