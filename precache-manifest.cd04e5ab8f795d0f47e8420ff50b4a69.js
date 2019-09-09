@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "46316f5a07cf6b7841d3244557ea1024",
+    "revision": "079650e96e2330463917b76f8b22c0ea",
     "url": "/index.html"
   },
   {
-    "revision": "e733497ced7d99a5f028",
+    "revision": "cabf7a4a39a080660bed",
     "url": "/static/css/2.266e55a5.chunk.css"
   },
   {
-    "revision": "776a62ebee4b1fbf5c92",
-    "url": "/static/css/main.7f3c9e64.chunk.css"
+    "revision": "aafd462a78a794ced46e",
+    "url": "/static/css/main.5614c126.chunk.css"
   },
   {
-    "revision": "e733497ced7d99a5f028",
-    "url": "/static/js/2.8fe3bc9b.chunk.js"
+    "revision": "cabf7a4a39a080660bed",
+    "url": "/static/js/2.99d57f42.chunk.js"
   },
   {
-    "revision": "776a62ebee4b1fbf5c92",
-    "url": "/static/js/main.79095daf.chunk.js"
+    "revision": "aafd462a78a794ced46e",
+    "url": "/static/js/main.1306a1df.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -40,6 +40,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/P1160835.9c7321ec.JPG"
   },
   {
+    "revision": "9200a5be48f97aa37937064057db84dc",
+    "url": "/static/media/apjii.9200a5be.png"
+  },
+  {
     "revision": "e150e6e0c7c7d4b66ce76c8dec1efa68",
     "url": "/static/media/cloudkilat.e150e6e0.png"
   },
@@ -56,6 +60,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/gimpscape.87af656d.png"
   },
   {
+    "revision": "0e4f68d58b259469861da8e7157432e2",
+    "url": "/static/media/gnf.0e4f68d5.png"
+  },
+  {
     "revision": "038b31fcad832adabd3221d5111712cb",
     "url": "/static/media/gnome-id.038b31fc.png"
   },
@@ -66,6 +74,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "6c54e1e3a447f4cc6abb513187b62238",
     "url": "/static/media/gresikdev.6c54e1e3.png"
+  },
+  {
+    "revision": "718334c86f65cd15f57d816428feff20",
+    "url": "/static/media/hompremiere.718334c8.jpg"
+  },
+  {
+    "revision": "1515c546b19d2412f57d0d4af64f71d4",
+    "url": "/static/media/ini-gresik.1515c546.png"
   },
   {
     "revision": "99c6630d0c7f9203022ffe6b9337831d",
