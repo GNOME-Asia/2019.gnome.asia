@@ -29,22 +29,7 @@ const Paymentstatus = (props) => {
 
     if(props.payments.status === 0)
     {
-        if(distance > 0 ){
-            return(
-                <div className="p-3 border text-center my-2">
-                    <Status code={props.payments.status}/><br/>
-                    <small>QrCode akan expired dalam waktu 1x24 jam</small>
-                    <br/>
-                    <Qrcode src={props.payments.qrcode_url}/>
-                    <br/>
-                    <div>
-                    <span className="text-danger font-weight-bold">QR code Expired in</span>
-                    <Counter targetdate={props.payments.expired_date}/> 
-                    </div>
-                </div>
-            )
-        }
-        else{
+        if(distance < 0){
             const token = localStorage.getItem('ken_token')
             Api.setexpired(token,props.payments.user_id)
             .then(resp => {
@@ -58,6 +43,22 @@ const Paymentstatus = (props) => {
                 <div className="my-4">
                     <h4>QR Code pembayaran anda telah Expired, klik dibawah untuk membuat QRcode pembayaran</h4>
                     <button onClick={props.recreateqr}>{props.loading? "Loading..": "Re-create QRcode"}</button>
+                </div>
+            )
+            
+        }
+        else{
+            return(
+                <div className="p-3 border text-center my-2">
+                    <Status code={props.payments.status}/><br/>
+                    <small>QrCode akan expired dalam waktu 1x24 jam</small>
+                    <br/>
+                    <Qrcode src={props.payments.qrcode_url}/>
+                    <br/>
+                    <div>
+                    <span className="text-danger font-weight-bold">QR code Expired in</span>
+                    <Counter targetdate={props.payments.expired_date}/> 
+                    </div>
                 </div>
             )
         }
