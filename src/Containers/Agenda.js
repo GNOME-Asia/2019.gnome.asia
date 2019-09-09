@@ -1,4 +1,5 @@
 import React from 'react';
+import String from '../Components/Contents';
 import { Table, TabContent, TabPane, Nav, NavItem, NavLink, Row, Col } from 'reactstrap';
 
 class Agenda extends React.Component{
@@ -24,7 +25,7 @@ class Agenda extends React.Component{
             <div className="Page py-5" style={{ backgroundColor:'#E0E0E0' }}>
                 <div className="container py-3">
                     <div className="text-center">
-                        <h1>Schedule</h1>
+                        <h1>{String.navigation.agenda}</h1>
                     </div>
                     <hr />
                     <div className="p-4 agenda-container">
@@ -74,7 +75,7 @@ class Agenda extends React.Component{
                                                 <td className="align-middle">13:00 - 16:00</td>
                                                 <td className="align-middle">GNOME Translation <br/> Andika Triwidada</td>
                                                 <td className="align-middle">Another Class</td>
-                                                <td className="align-middle">GNOME: Newcomers workshop (BoF) <br/> Gaurav Agrawal</td>
+                                                <td className="align-middle">GNOME: Newcomers workshop (BoF) <br/>Gaurav Agrawal, Felipe Borges, Sajeer Ahamed</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">16:00 - 16:30</td>

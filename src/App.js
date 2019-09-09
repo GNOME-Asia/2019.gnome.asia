@@ -15,7 +15,6 @@ import Staff from './Containers/Staff';
 import Media from './Containers/Media';
 import Community from './Containers/Community';
 import Proposal from './Containers/Proposal';
-import Speakers from './Containers/Speakers';
 
 class App extends React.Component {
 
@@ -41,10 +40,6 @@ class App extends React.Component {
         <div className="pt-5" id="schedule">
 
           <Agenda/>
-        </div>
-        <div className="pt-5" id="speakers">
-
-          <Speakers/>
         </div>
         <div className="pt-5" id="staff">
 
