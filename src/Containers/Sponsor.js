@@ -4,6 +4,7 @@ import sakti from '../assets/sponsors/silver/sakti.png';
 import gnome from '../assets/sponsors/platinum/gnome.png';
 import tatalogam from '../assets/sponsors/silver/domus.png';
 import fans from '../assets/sponsors/bronze/fans.png';
+import apjii from '../assets/sponsors/bronze/apjii.png';
 import cloudkilat from '../assets/sponsors/bronze/cloudkilat.png';
 import kabarlinux from '../assets/sponsors/custom/kabarlinux.png';
 
@@ -13,7 +14,7 @@ const Image = props => {
 }
 
 const SponsorTitle = props => {
-    return <div className="mx-auto my-5 text-white" style={{background:props.color, padding:'20px', width:'200px'}}><h5 className="my-0">{props.title}</h5></div>
+    return <div className="my-5"><h5 className="my-0">{props.title}</h5></div>
 }
 
 const Platinum = props => {
@@ -36,7 +37,7 @@ class Sponsor extends React.Component{
     render(){
         return(
             <div className="Page py-5">
-                <div className="container text-center py-3">
+                <div className="container py-3">
                     <h1>Sponsors</h1>
                     <hr/>
                     <div>
@@ -49,7 +50,7 @@ class Sponsor extends React.Component{
                             </li>
                         </ul>
                         <ul className="list-inline">
-                            <SponsorTitle color="#f57601" title="Platinum" />
+                            <SponsorTitle title="Platinum" />
                             <li className="list-inline-item">
                                 <Platinum
                                     name="GNOME Foundation"
@@ -58,7 +59,7 @@ class Sponsor extends React.Component{
                             </li>
                         </ul>
                         <ul className="list-inline">
-                            <SponsorTitle color="#f57601" title="Silver" />
+                            <SponsorTitle title="Silver" />
                             <li className="list-inline-item">
                                 <Silver
                                     name="PT SAKTI KINERJA KOLABORASINDO"
@@ -73,7 +74,7 @@ class Sponsor extends React.Component{
                             </li>
                         </ul>
                         <ul className="list-inline">
-                            <SponsorTitle color="#f57601" title="Bronze" />
+                            <SponsorTitle title="Bronze" />
                             <li className="list-inline-item">
                                 <Bronze
                                     name="FANS"
@@ -86,9 +87,15 @@ class Sponsor extends React.Component{
                                     src={cloudkilat}
                                 />
                             </li>
+                            <li className="list-inline-item">
+                                <Bronze
+                                    name="APJII"
+                                    src={apjii}
+                                />
+                            </li>
                         </ul>
                         <ul className="list-inline">
-                            <SponsorTitle color="#f57601" title="Custom Sponsors" />
+                            <SponsorTitle title="Custom Sponsors" />
                             <li className="list-inline-item">
                                 <Custom
                                     name="KabarLinux"
