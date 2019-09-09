@@ -4,11 +4,11 @@ import String from './Contents';
 const News = (props) => {
     return (
         <div className="my-5">
-            <h5 style={{ fontWeight:'bold' }}>{props.title}</h5>
+            <a href={props.link} target="__blank"><h5 style={{ fontWeight:'bold' }}>{props.title}</h5></a>
             <p>
             {props.content}
             <br/>
-            <a className="btn btn-outline-primary" href={props.link} target="__blank">{String.etc.more}</a>
+            <a href={props.link} target="__blank">{String.etc.more}</a>
             </p>
         </div>
     )
