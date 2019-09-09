@@ -107,21 +107,22 @@ class Dashboard extends React.Component{
                             <div className="p-4">
                                 <div className="mb-1">
                                     <h3>Hello, {this.props.name}</h3><br/>
-                                    <p>
-                                    {this.props.email} {this.props.verified ? <span className="text-success ml-1">Verified</span> : <span className="text-danger ml-1">Not Verified</span>}
-                                    <br/>
-                                    {`+`+this.props.phone}
-                                    </p>
-                                    
+                                    <ul className="nav flex-column">
+                                        <li className="nav-item">
+                                        Email : <span className="ml-1">{this.props.email} </span>{this.props.verified ? <span className="text-success ml-1"><i className="fas fa-check"></i></span> : <span className="text-danger ml-1">Not Verified</span>}
+                                        </li>
+                                        <li className="nav-item">
+                                        Phone : {`+`+this.props.phone}
+                                        </li>
+                                    </ul>    
                                 </div>
                             </div>
                         </div>
                         <div className="col-md-6">
-                            <span>Registration Payments</span>
                             <div>
-                                <span>Scan Qrcode with Mycoop Apps</span>
                                 <div className="my-3">
-                                    <h4>Transaction ID: <span className="text-danger font-italic">{this.props.payments.transaction_id}</span> - Rp. {this.props.payments.amount}</h4>
+                                    <h5>Transaction ID: <span className="text-danger font-italic">{this.props.payments.transaction_id}</span></h5>
+                                    <p>Jumlah: Rp. <strong>{this.props.payments.amount}</strong></p>
                                 </div>
                                 <div>
                                     {
