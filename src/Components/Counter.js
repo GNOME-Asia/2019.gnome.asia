@@ -71,10 +71,10 @@ class Counter extends React.Component{
         
         return(
             <div>
-                <span className="px-1">{this.state.days} <b><i>Days</i></b></span>
-                <span className="px-1">{this.state.hours} <b><i>Hours</i></b></span>
-                <span className="px-1">{this.state.minutes} <b><i>Min</i></b></span>
-                <span className="px-1">{this.state.seconds} <b><i>Sec</i></b></span>
+                <span className="px-1">{this.state.days} <b><i>Hari</i></b></span>
+                <span className="px-1">{this.state.hours} <b><i>Jam</i></b></span>
+                <span className="px-1">{this.state.minutes} <b><i>Menit</i></b></span>
+                <span className="px-1">{this.state.seconds} <b><i>Detik</i></b></span>
             </div>
         );
     }

@@ -1,8 +1,7 @@
 import React from 'react';
 import { Navbar,Nav,NavItem,Collapse,NavbarToggler } from 'reactstrap';
-import gnome from '../assets/photo_2019-07-10 19.01.08.jpeg';
-// import Registrationmodal from '../Components/Registrationmodal';
 import { Link } from 'react-router-dom';
+import gnome from '../assets/2019_logo.jpeg';
 
 
 class Navigation extends React.Component{
@@ -64,9 +63,6 @@ class Navigation extends React.Component{
                             <NavItem><a href="#schedule" 
                             onClick={this._closed}
                             className="nav-link menu-top p-3">Agenda</a></NavItem>
-                            <NavItem><a href="#speakers" 
-                            onClick={this._closed}
-                            className="nav-link menu-top p-3">Speakers</a></NavItem>
                             <NavItem><a href="#staff" 
                             onClick={this._closed}
                             className="nav-link menu-top p-3">Staff</a></NavItem>

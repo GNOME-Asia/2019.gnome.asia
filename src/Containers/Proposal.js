@@ -6,6 +6,7 @@ class Proposal extends React.Component{
         super(props);
 
         this.state = {
+            proposal:false,
             gnome:false,
             foss:false,
             os:false,
@@ -15,6 +16,7 @@ class Proposal extends React.Component{
             travel:false
         }
 
+        this._proposal = this._proposal.bind(this);
         this._gnome = this._gnome.bind(this);
         this._foss = this._foss.bind(this);
         this._os = this._os.bind(this);
@@ -22,6 +24,12 @@ class Proposal extends React.Component{
         this._ts = this._ts.bind(this);
         this._sc = this._sc.bind(this);
         this._travel = this._travel.bind(this);
+    }
+
+    _proposal(){
+        this.setState({
+            proposal: !this.state.proposal
+        })
     }
 
     _gnome(){
@@ -67,12 +75,17 @@ class Proposal extends React.Component{
 
     render(){
         return(
-            <div className="Page py-5" id="callofproposal">
+            <div className="Page py-5" id="callofproposal" style={{backgroundColor:'#E0E0E0'}}>
                 <div className="container py-3">
-                
-                    <h1>Call for Papers for GNOME.Asia Summit 2019 is now open!</h1>
-                    <hr/>
-                    <br/>
+                    <div onClick={this._proposal} className="cfptitle text-center">
+                        <h1 style={{fontSize: '2rem'}}>Call for Papers GNOME.Asia Summit 2019
+                        <br/>
+                        <span className="badge badge-danger badge-small">Closed</span>
+                        <br/>
+                        <i className={`fas ${this.state.proposal ? 'fa-chevron-up':'fa-chevron-down blinking'} ml-2`}></i>
+                        </h1>
+                    </div>
+                    <div className={this.state.proposal ? 'cfpshow' : 'cfphidden'} >
                         <h4>Topics of Call for Papers (CFP)</h4>
                         <div className="container px-5">
                         <br/>
@@ -200,6 +213,7 @@ class Proposal extends React.Component{
 
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
         )
