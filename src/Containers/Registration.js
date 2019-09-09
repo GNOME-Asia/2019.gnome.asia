@@ -186,7 +186,7 @@ class Registration extends React.Component{
         return(
             <div className="Page mb-5 mt-3">
                 <div className="container py-3">
-                    <h1>Registration</h1>
+                    <h1>Registrasi</h1>
                     <hr/>
                     <br/>
                     <div className="row">
@@ -194,12 +194,20 @@ class Registration extends React.Component{
                             <div className="px-5">
                                 <img src={gnome} className="img-fluid" alt="GNOME Asia Summit 2019" />
                             </div>
+                            <div className="px-5">
+                                <p>
+                                    <span className="text-registration"><strong>Special Note:</strong></span><br/>
+                                    This registration form is only for Indonesian citizens. <br/>
+                                    If you are from outside Indonesia, please register by sending an email to <br/>
+                                    <strong><a className="text-dark" target="__blank" href="mailto:humas@gnome.id?subject=GNOME.Asia Registration">humas@gnome.id</a></strong> with the subject <strong>"GNOME.Asia Registration"</strong>
+                                </p>
+                            </div>
                         </div>
                         <div className="col-md-4 pt-5">
                             {this.props.error ?  <div className="text-danger mb-3"><b><i className="far fa-times-circle mr-3"></i> {this.props.error} - {this.props.errmsg}</b></div>:null}
                             <form onSubmit={this._handleSubmit}>
                                 <div className="form-group">
-                                    <label htmlFor="name">Full Name</label>
+                                    <label htmlFor="name">Nama Lengkap</label>
                                     <input id="name" type="Text" className="form-control" 
                                     placeholder="Gatot Kaca"
                                     value={this.state.name} 
@@ -218,29 +226,30 @@ class Registration extends React.Component{
                                     onChangePhone={this._phone}
                                 />
                                 <div className="form-group">
-                                    <label htmlFor="asal">Asal</label>
-                                    <input id="asal" value={this.state.asal} onChange={this._asal} className="form-control"  required/>
+                                    <label htmlFor="asal">Nama Instansi/Sekolah/Personal</label>
+                                    <input id="asal" value={this.state.asal} onChange={this._asal} className="form-control" placeholder="Universitas Gatot Kaca" required/>
                                 </div>
                                 <div className="form-group">
-                                    <span>Ticket</span>
+                                    <span>Jenis Tiket</span>
                                     <br/><br/>
                                     <div className="form-check form-check-inline ml-3">
                                         <input className="form-check-input" type="radio" name="inlineRadioOptions" id="umum" value="1" onChange={this._amount} defaultChecked/>
-                                        <label className="form-check-label" htmlFor="umum">Umum - Rp. 100K</label>
+                                        <label className="form-check-label" htmlFor="umum">Umum - Rp100.000,-</label>
                                     </div>
-                                    <div className="form-check form-check-inline">
+                                    <br/>
+                                    <div className="form-check form-check-inline ml-3">
                                         <input className="form-check-input" type="radio" name="inlineRadioOptions" id="mahasiswa" value="2" onChange={this._amount}/>
-                                        <label className="form-check-label" htmlFor="mahasiswa">Mahasiswa - Rp. 50K</label>
+                                        <label className="form-check-label" htmlFor="mahasiswa">Mahasiswa - Rp50.000,-</label>
                                     </div>
                                     <div className={this.state.showupload ? null : 'd-none'}>
                                         <div className="form-group mt-3 ml-3">
-                                            <label htmlFor="filektm">Insert Your Student Card</label>
+                                            <label htmlFor="filektm">Unggah Kartu Pelajar</label>
                                             <input type="file" className="form-control-file" id="filektm"  onChange={this._uploadKtm}/>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="form-group">
-                                    <span>T-Shirt size</span>
+                                    <span>Ukuran Kaos</span>
                                     <br/><br/>
                                     <div className="form-check form-check-inline ml-3">
                                         <input className="form-check-input" type="radio" id="sizem" name="kaos" value="M" onChange={this._kaos} defaultChecked/>
@@ -265,7 +274,7 @@ class Registration extends React.Component{
                                 </div>
 
                                 <div className="form-group mt-3">
-                                    <label htmlFor="password">Password</label>
+                                    <label htmlFor="password">Sandi</label>
                                     <input id="password" type="password" 
                                     className={this.state.passlength.check ? (this.state.passlength.match ? "form-control is-valid":"form-control is-invalid") : "form-control"} 
                                     value={this.state.password}
@@ -277,13 +286,13 @@ class Registration extends React.Component{
                                         null
                                         :
                                         <div className="invalid-feedback">
-                                            Minimum 8 character
+                                            Minimum 8 karakter
                                         </div>
 
                                     }
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="confirm">Confirm Password</label>
+                                    <label htmlFor="confirm">Ketik Ulang Sandi</label>
                                     <input id="confirm" type="password" 
                                     className={this.state.matchpassword.check ? (this.state.matchpassword.match ? "form-control is-valid" : "form-control is-invalid") :"form-control"}
                                     value={this.state.confirm}
@@ -293,26 +302,26 @@ class Registration extends React.Component{
                                     {
                                         this.state.matchpassword.match && this.state.matchpassword.check ? 
                                         <div className="valid-feedback">
-                                        Password Match
+                                        Sandi Cocok
                                         </div>
                                         :
                                         <div className="invalid-feedback">
-                                            Not Match!
+                                            Tidak Cocok!
                                         </div>
                                     }
                                 </div>
 
                                 <Buttonsubmit 
-                                    class="btn btn-block btn-primary btn-rounded"
-                                    text="Sign up"
+                                    class="btn btn-block btn-primary btn-rounded btn-registration"
+                                    text="Daftar"
                                     loading={this.props.loading}
                                 />
                                 
                             </form>
                             <br/>
                             <div className="d-flex justify-content-center">
-                                <span>Already have an account?</span>
-                                <Link className="ml-2" to="/login">Login</Link>
+                                <span>Sudah punya akun?</span>
+                                <Link className="text-registration ml-2" to="/login">Masuk</Link>
                             </div>
                         </div>
                     </div>

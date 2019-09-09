@@ -42,7 +42,7 @@ class Login extends React.Component{
         return(
             <div className="Page mb-5 mt-3">
                 <div className="container py-3">
-                    <h1>Login</h1>    
+                    <h1>Dasbor Peserta</h1>
                     <hr/>
                     <br/>
                     <div className="row">
@@ -55,7 +55,7 @@ class Login extends React.Component{
                         {this.props.error ?  <div className="text-danger mb-3"><b><i className="far fa-times-circle mr-3"></i> {this.props.error}</b></div>:null}
                             <form onSubmit={this._handleForm}>
                                 <div className="form-group">
-                                    <label htmlFor="email">Email</label>
+                                    <label htmlFor="email">Alamat Surel</label>
                                     <input id="email" type="email" className="form-control"
                                     placeholder="example@example.com"
                                     value={this.state.email}
@@ -63,7 +63,7 @@ class Login extends React.Component{
                                     required/>
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="password">Password</label>
+                                    <label htmlFor="password">Sandi</label>
                                     <input id="password" type="password" className="form-control"
                                     placeholder="········"
                                     value={this.state.password}
@@ -72,15 +72,15 @@ class Login extends React.Component{
                                 </div>
                                 <br/>
                                 <Buttonsubmit 
-                                    class="btn btn-block btn-primary btn-rounded"
-                                    text="Sign in"
+                                    class="btn btn-block btn-primary btn-rounded btn-registration"
+                                    text="Masuk"
                                     loading={this.props.loading}
                                 />
                             </form>
                             <br/>
                             <div className="d-flex justify-content-center">
-                                <span>Already have an account?</span>
-                                <Link className="ml-2" to="/registration">Register</Link>
+                                <span>Belum punya akun?</span>
+                                <Link className="ml-2 text-registration" to="/registration">Daftar</Link>
                             </div>
                         </div>
                     </div>

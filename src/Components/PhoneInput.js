@@ -41,7 +41,7 @@ class PhoneInput extends React.Component {
     render(){
        return(
         <div>
-            <label>Phone Number</label>
+            <label>Nomor Hp</label>
             <div className="row">
                 <div className="form-group col-6">
                     <div>
@@ -61,7 +61,7 @@ class PhoneInput extends React.Component {
                     
                 </div>
                 <div className="form-group col-6">
-                    <input type="text" className="form-control" placeholder="ex: 81234567890"
+                    <input type="text" className="form-control" placeholder="mis: 81234567890"
                         value={this.state.phone}
                         onChange={this._handlePhone}
                     />

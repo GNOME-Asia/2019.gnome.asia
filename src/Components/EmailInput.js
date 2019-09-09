@@ -16,7 +16,7 @@ class EmailInput extends React.Component{
         return(
             <div className="form-group">
                                 
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email">Alamat Surel</label>
                 <input id="email" type="email" 
                 className={this.state.checkemail ? this.state.emailvalid ? "form-control is-valid" : "form-control is-invalid" :"form-control"}
                 value={this.props.value}
@@ -26,11 +26,11 @@ class EmailInput extends React.Component{
                 {
                     this.state.emailvalid ? 
                     <div className="valid-feedback">
-                        Email Available
+                        Alamat surel tersedia
                     </div>
                     :
                     <div className="invalid-feedback">
-                    Email Not Available!
+                    Alamat Surel tidak tersedia!
                 </div>
                 }
                 
