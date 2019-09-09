@@ -75,7 +75,7 @@ class Agenda extends React.Component{
                                                 <td className="align-middle">13:00 - 16:00</td>
                                                 <td className="align-middle">GNOME Translation <br/> Andika Triwidada</td>
                                                 <td className="align-middle">Another Class</td>
-                                                <td className="align-middle">GNOME: Newcomers workshop (BoF) <br/> Gaurav Agrawal</td>
+                                                <td className="align-middle">GNOME: Newcomers workshop (BoF) <br/>Gaurav Agrawal, Felipe Borges, Sajeer Ahamed</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">16:00 - 16:30</td>
