@@ -130,13 +130,8 @@ class Dashboard extends React.Component{
                         <div className="col-md-6">
                             <div>
                                 <div className="my-3">
-<<<<<<< HEAD
-                                    <h5>Transaction ID: <span className="text-danger font-italic">{this.props.payments.transaction_id}</span></h5>
-                                    <p>Jumlah: Rp <strong>{this.props.payments.amount.toLocaleString()}</strong></p>
-=======
                                     <h5>Kode Transaksi: <span className="text-danger font-italic">{this.props.payments.transaction_id}</span></h5>
                                     <p>Nominal Transaksi: <strong><CurrencyFormat thousandSeparator={'.'} decimalSeparator={','} suffix={',-'} prefix={'Rp'} value={this.props.payments.amount} displayType={'text'}/></strong></p>
->>>>>>> 5262c839ddf717116846218adf64c31d89bd7a6d
                                 </div>
                                 <div>
                                     {
