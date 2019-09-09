@@ -23,7 +23,7 @@ function* fetchRegister(action){
         const kenproject = yield call(Api.registration,data)
         
         const ken = kenproject.data
-        console.log(ken)
+        // console.log(ken)
 
         if(ken.error){
             yield put({
@@ -51,7 +51,7 @@ function* fetchRegister(action){
         
 
     } catch (error) {
-        console.log(error.response)
+        // console.log(error.response)
         const errmsg = error.response.data.error
         yield put({
             type:"AUTH_ERROR",
@@ -70,7 +70,7 @@ function *islogin(action){
         // console.log("ANDA SEDANG LOGIN GAN!!",data)
         const ken = yield call(Api.checkLogin,token)
         const kendata = ken.data
-        console.log(kendata)
+        // console.log(kendata)
 
         yield put({
             type:"IS_LOGIN",
@@ -87,7 +87,7 @@ function *islogin(action){
         
     
     } catch (error) {
-        console.log(error.response)
+        // console.log(error.response)
         localStorage.removeItem('ken_token')
         yield put({type:"AUTH_ERROR",error:error.message})
     }
@@ -124,7 +124,7 @@ function* fetchLogin(action){
         // ])
         const kendata = yield call(Api.login,action)
         // const kendata = ken.data
-        console.log(kendata)
+        // console.log(kendata)
         localStorage.setItem('ken_token',kendata.accessToken)
         yield put({
             type:"DO_LOGIN",
@@ -137,7 +137,7 @@ function* fetchLogin(action){
             documents: kendata.documents
         })
     } catch (error) {
-        console.log("Error Login gan!")
+        // console.log("Error Login gan!")
         yield put({type:"AUTH_ERROR",error:error.message})
     }
     
@@ -150,7 +150,7 @@ function* recreateqr(action){
         if(localStorage.getItem('ken_token')){
 
             const kendata = yield call(Api.recreateqr,localStorage.getItem('ken_token'),action.userid)
-            console.log(kendata)
+            // console.log(kendata)
             if(kendata.data.sukses){
                 yield put({
                     type:"RECREATE_QRCODE_DONE"
@@ -160,7 +160,7 @@ function* recreateqr(action){
         }
 
     } catch (error) {
-        console.log("Error Login gan!")
+        // console.log("Error Login gan!")
         yield put({
             type:"AUTH_ERROR",
             error:error.message

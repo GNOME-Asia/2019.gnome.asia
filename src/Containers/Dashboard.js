@@ -21,29 +21,15 @@ const Qrcode = (props) => {
 }
 
 const Paymentstatus = (props) => {
-    const datenow = new Date().getTime()
+    // const datenow = new Date().getTime()
+    const datenow = new Date(props.payments.created_at).getTime()
     const expireddate = new Date(props.payments.expired_date).getTime() 
     const distance = expireddate - datenow 
     // const distance = 0
 
     if(props.payments.status === 0)
     {
-        if(distance > 0 ){
-            return(
-                <div className="p-3 border text-center my-2">
-                    <Status code={props.payments.status}/><br/>
-                    <small>QrCode akan expired dalam waktu 1x24 jam</small>
-                    <br/>
-                    <Qrcode src={props.payments.qrcode_url}/>
-                    <br/>
-                    <div>
-                    <span className="text-danger font-weight-bold">QR code Expired in</span>
-                    <Counter targetdate={props.payments.expired_date}/> 
-                    </div>
-                </div>
-            )
-        }
-        else{
+        if(distance < 0){
             const token = localStorage.getItem('ken_token')
             Api.setexpired(token,props.payments.user_id)
             .then(resp => {
@@ -59,6 +45,22 @@ const Paymentstatus = (props) => {
                     <button onClick={props.recreateqr}>{props.loading? "Loading..": "Re-create QRcode"}</button>
                 </div>
             )
+            
+        }
+        else{
+            return(
+                <div className="p-3 border text-center my-2">
+                    <Status code={props.payments.status}/><br/>
+                    <small>QrCode akan expired dalam waktu 1x24 jam</small>
+                    <br/>
+                    <Qrcode src={props.payments.qrcode_url}/>
+                    <br/>
+                    <div>
+                    <span className="text-danger font-weight-bold">QR code Expired in</span>
+                    <Counter targetdate={props.payments.expired_date}/> 
+                    </div>
+                </div>
+            )
         }
     }
 
@@ -67,12 +69,12 @@ const Paymentstatus = (props) => {
         return(
             <div className="my-4">
                 <div>
-                    <h4>Berikut QR Code untuk Registrasi ulang Acara</h4>
-                    <img src={props.documents.qrcode_url} alt="QRCODE GNOME Asia 2019" className="img-fluid" width="400px"/>
+                    <p>Berikut QR Code untuk Registrasi ulang Acara</p>
+                    <img src={props.documents.qrcode_url} alt="QRCODE GNOME Asia 2019" className="img-fluid" width="200px"/>
+                    {/* <img src="http://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=google.com" alt="QRCODE GNOME Asia 2019" className="img-fluid" width="400px"/> */}
+                    {/* {props.documents.qrcode_url} */}
                 </div>
-                <h4>Kode Registrasi & QR code juga telah dikirim ke Email Anda</h4>
-                <span>Terima Kasih</span>
-                
+                <p>Kode Registrasi & QR code juga telah dikirim ke Email Anda.<br/>Terima Kasih</p>
             </div>
         )
     }
@@ -93,6 +95,7 @@ class Dashboard extends React.Component{
     
 
     render(){
+        console.log(this.props.documents)
         console.log(this.props.payments)
 
         return(
@@ -107,21 +110,22 @@ class Dashboard extends React.Component{
                             <div className="p-4">
                                 <div className="mb-1">
                                     <h3>Hello, {this.props.name}</h3><br/>
-                                    <p>
-                                    {this.props.email} {this.props.verified ? <span className="text-success ml-1">Verified</span> : <span className="text-danger ml-1">Not Verified</span>}
-                                    <br/>
-                                    {`+`+this.props.phone}
-                                    </p>
-                                    
+                                    <ul className="nav flex-column">
+                                        <li className="nav-item">
+                                        Email : <span className="ml-1">{this.props.email} </span>{this.props.verified ? <span className="text-success ml-1"><i className="fas fa-check"></i></span> : <span className="text-danger ml-1">Not Verified</span>}
+                                        </li>
+                                        <li className="nav-item">
+                                        Phone : {`+`+this.props.phone}
+                                        </li>
+                                    </ul>    
                                 </div>
                             </div>
                         </div>
                         <div className="col-md-6">
-                            <span>Registration Payments</span>
                             <div>
-                                <span>Scan Qrcode with Mycoop Apps</span>
                                 <div className="my-3">
-                                    <h4>Transaction ID: <span className="text-danger font-italic">{this.props.payments.transaction_id}</span> - Rp. {this.props.payments.amount}</h4>
+                                    <h5>Transaction ID: <span className="text-danger font-italic">{this.props.payments.transaction_id}</span></h5>
+                                    <p>Jumlah: Rp. <strong>{this.props.payments.amount}</strong></p>
                                 </div>
                                 <div>
                                     {
