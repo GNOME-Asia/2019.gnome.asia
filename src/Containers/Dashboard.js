@@ -67,13 +67,12 @@ const Paymentstatus = (props) => {
         return(
             <div className="my-4">
                 <div>
-                    <h4>Berikut QR Code untuk Registrasi ulang Acara</h4>
-                    {/* <img src={} alt="QRCODE GNOME Asia 2019" className="img-fluid" width="400px"/> */}
-                    {props.documents.qrcode_url}
+                    <p>Berikut QR Code untuk Registrasi ulang Acara</p>
+                    <img src={props.documents.qrcode_url} alt="QRCODE GNOME Asia 2019" className="img-fluid" width="200px"/>
+                    {/* <img src="http://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=google.com" alt="QRCODE GNOME Asia 2019" className="img-fluid" width="400px"/> */}
+                    {/* {props.documents.qrcode_url} */}
                 </div>
-                <h4>Kode Registrasi & QR code juga telah dikirim ke Email Anda</h4>
-                <span>Terima Kasih</span>
-                
+                <p>Kode Registrasi & QR code juga telah dikirim ke Email Anda.<br/>Terima Kasih</p>
             </div>
         )
     }
@@ -94,7 +93,7 @@ class Dashboard extends React.Component{
     
 
     render(){
-        console.log(this.props.payments)
+        // console.log(this.props.documents)
 
         return(
             <div className="Page mb-5">
