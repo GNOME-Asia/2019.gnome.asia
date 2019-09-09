@@ -68,7 +68,8 @@ const Paymentstatus = (props) => {
             <div className="my-4">
                 <div>
                     <h4>Berikut QR Code untuk Registrasi ulang Acara</h4>
-                    <img src={props.documents.qrcode_url} alt="QRCODE GNOME Asia 2019" className="img-fluid" width="400px"/>
+                    {/* <img src={} alt="QRCODE GNOME Asia 2019" className="img-fluid" width="400px"/> */}
+                    {props.documents.qrcode_url}
                 </div>
                 <h4>Kode Registrasi & QR code juga telah dikirim ke Email Anda</h4>
                 <span>Terima Kasih</span>
