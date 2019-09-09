@@ -27,8 +27,6 @@ html{
 .menu-top{
   color: #616161 !important;
   border: 1px solid#ffffff;
-  
-  
 }
 
 .menu-top:hover{
@@ -38,6 +36,20 @@ html{
 }
 .navbar-dark .navbar-toggler-icon{
   background-image: ('./assets/favicon.ico') !important;
+}
+
+.text-registration {
+  color: #f57600
+}
+
+.btn-registration {
+  background-color: #f57600 !important;
+  border: 1px solid #f57600;
+}
+
+.btn-registration:hover,.btn-registration:active,.btn-registration:focus {
+  background-color: #f57600 !important;
+  border: 1px solid #f57600;
 }
 
 .tab-agenda{
