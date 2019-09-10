@@ -6,8 +6,6 @@
   font-size: 14px;
   background-color: #ffffff;
   color:#616161;
-  
-  
   font-size: 14px;
 }
 
@@ -23,22 +21,35 @@ html{
 
 .navbar-brand{
   font-size: 14px;
+  
 }
 
 .menu-top{
-  color: #000000 !important;
+  color: #616161 !important;
   border: 1px solid#ffffff;
-  
-  
 }
 
 .menu-top:hover{
-  border-bottom: 1px solid #0a0a0a;
+  border-bottom: 1px solid #616161;
   transition: 350ms ease-in-out;
 
 }
 .navbar-dark .navbar-toggler-icon{
   background-image: ('./assets/favicon.ico') !important;
+}
+
+.text-registration {
+  color: #f57600
+}
+
+.btn-registration {
+  background-color: #f57600 !important;
+  border: 1px solid #f57600;
+}
+
+.btn-registration:hover,.btn-registration:active,.btn-registration:focus {
+  background-color: #f57600 !important;
+  border: 1px solid #f57600;
 }
 
 .btn-outline-primary{
@@ -153,6 +164,33 @@ p{
  
 }
 
+.btn-rounded{
+  border-radius: 4vh;
+}
+
+.link-back{
+  height: 8vh;
+}
+.back-link{
+  text-decoration: none !important;
+  color: #C82333;
+  font-size: 12px;
+  animation-name: linkback;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes linkback{
+  from{
+    color:red;
+  }
+  to{
+    color:#616161;
+    
+  }
+}
 .sponsor-title{
   background-color: #4a88cf;
   color: #fff;

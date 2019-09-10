@@ -1,7 +1,7 @@
 import React from 'react';
-import String from '../Components/Contents';
 import Carousel from '../Components/Carousel';
 import News from '../Components/News';
+import String from '../Components/Contents';
 class Home extends React.Component{  
     render(){
         

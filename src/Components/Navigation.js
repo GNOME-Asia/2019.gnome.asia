@@ -1,8 +1,7 @@
 import React from 'react';
 import { Navbar,Nav,NavItem,Collapse,NavbarToggler } from 'reactstrap';
-import String from '../Components/Contents';
+import { Link } from 'react-router-dom';
 import gnome from '../assets/2019_logo.jpeg';
-import Registrationmodal from '../Components/Registrationmodal';
 
 
 class Navigation extends React.Component{
@@ -57,31 +56,31 @@ class Navigation extends React.Component{
                             onClick={
                                 this._closed
                             }
-                            className="nav-link menu-top p-3">{String.navigation.home}</a></NavItem>
+                            className="nav-link menu-top p-3">Home</a></NavItem>
                             <NavItem><a href="#venue" 
                             onClick={this._closed}
-                            className="nav-link menu-top p-3">{String.navigation.venue}</a></NavItem>
+                            className="nav-link menu-top p-3">Venue</a></NavItem>
                             <NavItem><a href="#schedule" 
                             onClick={this._closed}
-                            className="nav-link menu-top p-3">{String.navigation.agenda}</a></NavItem>
+                            className="nav-link menu-top p-3">Agenda</a></NavItem>
                             <NavItem><a href="#staff" 
                             onClick={this._closed}
-                            className="nav-link menu-top p-3">{String.navigation.staff}</a></NavItem>
+                            className="nav-link menu-top p-3">Staff</a></NavItem>
                             <NavItem><a href="#callofproposal" 
                             onClick={this._closed}
-                            className="nav-link menu-top p-3">{String.navigation.cfp}</a></NavItem>
+                            className="nav-link menu-top p-3">Call For Paper</a></NavItem>
                             <NavItem><a href="#sponsor" 
                             onClick={this._closed}
-                            className="nav-link menu-top p-3">{String.navigation.sponsor}</a></NavItem>
-                            <NavItem><a href="#registration" 
-                            onClick={this._modalopen}
-                            className="nav-link menu-top p-3">{String.navigation.registration}</a></NavItem>
+                            className="nav-link menu-top p-3">Sponsor</a></NavItem>
+                            <NavItem><Link to="/registration" 
+                            onClick={this._closed}
+                            className="nav-link menu-top p-3">Registration</Link></NavItem>
                         </Nav>
                     </Collapse>
                     
                 </div>
             </Navbar>
-            <Registrationmodal open={this.state.modal} toggle={this._modalopen}/>
+            {/* <Registrationmodal open={this.state.modal} toggle={this._modalopen}/> */}
             </div>
         );
     }
