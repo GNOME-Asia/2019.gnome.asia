@@ -111,7 +111,7 @@ class App extends React.Component {
         <Registrationroute islogin={this.props.islogin} path="/registration" component={Registration} />
         <LoginRoute islogin={this.props.islogin} path="/login" component={Login}/>
         <Dashboardroute  islogin={this.props.islogin} path="/dashboard" component={Dashboard} />
-        <Route component={Notfound}/>
+        {/* <Route component={Notfound}/> */}
         </Switch>
        </div>
       </Router>
