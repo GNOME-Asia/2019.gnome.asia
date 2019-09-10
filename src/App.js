@@ -17,7 +17,8 @@ import Proposal from './Containers/Proposal';
 // import Speakers from './Containers/Speakers';
 import Loading from './Components/Loading';
 import { 
-  BrowserRouter as Router
+  HashRouter as Router
+  // BrowserRouter as Router
   ,Switch,Route,Redirect
 } from 'react-router-dom';
 import { connect } from 'react-redux';
