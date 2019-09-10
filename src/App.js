@@ -6,7 +6,7 @@ import Navigation from './Components/Navigation';
 import Home from './Containers/Home';
 import Venue from './Containers/Venue';
 import Cityinformation from './Containers/City';
-import Notfound from './Containers/Notfound';
+// import Notfound from './Containers/Notfound';
 import Footer from './Components/Footer';
 import Sponsor from './Containers/Sponsor';
 import Agenda from './Containers/Agenda';
