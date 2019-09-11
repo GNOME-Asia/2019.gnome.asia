@@ -14,7 +14,7 @@ import Staff from './Containers/Staff';
 import Media from './Containers/Media';
 import Community from './Containers/Community';
 import Proposal from './Containers/Proposal';
-// import Speakers from './Containers/Speakers';
+import Speakers from './Containers/Speakers';
 import Loading from './Components/Loading';
 import { 
   HashRouter as Router
@@ -38,10 +38,12 @@ const content = () => {
           <div className="pt-5" id="venue">
             <Venue />
           </div>
-          
           <Cityinformation/>
           <div className="pt-5" id="schedule">
             <Agenda/>
+          </div>
+          <div className="pt-5" id="speakers">
+            <Speakers/>
           </div>
           <div className="pt-5" id="staff">
             <Staff/>
