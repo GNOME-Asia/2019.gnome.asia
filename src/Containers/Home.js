@@ -13,6 +13,7 @@ class Home extends React.Component{
                 <div className="container my-3">
                     <h2>{String.home.news.title}</h2>
                     <hr/>
+                    <News title={String.home.news.regisjudul} content={String.home.news.regiscontent} link={String.home.news.regislink}/>
                     <News title={String.home.news.cfpjudul} content={String.home.news.cfpcontent} link={String.home.news.cfplink}/>
                     <News title={String.home.news.pengumumanjudul} content={String.home.news.pengumumancontent} link={String.home.news.pengumumanlink}/>
                     <News title={String.home.news.logo} content={String.home.news.logocontent} link={String.home.news.logolink}/>
