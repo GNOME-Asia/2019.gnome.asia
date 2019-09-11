@@ -1,11 +1,13 @@
 import React from 'react';
 import unmuh from '../assets/sponsors/unmuh.png';
-import sakti from '../assets/sponsors/silver/sakti.png';
+import mycoop from '../assets/sponsors/silver/mycoop.png';
 import gnome from '../assets/sponsors/platinum/gnome.png';
 import tatalogam from '../assets/sponsors/silver/domus.png';
+import pemkab from '../assets/sponsors/silver/pemkabgresik.png';
 import fans from '../assets/sponsors/bronze/fans.png';
 import apjii from '../assets/sponsors/bronze/apjii.png';
 import cloudkilat from '../assets/sponsors/bronze/cloudkilat.png';
+import esensi from '../assets/sponsors/bronze/esensicreative.png';
 import kabarlinux from '../assets/sponsors/custom/kabarlinux.png';
 
 
@@ -62,8 +64,14 @@ class Sponsor extends React.Component{
                             <SponsorTitle title="Silver" />
                             <li className="list-inline-item">
                                 <Silver
-                                    name="PT SAKTI KINERJA KOLABORASINDO"
-                                    src={sakti}
+                                    name="MyCOOP"
+                                    src={mycoop}
+                                />
+                            </li>
+                            <li className="list-inline-item">
+                                <Silver
+                                    name="Pemerintah Kabupaten Gresik"
+                                    src={pemkab}
                                 />
                             </li>
                             <li className="list-inline-item">
@@ -91,6 +99,12 @@ class Sponsor extends React.Component{
                                 <Bronze
                                     name="APJII"
                                     src={apjii}
+                                />
+                            </li>
+                            <li className="list-inline-item">
+                                <Bronze
+                                    name="Esensi Creative"
+                                    src={esensi}
                                 />
                             </li>
                         </ul>

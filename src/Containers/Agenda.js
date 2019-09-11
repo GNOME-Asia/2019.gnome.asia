@@ -73,9 +73,8 @@ class Agenda extends React.Component{
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">13:00 - 16:00</td>
-                                                <td className="align-middle">GNOME Translation <br/> Andika Triwidada</td>
-                                                <td className="align-middle">Another Class</td>
-                                                <td className="align-middle">GNOME: Newcomers workshop (BoF) <br/>Gaurav Agrawal, Felipe Borges, Sajeer Ahamed</td>
+                                                <td className="align-middle" width="45%">GNOME Translation <br/> Andika Triwidada</td>
+                                                <td className="align-middle" width="45%">GNOME: Newcomers workshop (BoF) <br/>Gaurav Agrawal, Felipe Borges, Sajeer Ahamed</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">16:00 - 16:30</td>
@@ -237,7 +236,7 @@ class Agenda extends React.Component{
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">11:30 - 12:15</td>
-                                                <td className="align-middle">Gitar Shredding dalam Lingkungan GNOME <br/>Hananto Herlambang</td>
+                                                <td className="align-middle">Guitar Shredding under GNOME Environment <br/>Hananto Herlambang</td>
                                                 <td className="align-middle">Open Source in Homeschooling Family <br/> Andik Nur Achmad</td>
                                                 <td className="align-middle">Using Creative Commons License to Collaborate with Digital Artwork <br/> Florens Debora Patricia</td>
                                                 <td className="align-middle">Power Management and Measurement in GNOME <br/> Aditya Manglik</td>
@@ -281,7 +280,7 @@ class Agenda extends React.Component{
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">14:50 - 14:55</td>
-                                                <td className="align-middle" colSpan="5">(Lightning Talk) Implementasi dan manfaat File hosting Owncloud dan Virtualisasi Proxmox pada pembelajaran Teaching Factory SMK Muhammadiyah 1 Yogyakarta <br/> Budi Putra</td>
+                                                <td className="align-middle" colSpan="5">(Lightning Talk) Implementation and utilization file hosting Owncloud and virtualization Proxmox for Teaching Factory Model on SMK Muhammadiyah 1 Yogyakarta <br/> Budi Putra</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">14:55 - 15:00</td>
