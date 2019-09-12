@@ -18,7 +18,7 @@ class Speakers extends React.Component{
         return(
             <div className="Page">
                 <div className="container py-3">
-                    <h1>Speakers</h1>
+                    <h1>GNOME.Asia Summit 2019 Speakers</h1>
                     <hr/>
                     <h3 className="text-center">Keynote Speakers</h3>
                     <div className="row d-flex d-flex-row align-items-center justify-content-center" >
