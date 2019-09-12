@@ -191,8 +191,14 @@ p{
     
   }
 }
+
 .sponsor-title{
   background-color: #4a88cf;
   color: #fff;
 }
 
+.registration-banner{
+    color: #333;
+    background-color: #ffefe2;
+    border-color: white;
+}
