@@ -1,43 +1,43 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "62f5b1d931718b8d19d471be40f66820",
+    "revision": "b9a432b9bec8577e1510fca9b9ab3a1a",
     "url": "/index.html"
   },
   {
-    "revision": "a936cbd265c3878629c4",
+    "revision": "c75d586c87904118fec4",
     "url": "/static/css/2.266e55a5.chunk.css"
   },
   {
-    "revision": "3a28aff8397fd0d6bef3",
+    "revision": "bfe0c2ccb0f2e91d64f2",
     "url": "/static/css/main.18a8af3a.chunk.css"
   },
   {
-    "revision": "a936cbd265c3878629c4",
-    "url": "/static/js/2.13d0ba8c.chunk.js"
+    "revision": "c75d586c87904118fec4",
+    "url": "/static/js/2.b3d2ac10.chunk.js"
   },
   {
-    "revision": "07372ed030f94d85e80d",
-    "url": "/static/js/3.d4bfc6d5.chunk.js"
+    "revision": "376cb75381c0ddcefb94",
+    "url": "/static/js/3.c40c02fc.chunk.js"
   },
   {
-    "revision": "2aba6135f1dfdc518dc9",
-    "url": "/static/js/4.9099f84e.chunk.js"
+    "revision": "5cd5314c6f35d1d69e0e",
+    "url": "/static/js/4.3a4897c2.chunk.js"
   },
   {
-    "revision": "925e0e60a9cccf7cb10b",
-    "url": "/static/js/5.713008a6.chunk.js"
+    "revision": "7e106100a3ce1edbdd94",
+    "url": "/static/js/5.9b5b8e6b.chunk.js"
   },
   {
-    "revision": "ccdc964d315fb7a2784c",
-    "url": "/static/js/6.420ddd16.chunk.js"
+    "revision": "5142ee7f1f5e44ad4f5f",
+    "url": "/static/js/6.f6f5e2dd.chunk.js"
   },
   {
-    "revision": "3a28aff8397fd0d6bef3",
-    "url": "/static/js/main.78f689e5.chunk.js"
+    "revision": "bfe0c2ccb0f2e91d64f2",
+    "url": "/static/js/main.98d74d86.chunk.js"
   },
   {
-    "revision": "6ef2a555c5a41dcf2d37",
-    "url": "/static/js/runtime~main.76971056.js"
+    "revision": "21b2d318992c01b6665b",
+    "url": "/static/js/runtime~main.91b06a1e.js"
   },
   {
     "revision": "c15933df6581ddb001e9b5a56db0b9e5",
@@ -104,8 +104,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/ini-gresik.1515c546.png"
   },
   {
-    "revision": "99c6630d0c7f9203022ffe6b9337831d",
-    "url": "/static/media/kabarlinux.99c6630d.png"
+    "revision": "6399010319da10243e7910bc57e3f72d",
+    "url": "/static/media/kabarlinux.63990103.png"
   },
   {
     "revision": "c69bb0f7f26711710882f5838ef3fca5",
@@ -118,6 +118,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "47e49012f40997dc1f90d6233e6a3108",
     "url": "/static/media/pesona.47e49012.png"
+  },
+  {
+    "revision": "42a4eca625b113a4831b630551720fc8",
+    "url": "/static/media/pia.42a4eca6.png"
   },
   {
     "revision": "117448e17d0fac625f060b0377794452",
