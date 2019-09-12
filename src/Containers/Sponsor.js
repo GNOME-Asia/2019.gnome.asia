@@ -9,6 +9,7 @@ import apjii from '../assets/sponsors/bronze/apjii.png';
 import cloudkilat from '../assets/sponsors/bronze/cloudkilat.png';
 import esensi from '../assets/sponsors/bronze/esensicreative.png';
 import kabarlinux from '../assets/sponsors/custom/kabarlinux.png';
+import pia from '../assets/sponsors/custom/pia.png';
 
 
 const Image = props => {
@@ -114,6 +115,12 @@ class Sponsor extends React.Component{
                                 <Custom
                                     name="KabarLinux"
                                     src={kabarlinux}
+                                />
+                            </li>
+                            <li className="list-inline-item">
+                                <Custom
+                                    name="Private Internet Access"
+                                    src={pia}
                                 />
                             </li>
                         </ul>

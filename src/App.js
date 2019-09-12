@@ -39,11 +39,11 @@ const content = () => {
             <Venue />
           </div>
           <Cityinformation/>
-          <div className="pt-5" id="schedule">
-            <Agenda/>
-          </div>
           <div className="pt-5" id="speakers">
             <Speakers/>
+          </div>
+          <div className="pt-5" id="schedule">
+            <Agenda/>
           </div>
           <div className="pt-5" id="staff">
             <Staff/>
