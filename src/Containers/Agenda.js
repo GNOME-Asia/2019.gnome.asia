@@ -119,7 +119,7 @@ class Agenda extends React.Component{
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">10:50 - 11:50</td>
-                                                <td className="align-middle" colSpan="5">Keynote Speaker (Sponsor) - DOMUS</td>
+                                                <td className="align-middle" colSpan="5">USB Borne Attacks and Usable Defense Mechanisms by Tobias Mueller</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">11:50 - 13:00</td>
@@ -220,7 +220,7 @@ class Agenda extends React.Component{
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">10:15 - 11:00</td>
-                                                <td className="align-middle" colSpan="5">USB Borne Attacks and Usable Defense Mechanisms by Tobias Mueller</td>
+                                                <td className="align-middle" colSpan="5">Make our steel industry Great again, with Industry 4.0 - Stephanus Koeswandi (DOMUS)</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">11:00 - 11:30</td>
