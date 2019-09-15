@@ -22,8 +22,8 @@ const Qrcode = (props) => {
 }
 
 const Paymentstatus = (props) => {
-    // const datenow = new Date().getTime()
-    const datenow = new Date(props.payments.created_at).getTime()
+    const datenow = new Date().getTime()
+    // const datenow = new Date(props.payments.created_at).getTime()
     const expireddate = new Date(props.payments.expired_date).getTime() 
     const distance = expireddate - datenow 
     // const distance = 0
@@ -101,7 +101,7 @@ class Dashboard extends React.Component{
     
 
     render(){
-        console.log(this.props.documents)
+        // console.log(this.props.documents)
         console.log(this.props.payments)
 
         return(
