@@ -2,6 +2,8 @@ import React from 'react';
 import unmuh from '../assets/sponsors/unmuh.png';
 import mycoop from '../assets/sponsors/silver/mycoop.png';
 import gnome from '../assets/sponsors/platinum/gnome.png';
+import endless from '../assets/sponsors/gold/endless.png';
+import opensuse from '../assets/sponsors/silver/openSUSE.png';
 import tatalogam from '../assets/sponsors/silver/domus.png';
 import pemkab from '../assets/sponsors/silver/pemkabgresik.png';
 import fans from '../assets/sponsors/bronze/fans.png';
@@ -9,7 +11,7 @@ import apjii from '../assets/sponsors/bronze/apjii.png';
 import cloudkilat from '../assets/sponsors/bronze/cloudkilat.png';
 import esensi from '../assets/sponsors/bronze/esensicreative.png';
 import kabarlinux from '../assets/sponsors/custom/kabarlinux.png';
-import pia from '../assets/sponsors/custom/pia.png';
+import pia from '../assets/sponsors/platinum/pia.png';
 
 
 const Image = props => {
@@ -21,7 +23,11 @@ const SponsorTitle = props => {
 }
 
 const Platinum = props => {
-    return <img className="img-fluid" alt={props.name} src={props.src} style={{ height:'200px' }}/>
+    return <img className="img-fluid" alt={props.name} src={props.src} style={{ height:props.height }}/>
+}
+
+const Gold = props => {
+    return <img className="img-fluid" alt={props.name} src={props.src} style={{ height:'175px' }}/>
 }
 
 const Silver = props => {
@@ -54,10 +60,27 @@ class Sponsor extends React.Component{
                         </ul>
                         <ul className="list-inline">
                             <SponsorTitle title="Platinum" />
-                            <li className="list-inline-item">
+                            <li className="list-inline-item mr-5">
                                 <Platinum
                                     name="GNOME Foundation"
                                     src={gnome}
+                                    height="200px"
+                                />
+                            </li>
+                            <li className="list-inline-item">
+                                <Platinum
+                                    name="Private Internet Access"
+                                    src={pia}
+                                    height="120px"
+                                />
+                            </li>
+                        </ul>
+                        <ul className="list-inline">
+                            <SponsorTitle title="Gold" />
+                            <li className="list-inline-item">
+                                <Gold
+                                    name="Endless"
+                                    src={endless}
                                 />
                             </li>
                         </ul>
@@ -71,14 +94,20 @@ class Sponsor extends React.Component{
                             </li>
                             <li className="list-inline-item">
                                 <Silver
-                                    name="Pemerintah Kabupaten Gresik"
-                                    src={pemkab}
+                                    name="PT TATA LOGAM LESTARI"
+                                    src={tatalogam}
                                 />
                             </li>
                             <li className="list-inline-item">
                                 <Silver
-                                    name="PT TATA LOGAM LESTARI"
-                                    src={tatalogam}
+                                    name="openSUSE"
+                                    src={opensuse}
+                                />
+                            </li>
+                            <li className="list-inline-item">
+                                <Silver
+                                    name="Pemerintah Kabupaten Gresik"
+                                    src={pemkab}
                                 />
                             </li>
                         </ul>
@@ -115,12 +144,6 @@ class Sponsor extends React.Component{
                                 <Custom
                                     name="KabarLinux"
                                     src={kabarlinux}
-                                />
-                            </li>
-                            <li className="list-inline-item">
-                                <Custom
-                                    name="Private Internet Access"
-                                    src={pia}
                                 />
                             </li>
                         </ul>
