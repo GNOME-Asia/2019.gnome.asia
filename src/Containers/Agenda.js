@@ -61,11 +61,11 @@ class Agenda extends React.Component{
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">08:30 - 09:30</td>
-                                                <td className="align-middle" colSpan="3">Gitlab Class by GresikDev</td>
+                                                <td className="align-middle" colSpan="3">Gitlab Class by GresikDev<br/>(RPL TI UMG)</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">09:30 - 11:00</td>
-                                                <td className="align-middle" colSpan="3">Video Call Application using WebRTC and Gstreamer by Fitra Aditya</td>
+                                                <td className="align-middle" colSpan="3">Video Call Application using WebRTC and Gstreamer by Fitra Aditya<br/>(RPL TI UMG)</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">11:30 - 13:00</td>
@@ -73,8 +73,8 @@ class Agenda extends React.Component{
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">13:00 - 16:00</td>
-                                                <td className="align-middle" width="45%">GNOME Translation <br/> Andika Triwidada</td>
-                                                <td className="align-middle" width="45%">GNOME: Newcomers workshop (BoF) <br/>Gaurav Agrawal, Felipe Borges, Sajeer Ahamed</td>
+                                                <td className="align-middle" width="45%">GNOME Translation <br/> Andika Triwidada<br/>(SBC TI UMG)</td>
+                                                <td className="align-middle" width="45%">GNOME: Newcomers workshop (BoF) <br/>Gaurav Agrawal, Felipe Borges, Sajeer Ahamed<br/>(ALGO TI UMG)</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">16:00 - 16:30</td>
@@ -99,39 +99,39 @@ class Agenda extends React.Component{
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">09:00 - 09:30</td>
-                                                <td className="align-middle" colSpan="5">Opening - Tari-Tari Gembira (Traditional Dance)</td>
+                                                <td className="align-middle" colSpan="5">Opening - Tari-Tari Gembira (Traditional Dance) <br/>(Hall Sang Pencerah)</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">09:30 - 09:40</td>
-                                                <td className="align-middle" colSpan="5">Opening Talk by Mayor</td>
+                                                <td className="align-middle" colSpan="5">Opening Talk by Mayor <br/>(Hall Sang Pencerah)</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">09:40 - 09:45</td>
-                                                <td className="align-middle" colSpan="5">Opening Talk by Dean of University</td>
+                                                <td className="align-middle" colSpan="5">Opening Talk by Dean of University <br/>(Hall Sang Pencerah)</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">09:45 - 09:50</td>
-                                                <td className="align-middle" colSpan="5">Opening Talk by GNOME</td>
+                                                <td className="align-middle" colSpan="5">Opening Talk by GNOME <br/>(Hall Sang Pencerah)</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">09:50 - 10:50</td>
-                                                <td className="align-middle" colSpan="5">Opening Talk by Neil McGovern (GNOME Executive Director)</td>
+                                                <td className="align-middle" colSpan="5">Opening Talk by Neil McGovern (GNOME Executive Director) <br/>(Hall Sang Pencerah)</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">10:50 - 11:50</td>
-                                                <td className="align-middle" colSpan="5">USB Borne Attacks and Usable Defense Mechanisms by Tobias Mueller</td>
+                                                <td className="align-middle" colSpan="5">USB Borne Attacks and Usable Defense Mechanisms by Tobias Mueller <br/>(Hall Sang Pencerah)</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">11:50 - 13:00</td>
                                                 <td className="align-middle" colSpan="5">Break/Lunch/Praying</td>
                                             </tr>
                                             <tr>
-                                                <td></td>
-                                                <td className="align-middle table-secondary">Class 1</td>
-                                                <td className="align-middle table-secondary">Class 2</td>
-                                                <td className="align-middle table-secondary">Class 3</td>
-                                                <td className="align-middle table-secondary">Class 4</td>
-                                                <td className="align-middle table-secondary">Class 5</td>
+                                                <td width="12rem"></td>
+                                                <td width="20%" className="align-middle table-secondary">Class 1<br/>(Hall Sang Pencerah)</td>
+                                                <td width="20%" className="align-middle table-secondary">Class 2<br/>(Room I6.06)</td>
+                                                <td width="20%" className="align-middle table-secondary">Class 3<br/>(Room I6.07)</td>
+                                                <td width="20%" className="align-middle table-secondary">Class 4<br/>(Room I6.08)</td>
+                                                <td width="20%" className="align-middle table-secondary">Class 5<br/>(Room I6.09)</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">13:00 - 13:45</td>
@@ -150,12 +150,12 @@ class Agenda extends React.Component{
                                                 <td className="align-middle" colSpan="5">Coffee Break</td>
                                             </tr>
                                             <tr>
-                                                <td></td>
-                                                <td className="align-middle table-secondary">Class 1</td>
-                                                <td className="align-middle table-secondary">Class 2</td>
-                                                <td className="align-middle table-secondary">Class 3</td>
-                                                <td className="align-middle table-secondary">Class 4</td>
-                                                <td className="align-middle table-secondary">Class 5</td>
+                                                <td width="12rem"></td>
+                                                <td width="20%" className="align-middle table-secondary">Class 1<br/>(Hall Sang Pencerah)</td>
+                                                <td width="20%" className="align-middle table-secondary">Class 2<br/>(Room I6.06)</td>
+                                                <td width="20%" className="align-middle table-secondary">Class 3<br/>(Room I6.07)</td>
+                                                <td width="20%" className="align-middle table-secondary">Class 4<br/>(Room I6.08)</td>
+                                                <td width="20%" className="align-middle table-secondary">Class 5<br/>(Room I6.09)</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">14:15 - 15:00</td>
@@ -175,19 +175,19 @@ class Agenda extends React.Component{
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">15:30 - 15:35</td>
-                                                <td className="align-middle" colSpan="5">(Lightning Talk) GNOME l10n Indonesia Progress <br/> Kukuh syafaat</td>
+                                                <td className="align-middle" colSpan="5">(Lightning Talk) GNOME l10n Indonesia Progress <br/> Kukuh syafaat <br/>(Hall Sang Pencerah)</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">15:35 - 15:40</td>
-                                                <td className="align-middle" colSpan="5">(Lightning Talk) IRGSH <br/> Herpiko Dwi Aguno</td>
+                                                <td className="align-middle" colSpan="5">(Lightning Talk) IRGSH <br/> Herpiko Dwi Aguno <br/>(Hall Sang Pencerah)</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">15:40 - 15:45</td>
-                                                <td className="align-middle" colSpan="5">(Lightning Talk) Open Source and Education in Indonesia <br/> Faiq Aminuddin</td>
+                                                <td className="align-middle" colSpan="5">(Lightning Talk) Open Source and Education in Indonesia <br/> Faiq Aminuddin <br/>(Hall Sang Pencerah)</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">15:45 - 15:50</td>
-                                                <td className="align-middle" colSpan="5">(Lightning Talk) Deep Learning in Linux Distros <br/> Radical Rakhman Wahid</td>
+                                                <td className="align-middle" colSpan="5">(Lightning Talk) Deep Learning in Linux Distros <br/> Radical Rakhman Wahid <br/>(Hall Sang Pencerah)</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">15:50 - 16:30</td>
@@ -212,27 +212,27 @@ class Agenda extends React.Component{
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">09:10 - 09:15</td>
-                                                <td className="align-middle" colSpan="5">Opening by MC</td>
+                                                <td className="align-middle" colSpan="5">Opening by MC <br/>(Hall Sang Pencerah)</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">09:15 - 10:15</td>
-                                                <td className="align-middle" colSpan="5">GNOME Foundation — We're Here to Help - Rosanna Yuen</td>
+                                                <td className="align-middle" colSpan="5">GNOME Foundation — We're Here to Help - Rosanna Yuen <br/>(Hall Sang Pencerah)</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">10:15 - 11:00</td>
-                                                <td className="align-middle" colSpan="5">Make our steel industry Great again, with Industry 4.0 - Stephanus Koeswandi (DOMUS)</td>
+                                                <td className="align-middle" colSpan="5">Make our steel industry Great again, with Industry 4.0 - Stephanus Koeswandi (DOMUS) <br/>(Hall Sang Pencerah)</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">11:00 - 11:30</td>
                                                 <td className="align-middle" colSpan="5">Coffee Break</td>
                                             </tr>
                                             <tr>
-                                                <td></td>
-                                                <td className="align-middle table-secondary">Class 1</td>
-                                                <td className="align-middle table-secondary">Class 2</td>
-                                                <td className="align-middle table-secondary">Class 3</td>
-                                                <td className="align-middle table-secondary">Class 4</td>
-                                                <td className="align-middle table-secondary">Class 5</td>
+                                                <td width="12rem"></td>
+                                                <td width="20%" className="align-middle table-secondary">Class 1<br/>(Hall Sang Pencerah)</td>
+                                                <td width="20%" className="align-middle table-secondary">Class 2<br/>(Room I6.06)</td>
+                                                <td width="20%" className="align-middle table-secondary">Class 3<br/>(Room I6.07)</td>
+                                                <td width="20%" className="align-middle table-secondary">Class 4<br/>(Room I6.08)</td>
+                                                <td width="20%" className="align-middle table-secondary">Class 5<br/>(Room I6.09)</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">11:30 - 12:15</td>
@@ -251,12 +251,12 @@ class Agenda extends React.Component{
                                                 <td className="align-middle" colSpan="5">Coffee Break</td>
                                             </tr>
                                             <tr>
-                                                <td></td>
-                                                <td className="align-middle table-secondary">Class 1</td>
-                                                <td className="align-middle table-secondary">Class 2</td>
-                                                <td className="align-middle table-secondary">Class 3</td>
-                                                <td className="align-middle table-secondary">Class 4</td>
-                                                <td className="align-middle table-secondary">Class 5</td>
+                                                <td width="12rem"></td>
+                                                <td width="20%" className="align-middle table-secondary">Class 1<br/>(Hall Sang Pencerah)</td>
+                                                <td width="20%" className="align-middle table-secondary">Class 2<br/>(Room I6.06)</td>
+                                                <td width="20%" className="align-middle table-secondary">Class 3<br/>(Room I6.07)</td>
+                                                <td width="20%" className="align-middle table-secondary">Class 4<br/>(Room I6.08)</td>
+                                                <td width="20%" className="align-middle table-secondary">Class 5<br/>(Room I6.09)</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">13:30 - 14:15</td>
@@ -276,19 +276,19 @@ class Agenda extends React.Component{
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">14:45 - 14:50</td>
-                                                <td className="align-middle" colSpan="5">(Lightning Talk) The Role of Open Source Technology to Accelerate Sustainable Development Goals <br/> Uthia Estiane</td>
+                                                <td className="align-middle" colSpan="5">(Lightning Talk) The Role of Open Source Technology to Accelerate Sustainable Development Goals <br/> Uthia Estiane<br/>(Hall Sang Pencerah)</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">14:50 - 14:55</td>
-                                                <td className="align-middle" colSpan="5">(Lightning Talk) Implementation and utilization file hosting Owncloud and virtualization Proxmox for Teaching Factory Model on SMK Muhammadiyah 1 Yogyakarta <br/> Budi Putra</td>
+                                                <td className="align-middle" colSpan="5">(Lightning Talk) Implementation and utilization file hosting Owncloud and virtualization Proxmox for Teaching Factory Model on SMK Muhammadiyah 1 Yogyakarta <br/> Budi Putra<br/>(Hall Sang Pencerah)</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">14:55 - 15:00</td>
-                                                <td className="align-middle" colSpan="5">(Lightning Talk) Introducing and Educate Local Community to FOSS <br/> Ernawan Ernawan</td>
+                                                <td className="align-middle" colSpan="5">(Lightning Talk) Introducing and Educate Local Community to FOSS <br/> Ernawan Ernawan<br/>(Hall Sang Pencerah)</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">15:00 - 16:15</td>
-                                                <td className="align-middle" colSpan="5">Using Open Sorce to Manage Asian Games IT Security <br/> Andika Triwidada </td>
+                                                <td className="align-middle" colSpan="5">Using Open Sorce to Manage Asian Games IT Security <br/> Andika Triwidada <br/>(Hall Sang Pencerah)</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">16:15 - 16:30</td>
