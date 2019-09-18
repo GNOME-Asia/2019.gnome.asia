@@ -192,7 +192,7 @@ class Registration extends React.Component{
                         <div className="alert alert-warning text-center registration-banner">
                             <span className="text-registration"><strong>Special Note:</strong></span><br/>
                             This registration form is only for Indonesian citizens. If you are from outside Indonesia, please register by sending an email to <br/>
-                            <strong><a className="text-dark" target="__blank" href="mailto:humas@gnome.id?subject=GNOME.Asia Registration">humas@gnome.id</a></strong> with the subject <strong>"GNOME.Asia Registration"</strong>. The email at least should contains your identity incuding first and last name, gender--not mandatory (attaching your formal identity will be better), country, and t-shirt size.
+                            <strong><a className="text-dark" target="__blank" href="mailto:humas@gnome.id?subject=GNOME.Asia Registration">humas@gnome.id</a></strong> with the subject <strong>"GNOME.Asia Registration"</strong>. The email at least should contains your identity incuding first and last name, gender (not mandatory), country, and t-shirt size.
                         </div>
                     </div>
                     <div className="row">
