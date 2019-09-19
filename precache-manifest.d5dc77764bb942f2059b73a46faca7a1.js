@@ -1,43 +1,43 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "65a00b13b5757ef3038910d6907ae026",
+    "revision": "b8171a270b6b09cc1bee77dc29ef1772",
     "url": "/index.html"
   },
   {
-    "revision": "9974b1461132c64b1887",
+    "revision": "ccd047f1c8495e7602b2",
     "url": "/static/css/2.266e55a5.chunk.css"
   },
   {
-    "revision": "8922948a8ddc020b6941",
+    "revision": "6a6ec52f842421f49a99",
     "url": "/static/css/main.f5979b0f.chunk.css"
   },
   {
-    "revision": "9974b1461132c64b1887",
-    "url": "/static/js/2.971b40fe.chunk.js"
+    "revision": "ccd047f1c8495e7602b2",
+    "url": "/static/js/2.120fa54e.chunk.js"
   },
   {
-    "revision": "28783cc8c7a16438c99c",
-    "url": "/static/js/3.5e7e85a7.chunk.js"
+    "revision": "8ea1dbe4913c7e49dd15",
+    "url": "/static/js/3.0d7d428d.chunk.js"
   },
   {
-    "revision": "3c8c6ce0da71d4c7051f",
-    "url": "/static/js/4.f8b2d4ae.chunk.js"
+    "revision": "9f18d0fd34fbf6dc0045",
+    "url": "/static/js/4.7750a9b6.chunk.js"
   },
   {
-    "revision": "723f46d78278fb832cf4",
-    "url": "/static/js/5.6eff766e.chunk.js"
+    "revision": "9fa88800adbdf8c16a55",
+    "url": "/static/js/5.10457680.chunk.js"
   },
   {
-    "revision": "93a35f283d852e6ac062",
-    "url": "/static/js/6.d4920903.chunk.js"
+    "revision": "befe4156f540596c304e",
+    "url": "/static/js/6.b4f591ea.chunk.js"
   },
   {
-    "revision": "8922948a8ddc020b6941",
-    "url": "/static/js/main.b34b4d52.chunk.js"
+    "revision": "6a6ec52f842421f49a99",
+    "url": "/static/js/main.549a8861.chunk.js"
   },
   {
-    "revision": "181a818af5a240cfebf6",
-    "url": "/static/js/runtime~main.3a57ea0a.js"
+    "revision": "b1e65afd12192cf58362",
+    "url": "/static/js/runtime~main.9710b8e0.js"
   },
   {
     "revision": "c15933df6581ddb001e9b5a56db0b9e5",
@@ -142,6 +142,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "b826ba91ea35a3c7b624959f2463e247",
     "url": "/static/media/saptanawa.b826ba91.jpg"
+  },
+  {
+    "revision": "88b9540bf4e22393ef5275bb3361bb07",
+    "url": "/static/media/sisi.88b9540b.png"
   },
   {
     "revision": "5c3e2e203fa4c18055d4052252e05def",
