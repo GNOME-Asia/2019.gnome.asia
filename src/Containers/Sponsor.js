@@ -10,6 +10,7 @@ import fans from '../assets/sponsors/bronze/fans.png';
 import apjii from '../assets/sponsors/bronze/apjii.png';
 import cloudkilat from '../assets/sponsors/bronze/cloudkilat.png';
 import esensi from '../assets/sponsors/bronze/esensicreative.png';
+import sisi from '../assets/sponsors/bronze/sisi.png';
 import kabarlinux from '../assets/sponsors/custom/kabarlinux.png';
 import pia from '../assets/sponsors/platinum/pia.png';
 
@@ -135,6 +136,12 @@ class Sponsor extends React.Component{
                                 <Bronze
                                     name="Esensi Creative"
                                     src={esensi}
+                                />
+                            </li>
+                            <li className="list-inline-item">
+                                <Bronze
+                                    name="SISI"
+                                    src={sisi}
                                 />
                             </li>
                         </ul>
