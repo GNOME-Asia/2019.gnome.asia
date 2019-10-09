@@ -145,6 +145,12 @@ class Sponsor extends React.Component{
                                     src={btech}
                                 />
                             </li>
+                            <li className="list-inline-item">
+                                <Bronze
+                                    name="Pemerintah Kabupaten Gresik"
+                                    src={pemkab}
+                                />
+                            </li>
                         </ul>
                         <ul className="list-inline">
                             <SponsorTitle title="Custom Sponsors" />
@@ -152,12 +158,6 @@ class Sponsor extends React.Component{
                                 <Custom
                                     name="KabarLinux"
                                     src={kabarlinux}
-                                />
-                            </li>
-                            <li className="list-inline-item">
-                                <Silver
-                                    name="Pemerintah Kabupaten Gresik"
-                                    src={pemkab}
                                 />
                             </li>
                         </ul>
