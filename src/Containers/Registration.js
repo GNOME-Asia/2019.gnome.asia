@@ -1,12 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import EmailInput from '../Components/EmailInput';
-import gnome from '../assets/2019_logo.jpeg';
+// import EmailInput from '../Components/EmailInput';
+// import gnome from '../assets/2019_logo.jpeg';
 import { Link } from 'react-router-dom';
 import Footerback from '../Components/Footerback';
-import Buttonsubmit from '../Components/Buttonsubmit';
+// import Buttonsubmit from '../Components/Buttonsubmit';
 import { doRegister,doLogout } from '../Redux/action/userAction';
-import PhoneInput from '../Components/PhoneInput';
+// import PhoneInput from '../Components/PhoneInput';
 class Registration extends React.Component{
     constructor(props){
         super();
