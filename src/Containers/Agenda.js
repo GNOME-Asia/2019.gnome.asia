@@ -119,7 +119,7 @@ class Agenda extends React.Component{
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">10:50 - 11:50</td>
-                                                <td className="align-middle" colSpan="5">USB Borne Attacks and Usable Defense Mechanisms by Tobias Mueller <br/>(Hall Sang Pencerah)</td>
+                                                <td className="align-middle" colSpan="5">Using Open Sorce to Manage Asian Games IT Security <br/> Andika Triwidada <br/>(Hall Sang Pencerah)</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">11:50 - 13:00</td>
@@ -139,7 +139,7 @@ class Agenda extends React.Component{
                                                 <td className="align-middle">Pegon at GNOME <br/> Rahman Yusri Aftian</td>
                                                 <td className="align-middle">Human Interface Engineering (Icons and Graphic Design) <br/> Sevagen Veerasamy</td>
                                                 <td className="align-middle">LibreOffice in Asia <br/> Franklin Weng</td>
-                                                <td className="align-middle">Understanding People with Visual Impairments Using Screen Reader (Gnome AT-API)) <br/>Yudhi Satrio</td>
+                                                <td className="align-middle">Understanding People with Visual Impairments Using Screen Reader (Gnome AT-SPI)) <br/>Yudhi Satrio</td>
                                             </tr>
                                             <tr>
                                                 <td></td>
@@ -159,7 +159,7 @@ class Agenda extends React.Component{
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">14:15 - 15:00</td>
-                                                <td className="align-middle">How To Contribute To FOSS Projects <br/> Ahmad Haris</td>
+                                                <td className="align-middle">-</td>
                                                 <td className="align-middle">Managing Social Capital in Open Source <br/> Rizki Kelimutu</td>
                                                 <td className="align-middle">Running Linux Desktop on Sony Playstation 4 <br/> Iwan Suryanto Tahari</td>
                                                 <td className="align-middle">pulseaudio: Improvement on Audio Streams Switch <br/> Hui Wang</td>
@@ -288,7 +288,7 @@ class Agenda extends React.Component{
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">15:00 - 16:15</td>
-                                                <td className="align-middle" colSpan="5">Using Open Sorce to Manage Asian Games IT Security <br/> Andika Triwidada <br/>(Hall Sang Pencerah)</td>
+                                                <td className="align-middle" colSpan="5">How To Contribute To FOSS Projects <br/> Ahmad Haris <br/>(Hall Sang Pencerah)</td>
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">16:15 - 16:30</td>
