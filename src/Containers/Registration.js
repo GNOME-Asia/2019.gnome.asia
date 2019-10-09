@@ -1,12 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import EmailInput from '../Components/EmailInput';
-import gnome from '../assets/2019_logo.jpeg';
+// import EmailInput from '../Components/EmailInput';
+// import gnome from '../assets/2019_logo.jpeg';
 import { Link } from 'react-router-dom';
 import Footerback from '../Components/Footerback';
-import Buttonsubmit from '../Components/Buttonsubmit';
+// import Buttonsubmit from '../Components/Buttonsubmit';
 import { doRegister,doLogout } from '../Redux/action/userAction';
-import PhoneInput from '../Components/PhoneInput';
+// import PhoneInput from '../Components/PhoneInput';
 class Registration extends React.Component{
     constructor(props){
         super();
@@ -189,12 +189,18 @@ class Registration extends React.Component{
                     <h1>Registrasi</h1>
                     <hr/>
                     <div className="row">
-                        <div className="alert alert-warning text-center registration-banner">
+                        {/*<div className="alert alert-warning text-center registration-banner">
                             <span className="text-registration"><strong>Special Note:</strong></span><br/>
                             This registration form is only for Indonesian citizens. If you are from outside Indonesia, please register by sending an email to <br/>
                             <strong><a className="text-dark" target="__blank" href="mailto:humas@gnome.id?subject=GNOME.Asia Registration">humas@gnome.id</a></strong> with the subject <strong>"GNOME.Asia Registration"</strong>. The email at least should contains your identity incuding first and last name, gender (not mandatory), country, and t-shirt size.
+                        </div>*/}
+                        <div className="alert alert-warning text-center registration-banner" style={ {width: 100 + "%"} }>
+                            <h2>We are closed</h2>
+                                <span>Sudah punya akun?</span>
+                                <Link className="text-registration ml-2" to="/login">Masuk</Link>
                         </div>
                     </div>
+                    {/*
                     <div className="row">
                         <div className="col-md-8">
                             <div className="px-5">
@@ -323,7 +329,7 @@ class Registration extends React.Component{
                             </div>
                         </div>
                     </div>
-                    
+                    */}
                     <Footerback/>
                 </div>
             </div>

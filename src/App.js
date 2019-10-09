@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 import Navigation from './Components/Navigation';
 import Home from './Containers/Home';
+import Video from './Containers/Video.js';
 import Venue from './Containers/Venue';
 import Cityinformation from './Containers/City';
 // import Notfound from './Containers/Notfound';
@@ -34,6 +35,9 @@ const content = () => {
           <Navigation/>
           <div className="py-3" id="home">
             <Home/>
+          </div>
+          <div className="pt-5" id="video">
+            <Video />
           </div>
           <div className="pt-5" id="venue">
             <Venue />
