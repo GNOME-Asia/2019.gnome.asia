@@ -196,6 +196,8 @@ class Registration extends React.Component{
                         </div>*/}
                         <div className="alert alert-warning text-center registration-banner" style={ {width: 100 + "%"} }>
                             <h2>We are closed</h2>
+                                <span>Sudah punya akun?</span>
+                                <Link className="text-registration ml-2" to="/login">Masuk</Link>
                         </div>
                     </div>
                     {/*
