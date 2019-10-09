@@ -13,6 +13,7 @@ import esensi from '../assets/sponsors/bronze/esensicreative.png';
 import sisi from '../assets/sponsors/bronze/sisi.png';
 import kabarlinux from '../assets/sponsors/custom/kabarlinux.png';
 import pia from '../assets/sponsors/platinum/pia.png';
+import btech from '../assets/sponsors/bronze/btech.png';
 
 
 const Image = props => {
@@ -142,6 +143,12 @@ class Sponsor extends React.Component{
                                 <Bronze
                                     name="SISI"
                                     src={sisi}
+                                />
+                            </li>
+                            <li className="list-inline-item">
+                                <Bronze
+                                    name="BTech"
+                                    src={btech}
                                 />
                             </li>
                         </ul>
