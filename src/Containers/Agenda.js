@@ -159,7 +159,7 @@ class Agenda extends React.Component{
                                             </tr>
                                             <tr>
                                                 <td className="align-middle">14:15 - 15:00</td>
-                                                <td className="align-middle">-</td>
+                                                <td className="align-middle">How and Why We Contribute to Open Source Events as Graphic Designer Community <br/> Gimpscape ID</td>
                                                 <td className="align-middle">Managing Social Capital in Open Source <br/> Rizki Kelimutu</td>
                                                 <td className="align-middle">Running Linux Desktop on Sony Playstation 4 <br/> Iwan Suryanto Tahari</td>
                                                 <td className="align-middle">pulseaudio: Improvement on Audio Streams Switch <br/> Hui Wang</td>
