@@ -6,7 +6,7 @@ import Navigation from './Components/Navigation';
 import Home from './Containers/Home';
 import Venue from './Containers/Venue';
 import Cityinformation from './Containers/City';
-import Notfound from './Containers/Notfound';
+// import Notfound from './Containers/Notfound';
 import Footer from './Components/Footer';
 import Sponsor from './Containers/Sponsor';
 import Agenda from './Containers/Agenda';
@@ -17,7 +17,8 @@ import Proposal from './Containers/Proposal';
 import Speakers from './Containers/Speakers';
 import Loading from './Components/Loading';
 import { 
-  BrowserRouter as Router
+  HashRouter as Router
+  // BrowserRouter as Router
   ,Switch,Route,Redirect
 } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -37,13 +38,12 @@ const content = () => {
           <div className="pt-5" id="venue">
             <Venue />
           </div>
-          
           <Cityinformation/>
-          <div className="pt-5" id="schedule">
-            <Agenda/>
-          </div>
           <div className="pt-5" id="speakers">
             <Speakers/>
+          </div>
+          <div className="pt-5" id="schedule">
+            <Agenda/>
           </div>
           <div className="pt-5" id="staff">
             <Staff/>
@@ -113,7 +113,7 @@ class App extends React.Component {
         <Registrationroute islogin={this.props.islogin} path="/registration" component={Registration} />
         <LoginRoute islogin={this.props.islogin} path="/login" component={Login}/>
         <Dashboardroute  islogin={this.props.islogin} path="/dashboard" component={Dashboard} />
-        <Route component={Notfound}/>
+        {/* <Route component={Notfound}/> */}
         </Switch>
        </div>
       </Router>

@@ -1,4 +1,5 @@
 import React from 'react';
+import CurrencyFormat from 'react-currency-format';
 import Footer from '../Components/Footerback';
 import { connect } from 'react-redux';
 import { doLogout,reCreateQr } from '../Redux/action/userAction';
@@ -9,7 +10,7 @@ import Api from '../Settings/api'
 const Status = (props) => {
     if(props.code === 0) return <span className="text-danger font-weight-bold">Belum Bayar</span>
     else if(props.code === 1) return <span className="text-success">Sudah Terbayar</span>
-    else if(props.code === 2) return <span className="text-danger">QR CODE EXPIRED</span>
+    else if(props.code === 2) return <span className="text-danger">Kode QR Kedaluwarsa</span>
 }
 
 const Qrcode = (props) => {
@@ -21,11 +22,12 @@ const Qrcode = (props) => {
 }
 
 const Paymentstatus = (props) => {
-    // const datenow = new Date().getTime()
-    const datenow = new Date(props.payments.created_at).getTime()
+    const datenow = new Date().getTime()
+    // const datenow = new Date(props.payments.created_at).getTime()
     const expireddate = new Date(props.payments.expired_date).getTime() 
     const distance = expireddate - datenow 
     // const distance = 0
+    
 
     if(props.payments.status === 0)
     {
@@ -41,8 +43,8 @@ const Paymentstatus = (props) => {
 
             return(
                 <div className="my-4">
-                    <h4>QR Code pembayaran anda telah Expired, klik dibawah untuk membuat QRcode pembayaran</h4>
-                    <button onClick={props.recreateqr}>{props.loading? "Loading..": "Re-create QRcode"}</button>
+                    <p>Kode QR pembayaran Anda telah kedaluwarsa, klik tombol di bawah ini untuk membuat Kode QR Pembayaran</p>
+                    <button className="btn btn-primary btn-registration" onClick={props.recreateqr}>{props.loading? "Loading..": "Buat Ulang Kode QR"}</button>
                 </div>
             )
             
@@ -51,13 +53,14 @@ const Paymentstatus = (props) => {
             return(
                 <div className="p-3 border text-center my-2">
                     <Status code={props.payments.status}/><br/>
-                    <small>QrCode akan expired dalam waktu 1x24 jam</small>
+                    <small>Kode QR akan kedaluwarsa dalam waktu 24 jam</small>
                     <br/>
                     <Qrcode src={props.payments.qrcode_url}/>
                     <br/>
                     <div>
-                    <span className="text-danger font-weight-bold">QR code Expired in</span>
-                    <Counter targetdate={props.payments.expired_date}/> 
+                    <span className="text-danger font-weight-bold">Tenggat Waktu Pembayaran</span>
+                    <Counter targetdate={props.payments.expired_date}/>
+                    <p>Gunakan aplikasi MYCOOP untuk memindai kode QR di atas</p>
                     </div>
                 </div>
             )
@@ -69,12 +72,15 @@ const Paymentstatus = (props) => {
         return(
             <div className="my-4">
                 <div>
-                    <p>Berikut QR Code untuk Registrasi ulang Acara</p>
-                    <img src={props.documents.qrcode_url} alt="QRCODE GNOME Asia 2019" className="img-fluid" width="200px"/>
-                    {/* <img src="http://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=google.com" alt="QRCODE GNOME Asia 2019" className="img-fluid" width="400px"/> */}
-                    {/* {props.documents.qrcode_url} */}
+                    <p>Gunakan Kode QR di bawah ini untuk melakukan registrasi ulang di hari kegiatan</p>
+                    <div className="text-center">
+                        <img src={props.documents.qrcode_url} alt="QRCODE GNOME Asia 2019" className="img-fluid" width="200px"/>
+                        {/* <img src="http://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=google.com" alt="QRCODE GNOME Asia 2019" className="img-fluid" width="400px"/> */}
+                        {/* {props.documents.qrcode_url} */}
+                        <p style={{lineHeight:"1.5rem"}}><strong>{props.name}<br/>GNOME.Asia Summit 2019</strong></p>
+                    </div>
                 </div>
-                <p>Kode Registrasi & QR code juga telah dikirim ke Email Anda.<br/>Terima Kasih</p>
+                <p className="text-registration">*Salinan informasi ini juga telah kami kirim ke surel Anda.</p>
             </div>
         )
     }
@@ -83,8 +89,8 @@ const Paymentstatus = (props) => {
     {
         return(
             <div className="my-4">
-                <h4>QR Code pembayaran anda telah Expired, klik dibawah untuk membuat QRcode pembayaran</h4>
-                <button onClick={props.recreateqr}>{props.loading? "Loading..": "Re-create QRcode"}</button>
+                <p>Kode QR pembayaran Anda telah kedaluwarsa, klik tombol di bawah ini untuk membuat Kode QR Pembayaran</p>
+                <button className="btn btn-primary btn-registration my-3" onClick={props.recreateqr}>{props.loading? "Loading..": "Buat Ulang Kode QR"}</button>
             </div>
         )
     }
@@ -95,7 +101,7 @@ class Dashboard extends React.Component{
     
 
     render(){
-        console.log(this.props.documents)
+        // console.log(this.props.documents)
         console.log(this.props.payments)
 
         return(
@@ -109,13 +115,13 @@ class Dashboard extends React.Component{
                         <div className="col-md-6">
                             <div className="p-4">
                                 <div className="mb-1">
-                                    <h3>Hello, {this.props.name}</h3><br/>
+                                    <h3>Hai, {this.props.name}</h3><br/>
                                     <ul className="nav flex-column">
                                         <li className="nav-item">
-                                        Email : <span className="ml-1">{this.props.email} </span>{this.props.verified ? <span className="text-success ml-1"><i className="fas fa-check"></i></span> : <span className="text-danger ml-1">Not Verified</span>}
+                                        Alamat Surel : <span className="ml-1">{this.props.email} </span>{this.props.verified ? <span className="text-success ml-1"><i className="fas fa-check"></i></span> : <span className="text-danger ml-1">Belum diverifikasi</span>}
                                         </li>
                                         <li className="nav-item">
-                                        Phone : {`+`+this.props.phone}
+                                        No. HP : {`+`+this.props.phone}
                                         </li>
                                     </ul>    
                                 </div>
@@ -124,21 +130,22 @@ class Dashboard extends React.Component{
                         <div className="col-md-6">
                             <div>
                                 <div className="my-3">
-                                    <h5>Transaction ID: <span className="text-danger font-italic">{this.props.payments.transaction_id}</span></h5>
-                                    <p>Jumlah: Rp. <strong>{this.props.payments.amount}</strong></p>
+                                    <h5>Kode Transaksi: <span className="text-danger font-italic">{this.props.payments.transaction_id}</span></h5>
+                                    <p>Nominal Transaksi: <strong><CurrencyFormat thousandSeparator={'.'} decimalSeparator={','} suffix={',-'} prefix={'Rp'} value={this.props.payments.amount} displayType={'text'}/></strong></p>
                                 </div>
                                 <div>
                                     {
                                         this.props.verified ? (
-                                           <Paymentstatus payments={this.props.payments} 
+                                           <Paymentstatus payments={this.props.payments}
+                                           name={this.props.name}
                                            recreateqr={()=>this.props.createQr(this.props.payments.user_id)} 
                                            documents={this.props.documents}
                                            loading={this.props.loading} 
                                            />
                                         ):(
                                             <div>
-                                            <p>Check your Email for Verify & Get Payment QRcode</p>
-                                            <button onClick={()=>window.location.reload()} className="btn btn-primary">Reload</button>
+                                            <p>Cek Surel Anda untuk Melakukan Verifikasi dan Dapatkan Kode QR untuk Pembayaran</p>
+                                            <button onClick={()=>window.location.reload()} className="btn btn-primary btn-registration">Muat Ulang</button>
                                             </div>
                                             )
                                     }

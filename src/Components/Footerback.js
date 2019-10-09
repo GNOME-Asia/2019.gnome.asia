@@ -6,7 +6,7 @@ class Footerback extends React.Component{
         return(
             <div className="fixed-bottom py-3 shadow">
                 <div className="d-flex justify-content-center">
-                <Link to="/" className="back-link"><i className="fas fa-arrow-circle-left mr-1"></i> GNOME Asia 2019</Link>
+                <Link to="/" className="back-link"><i className="fas fa-arrow-circle-left mr-1"></i> Halaman Beranda</Link>
                 </div>
             </div>
         );

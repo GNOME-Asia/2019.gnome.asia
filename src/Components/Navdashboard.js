@@ -6,9 +6,9 @@ class Navdashboard extends React.Component {
         return(
             <div style={style.container}>
                 <nav className="navbar">
-                    <Link className="navbar-brand" to="/dashboard" style={style.text}>Registration Dashboard</Link>
+                    <Link className="navbar-brand" to="/dashboard" style={style.text}>Dasbor Registrasi</Link>
                     <ul className="navbar-nav ml-auto">
-                        <li className="nav-item"><button className="btn btn-sm btn-link" style={style.text} onClick={this.props.logout} ><i className="fas fa-sign-out-alt"></i> Logout</button></li>
+                        <li className="nav-item"><button className="btn btn-sm btn-link" style={style.text} onClick={this.props.logout} ><i className="fas fa-sign-out-alt"></i> Keluar</button></li>
                     </ul>
                 </nav>
             </div>

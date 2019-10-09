@@ -4,6 +4,9 @@ import gresikdev from '../assets/community/gresikdev.png';
 import gnomeid from '../assets/community/gnome-id.png';
 import gimpscape from '../assets/community/gimpscape.png';
 import klim from '../assets/community/KLiM.png'
+import klas from '../assets/community/KLAS.png'
+import uisi from '../assets/community/uisi.png'
+import uqg from '../assets/community/uqg.png'
 
 
 const Image = props =>{
@@ -42,6 +45,27 @@ class Community extends React.Component{
                                 <Image 
                                     name="KLiM"
                                     src={klim}
+                                />
+                            </li>
+                            <li className="list-inline-item">
+                                <Image 
+                                    name="KLAS"
+                                    src={klas}
+                                />
+                            </li>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <li className="list-inline-item">
+                                <Image 
+                                    name="UISI"
+                                    src={uisi}
+                                />
+                            </li>
+                            <li className="list-inline-item">
+                                <Image 
+                                    name="Universitas Qomaruddin Gresik"
+                                    src={uqg}
                                 />
                             </li>
                         </ul>

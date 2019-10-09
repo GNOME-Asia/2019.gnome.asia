@@ -1,5 +1,7 @@
 import React from 'react';
-import kabarlinux from '../assets//media/kabarlinux.png';
+import gnf from '../assets/media/gnf.png';
+import inigresik from '../assets/media/ini-gresik.png';
+import wicara from '../assets/media/wicara.png'
 
 
 const Image = props =>{
@@ -17,19 +19,23 @@ class Media extends React.Component{
                         <ul className="list-inline">
                             <li className="list-inline-item">
                                 <Image 
-                                    name="Kabar Linux"
-                                    src={kabarlinux}
+                                    name="GNF"
+                                    src={gnf}
+                                />
+                            </li>
+                            <li className="list-inline-item">
+                                <Image 
+                                    name="Ini Gresik"
+                                    src={inigresik}
+                                />
+                            </li>
+                            <li className="list-inline-item">
+                                <Image 
+                                    name="Wicara"
+                                    src={wicara}
                                 />
                             </li>
                         </ul>
-                        {/* <ul className="list-inline">
-                            <li className="list-inline-item">
-                                <Image 
-                                    name="Relawan TIK Gresik"
-                                    src={unmuh}
-                                />
-                            </li>
-                        </ul> */}
                     </div>
                 </div>
             </div>
