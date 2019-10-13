@@ -223,8 +223,8 @@ class Agenda extends React.Component{
                                                 <td className="align-middle" colSpan="5">Make our steel industry Great again, with Industry 4.0 - Stephanus Koeswandi (DOMUS) <br/>(Hall Sang Pencerah)</td>
                                             </tr>
                                             <tr>
-                                                <td className="align-middle">11:00 - 11:30</td>
-                                                <td className="align-middle" colSpan="5">Coffee Break</td>
+                                                <td className="align-middle">11:00 - 12:15</td>
+                                                <td className="align-middle" colSpan="5">Lunch Break</td>
                                             </tr>
                                             <tr>
                                                 <td width="12rem"></td>
@@ -235,7 +235,7 @@ class Agenda extends React.Component{
                                                 <td width="20%" className="align-middle table-secondary">Class 5<br/>(Room I6.09)</td>
                                             </tr>
                                             <tr>
-                                                <td className="align-middle">11:30 - 12:15</td>
+                                                <td className="align-middle">12:15 - 13:30</td>
                                                 <td className="align-middle">Guitar Shredding under GNOME Environment <br/>Hananto Herlambang</td>
                                                 <td className="align-middle">Open Source in Homeschooling Family <br/> Andik Nur Achmad</td>
                                                 <td className="align-middle">Using Creative Commons License to Collaborate with Digital Artwork <br/> Florens Debora Patricia</td>
@@ -245,10 +245,6 @@ class Agenda extends React.Component{
                                             <tr>
                                                 <td></td>
                                                 <td className="align-middle" colSpan="5">Group Photos (Each Class)</td>
-                                            </tr>
-                                            <tr>
-                                                <td>12:15 - 13:30</td>
-                                                <td className="align-middle" colSpan="5">Coffee Break</td>
                                             </tr>
                                             <tr>
                                                 <td width="12rem"></td>
@@ -271,27 +267,27 @@ class Agenda extends React.Component{
                                                 <td className="align-middle" colSpan="5">Group Photos (Each Class)</td>
                                             </tr>
                                             <tr>
-                                                <td className="align-middle">14:15 - 14:45</td>
+                                                <td className="align-middle">14:15 - 15:00</td>
                                                 <td className="align-middle" colSpan="5">Coffee Break</td>
                                             </tr>
                                             <tr>
-                                                <td className="align-middle">14:45 - 14:50</td>
+                                                <td className="align-middle">15:00 - 15:05</td>
                                                 <td className="align-middle" colSpan="5">(Lightning Talk) The Role of Open Source Technology to Accelerate Sustainable Development Goals <br/> Uthia Estiane<br/>(Hall Sang Pencerah)</td>
                                             </tr>
                                             <tr>
-                                                <td className="align-middle">14:50 - 14:55</td>
+                                                <td className="align-middle">15:05 - 15:10</td>
                                                 <td className="align-middle" colSpan="5">(Lightning Talk) Implementation and utilization file hosting Owncloud and virtualization Proxmox for Teaching Factory Model on SMK Muhammadiyah 1 Yogyakarta <br/> Budi Putra<br/>(Hall Sang Pencerah)</td>
                                             </tr>
                                             <tr>
-                                                <td className="align-middle">14:55 - 15:00</td>
+                                                <td className="align-middle">15:10 - 15:15</td>
                                                 <td className="align-middle" colSpan="5">(Lightning Talk) Introducing and Educate Local Community to FOSS <br/> Ernawan Ernawan<br/>(Hall Sang Pencerah)</td>
                                             </tr>
                                             <tr>
-                                                <td className="align-middle">15:00 - 16:15</td>
+                                                <td className="align-middle">15:15 - 16:15</td>
                                                 <td className="align-middle" colSpan="5">How To Contribute To FOSS Projects <br/> Ahmad Haris <br/>(Hall Sang Pencerah)</td>
                                             </tr>
                                             <tr>
-                                                <td className="align-middle">16:15 - 16:30</td>
+                                                <td className="align-middle">16:15 - 16:45</td>
                                                 <td className="align-middle" colSpan="5">Closing</td>
                                             </tr>
                                         </tbody>

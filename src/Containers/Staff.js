@@ -12,7 +12,7 @@ class Staff extends React.Component{
                     <div className="row">
                         <div className="col-md-4">
                             <div className="p-3">
-                                <h5 className="font-weight-bold">Lead/Main Coordinator</h5>
+                                <h5 className="font-weight-bold">Coordinator</h5>
                                 <p>
                                     Andik Nur Ahmad
                                 </p>
