@@ -1,8 +1,8 @@
 import React from 'react';
 import { Navbar,Nav,NavItem,Collapse,NavbarToggler } from 'reactstrap';
-import String from '../Components/Contents';
-import gnome from '../assets/photo_2019-07-10 19.01.08.jpeg';
-import Registrationmodal from '../Components/Registrationmodal';
+// import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link'
+import gnome from '../assets/2019_logo.jpeg';
 
 
 class Navigation extends React.Component{
@@ -53,38 +53,38 @@ class Navigation extends React.Component{
                     <Collapse isOpen={this.state.iscolapse} navbar>
 
                         <Nav className="ml-auto" navbar>
-                            <NavItem><a href="#home" 
+                            <NavItem><a href="/#" 
                             onClick={
                                 this._closed
                             }
-                            className="nav-link menu-top p-3">{String.navigation.home}</a></NavItem>
-                            <NavItem><a href="#venue" 
+                            className="nav-link menu-top p-3">Home</a></NavItem>
+                            <NavItem><Link to="#venue" 
                             onClick={this._closed}
-                            className="nav-link menu-top p-3">{String.navigation.venue}</a></NavItem>
-                            <NavItem><a href="#schedule" 
+                            className="nav-link menu-top p-3">Venue</Link></NavItem>
+                            <NavItem><Link to="#speakers" 
                             onClick={this._closed}
-                            className="nav-link menu-top p-3">{String.navigation.agenda}</a></NavItem>
-                            <NavItem><a href="#speakers" 
+                            className="nav-link menu-top p-3">Speakers</Link></NavItem>
+                            <NavItem><Link to="#schedule" 
                             onClick={this._closed}
-                            className="nav-link menu-top p-3">{String.navigation.speakers}</a></NavItem>
-                            <NavItem><a href="#staff" 
+                            className="nav-link menu-top p-3">Agenda</Link></NavItem>
+                            <NavItem><Link to="#staff" 
                             onClick={this._closed}
-                            className="nav-link menu-top p-3">{String.navigation.staff}</a></NavItem>
-                            <NavItem><a href="#callofproposal" 
+                            className="nav-link menu-top p-3">Staff</Link></NavItem>
+                            <NavItem><Link to="#callofproposal" 
                             onClick={this._closed}
-                            className="nav-link menu-top p-3">{String.navigation.cfp}</a></NavItem>
-                            <NavItem><a href="#sponsor" 
+                            className="nav-link menu-top p-3">Call For Paper</Link></NavItem>
+                            <NavItem><Link to="#sponsor" 
                             onClick={this._closed}
-                            className="nav-link menu-top p-3">{String.navigation.sponsor}</a></NavItem>
-                            <NavItem><a href="#registration" 
-                            onClick={this._modalopen}
-                            className="nav-link menu-top p-3">{String.navigation.registration}</a></NavItem>
+                            className="nav-link menu-top p-3">Sponsor</Link></NavItem>
+                            <NavItem><Link to="/registration" 
+                            onClick={this._closed}
+                            className="nav-link menu-top p-3">Registration</Link></NavItem>
                         </Nav>
                     </Collapse>
                     
                 </div>
             </Navbar>
-            <Registrationmodal open={this.state.modal} toggle={this._modalopen}/>
+            {/* <Registrationmodal open={this.state.modal} toggle={this._modalopen}/> */}
             </div>
         );
     }

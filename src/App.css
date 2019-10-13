@@ -6,8 +6,6 @@
   font-size: 14px;
   background-color: #ffffff;
   color:#616161;
-  
-  
   font-size: 14px;
 }
 
@@ -23,17 +21,16 @@ html{
 
 .navbar-brand{
   font-size: 14px;
+  
 }
 
 .menu-top{
-  color: #000000 !important;
+  color: #616161 !important;
   border: 1px solid#ffffff;
-  
-  
 }
 
 .menu-top:hover{
-  border-bottom: 1px solid #0a0a0a;
+  border-bottom: 1px solid #616161;
   transition: 350ms ease-in-out;
 
 }
@@ -41,12 +38,38 @@ html{
   background-image: ('./assets/favicon.ico') !important;
 }
 
+.text-registration {
+  color: #f57600
+}
+
+.btn-registration {
+  background-color: #f57600 !important;
+  border: 1px solid #f57600;
+}
+
+.btn-registration:hover,.btn-registration:active,.btn-registration:focus {
+  background-color: #f57600 !important;
+  border: 1px solid #f57600;
+}
+
+.btn-outline-primary{
+  color:#4a88cf !important;
+  border: 1px solid #4a88cf;
+}
+.btn-outline-primary:hover,.btn-outline-primary:active{
+  background-color: #4a88cf !important;
+  border: 1px solid #4a88cf;
+  color: #ffffff !important;
+  transition: 150ms ease-in-out;
+}
+
 .tab-agenda{
-  color:#2962FF !important;
+  color:#4a88cf !important;
   border: 1px solid red;
+  cursor: pointer;
 }
 .tab-agenda-active{
-  background-color: #2962FF !important;
+  background-color: #4a88cf !important;
   color: #ffffff !important;
   transition: 350ms ease-in-out;
 }
@@ -77,11 +100,6 @@ p{
 .dropdown-item:hover{
   background-color: white !important;
   color: #343A40 !important;
-}
-
-.navbar-toggler-icon{
-  background: url(assets/menu.png);
-  
 }
 
 .hotel-link{
@@ -146,3 +164,41 @@ p{
  
 }
 
+.btn-rounded{
+  border-radius: 4vh;
+}
+
+.link-back{
+  height: 8vh;
+}
+.back-link{
+  text-decoration: none !important;
+  color: #C82333;
+  font-size: 12px;
+  animation-name: linkback;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes linkback{
+  from{
+    color:red;
+  }
+  to{
+    color:#616161;
+    
+  }
+}
+
+.sponsor-title{
+  background-color: #4a88cf;
+  color: #fff;
+}
+
+.registration-banner{
+    color: #333;
+    background-color: #ffefe2;
+    border-color: white;
+}
